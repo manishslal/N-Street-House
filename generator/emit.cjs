@@ -114,6 +114,7 @@ function stairsFor(layout){
 }
 
 function build(layout){
+  FIN.setLayout(layout);
   const nodes={}; const add=(n)=>{nodes[n.id]=n; return n;};
   const site=add({object:'node',id:'site_main',type:'site',parentId:null,children:['building_main'],
     polygon:{type:'polygon',points:[[-2,-8],[6.6,-8],[6.6,14.5],[-2,14.5]]},metadata:{}});
@@ -164,7 +165,7 @@ function build(layout){
     const rooms=FIN.floorRooms(floor), thick=floor==='main'?0.1:m(FH-8);
     const allHoles=[...s.holes,...rooms.map(r=>r.pts)];
     const slab=add({object:'node',id:`slab_${floor[0]}`,type:'slab',name:floor==='main'?'Main floor (wood)':'Upper floor (wood)',parentId:L.id,polygon:s.outer.map(p=>P(...p)),holes:allHoles.map(h=>h.map(p=>P(...p))),
-      holeMetadata:allHoles.map(()=>({source:'manual'})),elevation:0.01,thickness:thick,slots:{surface:FIN.MAT.wood,side:'library:preset-lightgrey'},metadata:{}});
+      holeMetadata:allHoles.map(()=>({source:'manual'})),elevation:0.01,thickness:thick,slots:{surface:FIN.baseFloor(floor),side:'library:preset-lightgrey'},metadata:{}});
     L.children.push(slab.id);
     rooms.forEach((r,i)=>{ const rid=`slab_${floor[0]}_room${i+1}`;
       add({object:'node',id:rid,type:'slab',name:r.name,parentId:L.id,polygon:r.pts.map(p=>P(...p)),holes:[],holeMetadata:[],elevation:0.01,thickness:thick,slots:{surface:r.surface,side:'library:preset-lightgrey'},metadata:{}});

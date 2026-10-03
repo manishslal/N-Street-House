@@ -1130,7 +1130,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "library:wood-woodplank48",
+    "surface": "#3e3c42",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1164,7 +1164,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "library:flooring-terrazzo19",
+    "surface": "#d9cfb0",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1198,7 +1198,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "library:flooring-lightceramic24",
+    "surface": "#8c7b69",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2692,7 +2692,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "library:wood-woodplank48",
+    "surface": "#b9895a",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2726,7 +2726,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "library:flooring-lightceramic24",
+    "surface": "#8a8a8c",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2760,7 +2760,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "library:flooring-lightceramic24",
+    "surface": "#8a8a8c",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -3367,10 +3367,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3401,10 +3401,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3435,10 +3435,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3469,10 +3469,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3501,10 +3501,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3539,10 +3539,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3574,10 +3574,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3605,10 +3605,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3639,10 +3639,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3673,10 +3673,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3708,10 +3708,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3740,10 +3740,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3774,10 +3774,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3804,10 +3804,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3838,10 +3838,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3872,10 +3872,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3907,10 +3907,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3939,10 +3939,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3973,10 +3973,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#8a5a2b",
+    "carcass": "#8a5a2b",
+    "plinth": "#8a5a2b",
+    "countertop": "#1d1d20",
     "hardware": "library:metal-brass"
    },
    "children": [

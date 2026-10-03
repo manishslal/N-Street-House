@@ -94,6 +94,7 @@
     "cabinet_k4",
     "cabinet_k5",
     "cabinet_k6",
+    "cabinet_k7",
     "slab_yard_lawn",
     "slab_yard_patio",
     "slab_yard_bed1",
@@ -4014,6 +4015,141 @@
    },
    "children": [
     "cabinet-module_k6_1"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k7_1": {
+   "object": "node",
+   "id": "cabinet-module_k7_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k7",
+   "cabinetType": "base",
+   "position": [
+    0.305,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.61,
+   "depth": 0.45,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k7m0c0",
+     "type": "door",
+     "doorType": "single-left"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k7_2": {
+   "object": "node",
+   "id": "cabinet-module_k7_2",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k7",
+   "cabinetType": "base",
+   "position": [
+    0.915,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.61,
+   "depth": 0.45,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k7m1c0",
+     "type": "drawer",
+     "drawerCount": 3
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k7_3": {
+   "object": "node",
+   "id": "cabinet-module_k7_3",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k7",
+   "cabinetType": "base",
+   "position": [
+    1.525,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.61,
+   "depth": 0.45,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k7m2c0",
+     "type": "door",
+     "doorType": "single-right"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k7": {
+   "object": "node",
+   "id": "cabinet_k7",
+   "type": "cabinet",
+   "name": "Dining sideboard",
+   "parentId": "level_0",
+   "runTier": "base",
+   "position": [
+    4.4653,
+    0,
+    1.6459
+   ],
+   "rotation": -1.5707963267948966,
+   "width": 1.83,
+   "depth": 0.45,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k7_1",
+    "cabinet-module_k7_2",
+    "cabinet-module_k7_3"
    ],
    "metadata": {}
   },

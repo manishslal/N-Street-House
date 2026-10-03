@@ -17,8 +17,27 @@ const MAT={
   steel:'library:preset-midgrey', siding:'library:siding-lap-white',
 };
 
+// Existing house as photographed (walkthrough frames): dark grey plank floor, beige vinyl tile and brown wood cabinets with
+// black marble-look tops in the kitchen, brown/beige vinyl in the powder room, bare plywood subfloor upstairs, grey plank in the baths.
+const EXIST={base:{main:'#3e3c42',upper:'#b9895a'},kitchenFloor:'#d9cfb0',powder:'#8c7b69',bath:'#8a8a8c',
+  cab:'#8a5a2b',top:'#1d1d20',hw:'library:metal-brass'};
+let LAYOUT='prop';
+function setLayout(l){LAYOUT=l;}
+const isExist=()=>LAYOUT==='exist';
+function baseFloor(floor){return isExist()?EXIST.base[floor]:MAT.wood;}
+
 // ---- floors: room-specific finishes cut out of the base wood slab (rectangles in plan feet)
 function floorRooms(floor){
+  if(isExist()){
+    if(floor==='main') return [
+      {name:'Kitchen floor',pts:[[7.3,12.35],[15,12.35],[15,21.6],[7.3,21.6]],surface:EXIST.kitchenFloor},
+      {name:'Powder room floor',pts:[[0,18.6],[3.3,18.6],[3.3,23.9],[0,23.9]],surface:EXIST.powder},
+    ];
+    return [
+      {name:'En suite floor',pts:[[9.7,12.35],[15,12.35],[15,17.35],[9.7,17.35]],surface:EXIST.bath},
+      {name:'Shower bath floor',pts:[[9.7,17.7],[15,17.7],[15,22.85],[9.7,22.85]],surface:EXIST.bath},
+    ];
+  }
   if(floor==='main') return [
     {name:'Kitchen floor',pts:[[7.3,12.35],[15,12.35],[15,21.6],[7.3,21.6]],surface:MAT.terrazzo},
     {name:'Powder room floor',pts:[[0,18.6],[3.3,18.6],[3.3,23.9],[0,23.9]],surface:MAT.bathTile},
@@ -33,7 +52,8 @@ function floorRooms(floor){
 function kitchen({add,L0}){
   const out=[];
   let n=0;
-  const slots={front:MAT.sage,carcass:MAT.sage,plinth:MAT.sage,countertop:MAT.marble,hardware:MAT.brass};
+  const slots=isExist()?{front:EXIST.cab,carcass:EXIST.cab,plinth:EXIST.cab,countertop:EXIST.top,hardware:EXIST.hw}
+    :{front:MAT.sage,carcass:MAT.sage,plinth:MAT.sage,countertop:MAT.marble,hardware:MAT.brass};
   const run=(name,tier,origin,yaw,len,depth,mods,extra={})=>{
     n++; const id=`cabinet_k${n}`;
     const y=extra.y||0;
@@ -81,6 +101,14 @@ function kitchen({add,L0}){
   run('Range hood','wall',[14.18,19.6],-PI/2,0.76,0.5,[
     {w:0.76,stack:[{type:'hood-pyramid'}]},
   ],{y:1.5,carcass:0.7});
+  if(!isExist()){
+    // dining sideboard against the terracotta east wall (plan z 28.6 -> 22.6), echoing the render's built-in
+    run('Dining sideboard','base',[14.65,28.6],-PI/2,1.83,0.45,[
+      {w:0.61,stack:[{type:'door',doorType:'single-left'}]},
+      {w:0.61,stack:[{type:'drawer',drawerCount:3}]},
+      {w:0.61,stack:[{type:'door',doorType:'single-right'}]},
+    ]);
+  }
   return out;
 }
 
@@ -141,4 +169,4 @@ function dining_accent(wall){
   wall.faceRegions=[{id:'accent_dining',face:'a',u0,u1,v0:0,v1:2.44,finish:MAT.terracotta}];
 }
 
-module.exports={GROUND_DROP,MAT,floorRooms,kitchen,yard,dining_accent};
+module.exports={setLayout,baseFloor,isExist,EXIST,GROUND_DROP,MAT,floorRooms,kitchen,yard,dining_accent};
