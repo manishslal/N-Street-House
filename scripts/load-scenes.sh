@@ -1,0 +1,14 @@
+#!/bin/bash
+# Loads both generated scenes into a running local Pascal editor through its scene API.
+# usage: scripts/load-scenes.sh <port>      (port printed by `npx @pascal-app/cli status`)
+# Needs a hosts entry or the Host header below; the sandbox the spike was built in cannot resolve *.localhost, so we send the header explicitly.
+PORT=${1:?usage: load-scenes.sh <port>}
+HERE="$(cd "$(dirname "$0")/.." && pwd)"
+load(){ id=$1; name=$2; file=$3
+  curl -s -o /dev/null -X DELETE -H "Host: pascal.localhost:$PORT" "http://127.0.0.1:$PORT/api/scenes/$id"
+  node -e "const g=JSON.parse(require('fs').readFileSync('$file','utf8'));process.stdout.write(JSON.stringify({id:'$id',name:'$name',graph:g}))" > /tmp/house-spike-body.json
+  curl -s -w "\n$id -> HTTP %{http_code}\n" -X POST -H "Host: pascal.localhost:$PORT" -H 'content-type: application/json' --data @/tmp/house-spike-body.json "http://127.0.0.1:$PORT/api/scenes" | tail -1
+}
+load house-existing "House - Existing" "$HERE/scenes/house-existing.json"
+load house-proposed "House - Proposed (L stair)" "$HERE/scenes/house-proposed.json"
+echo "Open: http://localhost:$PORT/scene/house-proposed   (use localhost, not pascal.localhost, if the page errors)"
