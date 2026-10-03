@@ -317,7 +317,10 @@
    "width": 0.838,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "window_m3_2": {
    "object": "node",
@@ -417,7 +420,10 @@
    "width": 0.853,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "window_m4_2": {
    "object": "node",
@@ -495,7 +501,9 @@
    "height": 2.042,
    "openingKind": "door",
    "doorType": "double",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left"
   },
   "door_m5_2": {
    "object": "node",
@@ -517,7 +525,10 @@
    "width": 0.914,
    "height": 2.042,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_m6": {
    "object": "node",
@@ -693,7 +704,10 @@
    "width": 0.701,
    "height": 2.042,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "door_m10_2": {
    "object": "node",
@@ -715,7 +729,10 @@
    "width": 0.427,
    "height": 2.042,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "door_m10_3": {
    "object": "node",
@@ -737,7 +754,10 @@
    "width": 0.792,
    "height": 2.042,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "right",
+   "handleSide": "left"
   },
   "wall_m11": {
    "object": "node",
@@ -959,7 +979,10 @@
    "width": 0.61,
    "height": 2.042,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_m16": {
    "object": "node",
@@ -2072,7 +2095,10 @@
    "width": 0.61,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_u8": {
    "object": "node",
@@ -2156,7 +2182,10 @@
    "width": 0.61,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_u10": {
    "object": "node",
@@ -2270,7 +2299,10 @@
    "width": 0.732,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_u13": {
    "object": "node",
@@ -2355,7 +2387,10 @@
    "width": 0.732,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "door_u14_2": {
    "object": "node",
@@ -2377,7 +2412,10 @@
    "width": 0.671,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_u15": {
    "object": "node",
@@ -2491,7 +2529,10 @@
    "width": 0.792,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_u18": {
    "object": "node",
@@ -2546,7 +2587,10 @@
    "width": 0.457,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "inward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "door_u18_2": {
    "object": "node",
@@ -2568,7 +2612,10 @@
    "width": 0.671,
    "height": 2.073,
    "openingKind": "door",
-   "metadata": {}
+   "metadata": {},
+   "swingDirection": "outward",
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "slab_u": {
    "object": "node",
@@ -5461,7 +5508,7 @@
    "position": [
     0.701,
     0,
-    1.311
+    1.097
    ],
    "rotation": [
     0,
@@ -5516,7 +5563,7 @@
    "position": [
     3.871,
     0,
-    1.311
+    1.097
    ],
    "rotation": [
     0,

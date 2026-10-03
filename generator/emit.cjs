@@ -220,6 +220,7 @@ function build(layout){
   // walkthrough start: just inside the front door, facing into the house
   add({object:'node',id:'spawn_entry',type:'spawn',parentId:L0.id,name:'Front door',position:[P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[0],0,P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[1]],rotation:parseFloat(process.env.SPAWN_YAW||String(Math.PI)),metadata:{}});
   L0.children.push('spawn_entry');
+  require('./swing.cjs').chooseSwings(nodes);   // hang every hinged door so it opens into free space
   return {nodes,rootNodeIds:[site.id],collections:{},materials:{},installedPlugins:[]};
 }
 module.exports={build};

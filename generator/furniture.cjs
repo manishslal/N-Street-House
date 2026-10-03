@@ -15,8 +15,8 @@ const main=[
 const upper=[
   ['double-bed',12.0,6.2,Wst,{w:5.2,d:6.6}],
   ['closet',0.6,3.0,E,{w:5.0,d:1.2}],
-  ['double-bed',2.3,29.7,E,{w:5.0,d:4.6}],
-  ['double-bed',12.7,29.7,Wst,{w:5.0,d:4.6}],
+  ['double-bed',2.3,30.4,E,{w:5.0,d:4.6}],
+  ['double-bed',12.7,30.4,Wst,{w:5.0,d:4.6}],
   ['toilet',10.4,16.65,E,{w:2.2,d:1.4}],['bathroom-sink',10.4,14.9,E,{w:1.8,d:1.5}],['bathtub',13.75,14.85,Wst,{w:5.0,d:2.5}],
   ['toilet',14.4,21.6,Wst,{w:2.2,d:1.4}],['bathroom-sink',14.4,19.2,Wst,{w:1.8,d:1.5}],['shower-square',11.2,21.4,S,{w:3,d:3}],
 ];
