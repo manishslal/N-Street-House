@@ -72,6 +72,7 @@
     "wall_m18",
     "wall_m19",
     "slab_m",
+    "ceiling_m",
     "zone_m1",
     "zone_m2",
     "zone_m3",
@@ -133,6 +134,7 @@
     "wall_u17",
     "wall_u18",
     "slab_u",
+    "ceiling_u",
     "zone_u1",
     "zone_u2",
     "zone_u3",
@@ -1042,6 +1044,34 @@
     "surface": "library:wood-floorplank1",
     "side": "library:preset-lightgrey"
    },
+   "metadata": {}
+  },
+  "ceiling_m": {
+   "object": "node",
+   "id": "ceiling_m",
+   "type": "ceiling",
+   "parentId": "level_0",
+   "name": "Main floor ceiling",
+   "polygon": [
+    [
+     0,
+     10.3632
+    ],
+    [
+     4.572,
+     10.3632
+    ],
+    [
+     4.572,
+     0.3962
+    ],
+    [
+     0,
+     0.3962
+    ]
+   ],
+   "holes": [],
+   "height": 2.4384,
    "metadata": {}
   },
   "zone_m1": {
@@ -2467,6 +2497,34 @@
    },
    "metadata": {}
   },
+  "ceiling_u": {
+   "object": "node",
+   "id": "ceiling_u",
+   "type": "ceiling",
+   "parentId": "level_1",
+   "name": "Upper floor ceiling",
+   "polygon": [
+    [
+     0,
+     10.3632
+    ],
+    [
+     4.572,
+     10.3632
+    ],
+    [
+     4.572,
+     0.3962
+    ],
+    [
+     0,
+     0.3962
+    ]
+   ],
+   "holes": [],
+   "height": 2.4384,
+   "metadata": {}
+  },
   "zone_u1": {
    "object": "node",
    "id": "zone_u1",
@@ -3000,7 +3058,8 @@
    "stepCount": 14,
    "thickness": 0.25,
    "fillToFloor": true,
-   "railingMode": "none",
+   "railingMode": "left",
+   "railingHeight": 0.92,
    "children": [
     "sseg_a"
    ],

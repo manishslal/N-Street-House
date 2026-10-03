@@ -18,6 +18,7 @@ This folder is self-contained: it lives in `house-spike/` in the repo but can be
 | `reference/bethan-original.html` | Untouched copy of the original artifact — the single source of truth the generator reads. |
 | `scripts/` | Start a local Pascal editor and load the scenes. |
 | `docs/FINDINGS.md` | Research, what was verified and how, what was not, limitations, recommendation. |
+| `docs/ROOMS.md` | The room list and what each room's saved camera shows. |
 | `docs/PASCAL_NOTES.md` | Pascal authoring notes (schemas, conventions, gotchas) learned while building this. |
 | `screenshots/` | Renders from the verification runs. |
 

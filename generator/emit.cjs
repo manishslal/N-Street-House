@@ -96,16 +96,18 @@ function slabFor(layout,floor){
   return {outer,holes:[[[0,6.35],[3,6.35],[3,12],[5.45,12],[5.45,15],[0,15]]]};
 }
 
+// which Pascal rail side ('left'|'right') lands on the plan's west wall / south (front-ward) edge for the stair yaw used
+const RAIL_WEST=process.env.RAIL_WEST||'left', RAIL_SOUTH=process.env.RAIL_SOUTH||'right';
 function stairsFor(layout){
   const yaw=(a)=>a;
   const out=[];
   const flight=(id,name,origin,y,rot,width,len,rise,steps,seg='stair',extra={})=>({id,name,origin,y,rot,width,len,rise,steps,seg,...extra});
   if(layout==='exist'){
-    out.push(flight('a','Existing stair',[2.23/2,3.04],0,Math.PI,2.23,14*(8.96/14),14*R,14,'stair',{from:true}));
+    out.push(flight('a','Existing stair',[2.23/2,3.04],0,Math.PI,2.23,14*(8.96/14),14*R,14,'stair',{from:true,rail:RAIL_WEST}));
   } else {
-    out.push(flight('a','Stair, lower run',[1.5,3.25],0,Math.PI,3,11*0.875,11*R,11,'stair',{from:true}));
-    out.push(flight('b','Stair landing',[1.5,3.25+11*0.875],11*R,Math.PI,3,15-(3.25+11*0.875),0,0,'landing'));
-    out.push(flight('c','Stair, upper run',[3,13.5],11*R,Math.PI/2,3,2.45,3*R,3,'stair'));
+    out.push(flight('a','Stair, lower run',[1.5,3.25],0,Math.PI,3,11*0.875,11*R,11,'stair',{from:true,rail:RAIL_WEST}));
+    out.push(flight('b','Stair landing',[1.5,3.25+11*0.875],11*R,Math.PI,3,15-(3.25+11*0.875),0,0,'landing',{rail:RAIL_WEST}));
+    out.push(flight('c','Stair, upper run',[3,13.5],11*R,Math.PI/2,3,2.45,3*R,3,'stair',{rail:RAIL_SOUTH}));
   }
   return out;
 }
@@ -158,6 +160,10 @@ function build(layout){
     const slab=add({object:'node',id:`slab_${floor[0]}`,type:'slab',parentId:L.id,polygon:s.outer.map(p=>P(...p)),holes:s.holes.map(h=>h.map(p=>P(...p))),
       holeMetadata:s.holes.map(()=>({source:'manual'})),elevation:0.01,thickness:floor==='main'?0.1:m(FH-8),slots:{surface:'library:wood-floorplank1',side:'library:preset-lightgrey'},metadata:{}});
     L.children.push(slab.id);
+    // ceiling at the wall-top height; the main-floor ceiling is open over the stairwell
+    const cl=add({object:'node',id:`ceiling_${floor[0]}`,type:'ceiling',parentId:L.id,name:floor==='main'?'Main floor ceiling':'Upper floor ceiling',
+      polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),metadata:{}});
+    L.children.push(cl.id);
     // zones
     zonesFor(layout,floor).forEach((z,i)=>{
       const id=`zone_${floor[0]}${i+1}`;
@@ -171,7 +177,7 @@ function build(layout){
     const sid=`stair_${f.id}`, gid=`sseg_${f.id}`;
     const st=add({object:'node',id:sid,type:'stair',parentId:L0.id,name:f.name,position:[m(f.origin[0]),r3(f.y*FT),m(D-f.origin[1])],rotation:f.rot,
       stairType:'straight',fromLevelId:f.from?'level_0':null,toLevelId:f.from?'level_1':null,slabOpeningMode:'none',width:m(f.width),
-      totalRise:r3(f.rise*FT),stepCount:Math.max(f.steps,1),thickness:0.25,fillToFloor:true,railingMode:'none',children:[gid],metadata:{}});
+      totalRise:r3(f.rise*FT),stepCount:Math.max(f.steps,1),thickness:0.25,fillToFloor:true,railingMode:f.rail||'none',railingHeight:0.92,children:[gid],metadata:{}});
     add({object:'node',id:gid,type:'stair-segment',parentId:sid,segmentType:f.seg,width:m(f.width),length:m(f.len),height:r3(f.rise*FT),stepCount:f.seg==='landing'?0:f.steps,
       attachmentSide:'front',fillToFloor:true,thickness:f.seg==='landing'?0.32:0.25,metadata:{}});
     L0.children.push(sid);

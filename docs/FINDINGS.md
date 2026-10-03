@@ -61,7 +61,9 @@ should have been an open archway, and gaps between room polygons.
    in the swing of the two pantry/closet doors beside it; the en suite door swing vs the vanity and tub; the
    shower base vs the shower-bath door; the washer vs the (4'2") laundry door. Several of these use furniture
    positions that are approximate, so treat them as "go look", not as errors.
-3. No ceilings, roof or handrails exist in the original, so none are in the scenes.
+3. The original has no ceilings, roof or handrails. We added ceilings (at the 8 ft wall height; the main-floor
+   ceiling is open over the stairwell) and stair handrails (west side of the lower run and landing, open south
+   side of the upper run). There is still no roof.
 
 ## Limitations and judgement calls in the scenes
 
