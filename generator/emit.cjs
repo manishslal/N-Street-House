@@ -2,6 +2,7 @@
 const fs=require('fs');
 const {levelWalls,FT,FH,r3}=require('./plan.cjs');
 const FURN=require('./furniture.cjs');
+const FIN=require('./finish.cjs');
 const CATALOG=Object.fromEntries(require('./catalog.json').map(a=>[a.id,a]));
 const D=34; // plan z (front=0) is flipped to Pascal Z so the house keeps its handedness (x east, front faces south)
 const m=(v)=>Math.round(v*FT*10000)/10000;
@@ -115,9 +116,9 @@ function stairsFor(layout){
 function build(layout){
   const nodes={}; const add=(n)=>{nodes[n.id]=n; return n;};
   const site=add({object:'node',id:'site_main',type:'site',parentId:null,children:['building_main'],
-    polygon:{type:'polygon',points:[[-2,-2.2],[6.6,-2.2],[6.6,12.6],[-2,12.6]]},metadata:{}});
+    polygon:{type:'polygon',points:[[-2,-8],[6.6,-8],[6.6,14.5],[-2,14.5]]},metadata:{}});
   const bld=add({object:'node',id:'building_main',type:'building',parentId:site.id,children:['level_0','level_1'],metadata:{}});
-  const L0=add({object:'node',id:'level_0',type:'level',parentId:bld.id,level:0,baseElevation:0,height:LEVEL_H,name:'Main floor',children:[],metadata:{}});
+  const L0=add({object:'node',id:'level_0',type:'level',parentId:bld.id,level:0,baseElevation:FIN.GROUND_DROP,height:LEVEL_H,name:'Main floor',children:[],metadata:{}});
   const L1=add({object:'node',id:'level_1',type:'level',parentId:bld.id,level:1,baseElevation:0,height:LEVEL_H,name:'Upper floor',children:[],metadata:{}});
   const lv={main:L0,upper:L1};
   for(const floor of ['main','upper']){
@@ -135,6 +136,9 @@ function build(layout){
         ?(along==='x'?(cc<10?'Front wall':'Rear wall'):(cc<5?'West party wall':'East party wall')):'Interior wall';
       const tone=w.isNew?'library:preset-powderblue':(exterior?'library:preset-softwhite':'library:preset-white');
       wall.slots={a:tone,b:tone,aSkirting:'library:preset-white',bSkirting:'library:preset-white'};
+      if(wall.name==='Rear wall') wall.slots.a=FIN.MAT.siding;                    // exterior face (north) is white vinyl lap siding
+      if(wall.name==='East party wall'&&floor==='main') FIN.dining_accent(wall);  // terracotta accent through the dining area
+      if(exterior&&floor==='main') wall.fillToTerrain=true;                       // the main floor sits above the yard; close the walls down to grade
       L.children.push(id);
       let on=0;
       for(const o of w.openings){
@@ -157,9 +161,14 @@ function build(layout){
     }
     // slab
     const s=slabFor(layout,floor);
-    const slab=add({object:'node',id:`slab_${floor[0]}`,type:'slab',parentId:L.id,polygon:s.outer.map(p=>P(...p)),holes:s.holes.map(h=>h.map(p=>P(...p))),
-      holeMetadata:s.holes.map(()=>({source:'manual'})),elevation:0.01,thickness:floor==='main'?0.1:m(FH-8),slots:{surface:'library:wood-floorplank1',side:'library:preset-lightgrey'},metadata:{}});
+    const rooms=FIN.floorRooms(floor), thick=floor==='main'?0.1:m(FH-8);
+    const allHoles=[...s.holes,...rooms.map(r=>r.pts)];
+    const slab=add({object:'node',id:`slab_${floor[0]}`,type:'slab',name:floor==='main'?'Main floor (wood)':'Upper floor (wood)',parentId:L.id,polygon:s.outer.map(p=>P(...p)),holes:allHoles.map(h=>h.map(p=>P(...p))),
+      holeMetadata:allHoles.map(()=>({source:'manual'})),elevation:0.01,thickness:thick,slots:{surface:FIN.MAT.wood,side:'library:preset-lightgrey'},metadata:{}});
     L.children.push(slab.id);
+    rooms.forEach((r,i)=>{ const rid=`slab_${floor[0]}_room${i+1}`;
+      add({object:'node',id:rid,type:'slab',name:r.name,parentId:L.id,polygon:r.pts.map(p=>P(...p)),holes:[],holeMetadata:[],elevation:0.01,thickness:thick,slots:{surface:r.surface,side:'library:preset-lightgrey'},metadata:{}});
+      L.children.push(rid); });
     // ceiling at the wall-top height; the main-floor ceiling is open over the stairwell
     const cl=add({object:'node',id:`ceiling_${floor[0]}`,type:'ceiling',parentId:L.id,name:floor==='main'?'Main floor ceiling':'Upper floor ceiling',
       polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),metadata:{}});
@@ -183,9 +192,12 @@ function build(layout){
     L0.children.push(sid);
   }
 
+  FIN.kitchen({add,L0});
+  FIN.yard({add,L0});
+
   // furniture from the built-in catalog (floor items are children of their level)
-  for(const floor of ['main','upper']){
-    const L=floor==='main'?L0:L1; let n=0;
+  for(const floor of ['main','upper','yard']){
+    const L=floor==='upper'?L1:L0; let n=0; const yOff=floor==='yard'?-FIN.GROUND_DROP:0;
     for(const [id,cx,cz,yaw,fit] of FURN[floor]){
       const a=CATALOG[id]; if(!a) throw new Error('unknown catalog item '+id);
       n++; const [dw,dh,dd]=a.dimensions; let sc=[1,1,1];
@@ -197,9 +209,9 @@ function build(layout){
       }
       // keep the footprint inside the house shell (centre-placed pieces can poke a few cm into a wall)
       const hw=Math.abs(Math.cos(yaw))*dw*sc[0]/2+Math.abs(Math.sin(yaw))*dd*sc[2]/2, hd=Math.abs(Math.sin(yaw))*dw*sc[0]/2+Math.abs(Math.cos(yaw))*dd*sc[2]/2;
-      const px=Math.min(Math.max(m(cx),hw),15*FT-hw), pz=Math.min(Math.max(m(D-cz),(D-32.7)*FT+hd),D*FT-hd);
-      const nid=`item_${floor[0]}${n}`;
-      add({object:'node',id:nid,type:'item',parentId:L.id,name:a.name,position:[r3(px),0,r3(pz)],rotation:[0,yaw,0],scale:sc,
+      const px=floor==='yard'?m(cx):Math.min(Math.max(m(cx),hw),15*FT-hw), pz=floor==='yard'?m(D-cz):Math.min(Math.max(m(D-cz),(D-32.7)*FT+hd),D*FT-hd);
+      const nid=`item_${floor==='yard'?'y':floor[0]}${n}`;
+      add({object:'node',id:nid,type:'item',parentId:L.id,name:a.name,position:[r3(px),yOff,r3(pz)],rotation:[0,yaw,0],scale:sc,
         asset:{id:a.id,category:a.category,name:a.name,thumbnail:(process.env.ASSET_BASE||'')+a.thumbnail,src:(process.env.ASSET_BASE||'')+a.src,dimensions:a.dimensions,offset:a.offset||[0,0,0],rotation:a.rotation||[0,0,0],scale:a.scale||[1,1,1],tags:a.tags},children:[],metadata:{}});
       L.children.push(nid);
     }

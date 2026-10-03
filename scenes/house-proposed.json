@@ -13,19 +13,19 @@
     "points": [
      [
       -2,
-      -2.2
+      -8
      ],
      [
       6.6,
-      -2.2
+      -8
      ],
      [
       6.6,
-      12.6
+      14.5
      ],
      [
       -2,
-      12.6
+      14.5
      ]
     ]
    },
@@ -48,7 +48,7 @@
    "type": "level",
    "parentId": "building_main",
    "level": 0,
-   "baseElevation": 0,
+   "baseElevation": 1.34,
    "height": 2.8447,
    "name": "Main floor",
    "children": [
@@ -70,6 +70,8 @@
     "wall_m16",
     "wall_m17",
     "slab_m",
+    "slab_m_room1",
+    "slab_m_room2",
     "ceiling_m",
     "zone_m1",
     "zone_m2",
@@ -86,6 +88,32 @@
     "stair_a",
     "stair_b",
     "stair_c",
+    "cabinet_k1",
+    "cabinet_k2",
+    "cabinet_k3",
+    "cabinet_k4",
+    "cabinet_k5",
+    "cabinet_k6",
+    "slab_yard_lawn",
+    "slab_yard_patio",
+    "slab_yard_bed1",
+    "slab_yard_soil1",
+    "slab_yard_bed2",
+    "slab_yard_soil2",
+    "slab_yard_bench",
+    "slab_yard_cushion",
+    "slab_deck",
+    "stair_deck",
+    "fence_deck1",
+    "fence_deck2",
+    "fence_deck3",
+    "fence_deck4",
+    "slab_stoop",
+    "slab_front_walk",
+    "stair_front",
+    "fence_back",
+    "fence_west",
+    "fence_east",
     "item_m1",
     "item_m2",
     "item_m3",
@@ -96,11 +124,10 @@
     "item_m8",
     "item_m9",
     "item_m10",
-    "item_m11",
-    "item_m12",
-    "item_m13",
-    "item_m14",
-    "item_m15",
+    "item_y1",
+    "item_y2",
+    "item_y3",
+    "item_y4",
     "spawn_entry"
    ],
    "metadata": {}
@@ -134,6 +161,8 @@
     "wall_u17",
     "wall_u18",
     "slab_u",
+    "slab_u_room1",
+    "slab_u_room2",
     "ceiling_u",
     "zone_u1",
     "zone_u2",
@@ -187,7 +216,8 @@
     "b": "library:preset-softwhite",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
-   }
+   },
+   "fillToTerrain": true
   },
   "wall_m2": {
    "object": "node",
@@ -217,7 +247,19 @@
     "b": "library:preset-softwhite",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
-   }
+   },
+   "faceRegions": [
+    {
+     "id": "accent_dining",
+     "face": "a",
+     "u0": 6.767,
+     "u1": 10.043,
+     "v0": 0,
+     "v1": 2.44,
+     "finish": "library:preset-terracotta"
+    }
+   ],
+   "fillToTerrain": true
   },
   "wall_m3": {
    "object": "node",
@@ -251,7 +293,8 @@
     "b": "library:preset-softwhite",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
-   }
+   },
+   "fillToTerrain": true
   },
   "door_m3_1": {
    "object": "node",
@@ -346,11 +389,12 @@
    "backSide": "unknown",
    "name": "Rear wall",
    "slots": {
-    "a": "library:preset-softwhite",
+    "a": "library:siding-lap-white",
     "b": "library:preset-softwhite",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
-   }
+   },
+   "fillToTerrain": true
   },
   "door_m4_1": {
    "object": "node",
@@ -980,6 +1024,7 @@
    "object": "node",
    "id": "slab_m",
    "type": "slab",
+   "name": "Main floor (wood)",
    "parentId": "level_0",
    "polygon": [
     [
@@ -999,12 +1044,124 @@
      0.3962
     ]
    ],
+   "holes": [
+    [
+     [
+      2.225,
+      6.5989
+     ],
+     [
+      4.572,
+      6.5989
+     ],
+     [
+      4.572,
+      3.7795
+     ],
+     [
+      2.225,
+      3.7795
+     ]
+    ],
+    [
+     [
+      0,
+      4.6939
+     ],
+     [
+      1.0058,
+      4.6939
+     ],
+     [
+      1.0058,
+      3.0785
+     ],
+     [
+      0,
+      3.0785
+     ]
+    ]
+   ],
+   "holeMetadata": [
+    {
+     "source": "manual"
+    },
+    {
+     "source": "manual"
+    }
+   ],
+   "elevation": 0.01,
+   "thickness": 0.1,
+   "slots": {
+    "surface": "library:wood-woodplank48",
+    "side": "library:preset-lightgrey"
+   },
+   "metadata": {}
+  },
+  "slab_m_room1": {
+   "object": "node",
+   "id": "slab_m_room1",
+   "type": "slab",
+   "name": "Kitchen floor",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.225,
+     6.5989
+    ],
+    [
+     4.572,
+     6.5989
+    ],
+    [
+     4.572,
+     3.7795
+    ],
+    [
+     2.225,
+     3.7795
+    ]
+   ],
    "holes": [],
    "holeMetadata": [],
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "library:wood-floorplank1",
+    "surface": "library:flooring-terrazzo19",
+    "side": "library:preset-lightgrey"
+   },
+   "metadata": {}
+  },
+  "slab_m_room2": {
+   "object": "node",
+   "id": "slab_m_room2",
+   "type": "slab",
+   "name": "Powder room floor",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0,
+     4.6939
+    ],
+    [
+     1.0058,
+     4.6939
+    ],
+    [
+     1.0058,
+     3.0785
+    ],
+    [
+     0,
+     3.0785
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0.01,
+   "thickness": 0.1,
+   "slots": {
+    "surface": "library:flooring-lightceramic24",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1728,7 +1885,7 @@
    "backSide": "unknown",
    "name": "Rear wall",
    "slots": {
-    "a": "library:preset-softwhite",
+    "a": "library:siding-lap-white",
     "b": "library:preset-softwhite",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
@@ -2416,6 +2573,7 @@
    "object": "node",
    "id": "slab_u",
    "type": "slab",
+   "name": "Upper floor (wood)",
    "parentId": "level_1",
    "polygon": [
     [
@@ -2461,9 +2619,51 @@
       0,
       5.7912
      ]
+    ],
+    [
+     [
+      2.9566,
+      6.5989
+     ],
+     [
+      4.572,
+      6.5989
+     ],
+     [
+      4.572,
+      5.0749
+     ],
+     [
+      2.9566,
+      5.0749
+     ]
+    ],
+    [
+     [
+      2.9566,
+      4.9682
+     ],
+     [
+      4.572,
+      4.9682
+     ],
+     [
+      4.572,
+      3.3985
+     ],
+     [
+      2.9566,
+      3.3985
+     ]
     ]
    ],
    "holeMetadata": [
+    {
+     "source": "manual"
+    },
+    {
+     "source": "manual"
+    },
     {
      "source": "manual"
     }
@@ -2471,7 +2671,75 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "library:wood-floorplank1",
+    "surface": "library:wood-woodplank48",
+    "side": "library:preset-lightgrey"
+   },
+   "metadata": {}
+  },
+  "slab_u_room1": {
+   "object": "node",
+   "id": "slab_u_room1",
+   "type": "slab",
+   "name": "En suite floor",
+   "parentId": "level_1",
+   "polygon": [
+    [
+     2.9566,
+     6.5989
+    ],
+    [
+     4.572,
+     6.5989
+    ],
+    [
+     4.572,
+     5.0749
+    ],
+    [
+     2.9566,
+     5.0749
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0.01,
+   "thickness": 0.4063,
+   "slots": {
+    "surface": "library:flooring-lightceramic24",
+    "side": "library:preset-lightgrey"
+   },
+   "metadata": {}
+  },
+  "slab_u_room2": {
+   "object": "node",
+   "id": "slab_u_room2",
+   "type": "slab",
+   "name": "Shower bath floor",
+   "parentId": "level_1",
+   "polygon": [
+    [
+     2.9566,
+     4.9682
+    ],
+    [
+     4.572,
+     4.9682
+    ],
+    [
+     4.572,
+     3.3985
+    ],
+    [
+     2.9566,
+     3.3985
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0.01,
+   "thickness": 0.4063,
+   "slots": {
+    "surface": "library:flooring-lightceramic24",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -3113,6 +3381,1269 @@
    "thickness": 0.25,
    "metadata": {}
   },
+  "cabinet-module_k1_1": {
+   "object": "node",
+   "id": "cabinet-module_k1_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k1",
+   "cabinetType": "base",
+   "position": [
+    0.32,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.64,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k1m0c0",
+     "type": "drawer",
+     "drawerCount": 3
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k1_2": {
+   "object": "node",
+   "id": "cabinet-module_k1_2",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k1",
+   "cabinetType": "base",
+   "position": [
+    1.189,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 1.097,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k1m1c0",
+     "type": "sink",
+     "sinkLayout": "double"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k1_3": {
+   "object": "node",
+   "id": "cabinet-module_k1_3",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k1",
+   "cabinetType": "base",
+   "position": [
+    2.042,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.61,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k1m2c0",
+     "type": "dishwasher"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k1": {
+   "object": "node",
+   "id": "cabinet_k1",
+   "type": "cabinet",
+   "name": "Kitchen sink run",
+   "parentId": "level_0",
+   "runTier": "base",
+   "position": [
+    4.572,
+    0,
+    6.2941
+   ],
+   "rotation": 3.141592653589793,
+   "width": 2.347,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k1_1",
+    "cabinet-module_k1_2",
+    "cabinet-module_k1_3"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k2_1": {
+   "object": "node",
+   "id": "cabinet-module_k2_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k2",
+   "cabinetType": "base",
+   "position": [
+    0.38,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.76,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k2m0c0",
+     "type": "cooktop-gas",
+     "cooktopLayout": "gas-4burner"
+    },
+    {
+     "id": "k2m0c1",
+     "type": "oven"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k2_2": {
+   "object": "node",
+   "id": "cabinet-module_k2_2",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k2",
+   "cabinetType": "base",
+   "position": [
+    1.18,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.84,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k2m1c0",
+     "type": "door",
+     "doorType": "double"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k2": {
+   "object": "node",
+   "id": "cabinet_k2",
+   "type": "cabinet",
+   "name": "Kitchen range run",
+   "parentId": "level_0",
+   "runTier": "base",
+   "position": [
+    4.2672,
+    0,
+    4.3891
+   ],
+   "rotation": -1.5707963267948966,
+   "width": 1.6,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k2_1",
+    "cabinet-module_k2_2"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k3_1": {
+   "object": "node",
+   "id": "cabinet-module_k3_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k3",
+   "cabinetType": "base",
+   "position": [
+    0.3,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.6,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k3m0c0",
+     "type": "door",
+     "doorType": "double"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k3_2": {
+   "object": "node",
+   "id": "cabinet-module_k3_2",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k3",
+   "cabinetType": "base",
+   "position": [
+    0.9,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.6,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k3m1c0",
+     "type": "drawer",
+     "drawerCount": 3
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k3_3": {
+   "object": "node",
+   "id": "cabinet-module_k3_3",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k3",
+   "cabinetType": "base",
+   "position": [
+    1.423,
+    0.1,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.446,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k3m2c0",
+     "type": "door",
+     "doorType": "single-left"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k3": {
+   "object": "node",
+   "id": "cabinet_k3",
+   "type": "cabinet",
+   "name": "Kitchen north run",
+   "parentId": "level_0",
+   "runTier": "base",
+   "position": [
+    2.9261,
+    0,
+    4.0843
+   ],
+   "rotation": 0,
+   "width": 1.646,
+   "depth": 0.61,
+   "carcassHeight": 0.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": true,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k3_1",
+    "cabinet-module_k3_2",
+    "cabinet-module_k3_3"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k4_1": {
+   "object": "node",
+   "id": "cabinet-module_k4_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k4",
+   "cabinetType": "tall",
+   "position": [
+    0.328,
+    0,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.655,
+   "depth": 0.7,
+   "carcassHeight": 1.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k4m0c0",
+     "type": "fridge-double"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k4": {
+   "object": "node",
+   "id": "cabinet_k4",
+   "type": "cabinet",
+   "name": "Kitchen refrigerator",
+   "parentId": "level_0",
+   "runTier": "tall",
+   "position": [
+    2.2403,
+    0,
+    4.13
+   ],
+   "rotation": 0,
+   "width": 0.655,
+   "depth": 0.7,
+   "carcassHeight": 1.8,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k4_1"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k5_1": {
+   "object": "node",
+   "id": "cabinet-module_k5_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k5",
+   "cabinetType": "base",
+   "position": [
+    0.3,
+    0,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.6,
+   "depth": 0.35,
+   "carcassHeight": 0.762,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k5m0c0",
+     "type": "door",
+     "doorType": "glass"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k5_2": {
+   "object": "node",
+   "id": "cabinet-module_k5_2",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k5",
+   "cabinetType": "base",
+   "position": [
+    0.9,
+    0,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.6,
+   "depth": 0.35,
+   "carcassHeight": 0.762,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k5m1c0",
+     "type": "door",
+     "doorType": "glass"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k5_3": {
+   "object": "node",
+   "id": "cabinet-module_k5_3",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k5",
+   "cabinetType": "base",
+   "position": [
+    1.423,
+    0,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.446,
+   "depth": 0.35,
+   "carcassHeight": 0.762,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k5m2c0",
+     "type": "door",
+     "doorType": "glass"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k5": {
+   "object": "node",
+   "id": "cabinet_k5",
+   "type": "cabinet",
+   "name": "Kitchen upper cabinets",
+   "parentId": "level_0",
+   "runTier": "wall",
+   "position": [
+    2.9261,
+    1.45,
+    3.9548
+   ],
+   "rotation": 0,
+   "width": 1.646,
+   "depth": 0.35,
+   "carcassHeight": 0.762,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k5_1",
+    "cabinet-module_k5_2",
+    "cabinet-module_k5_3"
+   ],
+   "metadata": {}
+  },
+  "cabinet-module_k6_1": {
+   "object": "node",
+   "id": "cabinet-module_k6_1",
+   "type": "cabinet-module",
+   "parentId": "cabinet_k6",
+   "cabinetType": "base",
+   "position": [
+    0.38,
+    0,
+    0
+   ],
+   "rotation": 0,
+   "width": 0.76,
+   "depth": 0.5,
+   "carcassHeight": 0.7,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "stack": [
+    {
+     "id": "k6m0c0",
+     "type": "hood-pyramid"
+    }
+   ],
+   "metadata": {}
+  },
+  "cabinet_k6": {
+   "object": "node",
+   "id": "cabinet_k6",
+   "type": "cabinet",
+   "name": "Range hood",
+   "parentId": "level_0",
+   "runTier": "wall",
+   "position": [
+    4.3221,
+    1.5,
+    4.3891
+   ],
+   "rotation": -1.5707963267948966,
+   "width": 0.76,
+   "depth": 0.5,
+   "carcassHeight": 0.7,
+   "frontStyle": "shaker",
+   "handleStyle": "knob",
+   "withCountertop": false,
+   "slots": {
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass"
+   },
+   "children": [
+    "cabinet-module_k6_1"
+   ],
+   "metadata": {}
+  },
+  "slab_yard_lawn": {
+   "object": "node",
+   "id": "slab_yard_lawn",
+   "type": "slab",
+   "name": "Lawn (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     -0.0762,
+     0.1676
+    ],
+    [
+     4.6482,
+     0.1676
+    ],
+    [
+     4.6482,
+     -6.7056
+    ],
+    [
+     -0.0762,
+     -6.7056
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.335,
+   "thickness": 0.3,
+   "slots": {
+    "surface": "library:preset-forest",
+    "side": "library:preset-forest"
+   },
+   "metadata": {}
+  },
+  "slab_yard_patio": {
+   "object": "node",
+   "id": "slab_yard_patio",
+   "type": "slab",
+   "name": "Concrete patio (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.286,
+     -3.6576
+    ],
+    [
+     4.572,
+     -3.6576
+    ],
+    [
+     4.572,
+     -6.6142
+    ],
+    [
+     2.286,
+     -6.6142
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.32,
+   "thickness": 0.12,
+   "slots": {
+    "surface": "library:concrete-polished",
+    "side": "library:concrete-polished"
+   },
+   "metadata": {}
+  },
+  "slab_yard_bed1": {
+   "object": "node",
+   "id": "slab_yard_bed1",
+   "type": "slab",
+   "name": "Raised bed 1 (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.0457,
+     -1.3716
+    ],
+    [
+     0.9449,
+     -1.3716
+    ],
+    [
+     0.9449,
+     -3.2004
+    ],
+    [
+     0.0457,
+     -3.2004
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.89,
+   "thickness": 0.45,
+   "slots": {
+    "surface": "library:preset-midgrey",
+    "side": "library:preset-midgrey"
+   },
+   "metadata": {}
+  },
+  "slab_yard_soil1": {
+   "object": "node",
+   "id": "slab_yard_soil1",
+   "type": "slab",
+   "name": "Bed soil 1",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.1067,
+     -1.4326
+    ],
+    [
+     0.8839,
+     -1.4326
+    ],
+    [
+     0.8839,
+     -3.1394
+    ],
+    [
+     0.1067,
+     -3.1394
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.87,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "library:preset-espresso",
+    "side": "library:preset-espresso"
+   },
+   "metadata": {}
+  },
+  "slab_yard_bed2": {
+   "object": "node",
+   "id": "slab_yard_bed2",
+   "type": "slab",
+   "name": "Raised bed 2 (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.0457,
+     -3.5052
+    ],
+    [
+     0.9449,
+     -3.5052
+    ],
+    [
+     0.9449,
+     -5.334
+    ],
+    [
+     0.0457,
+     -5.334
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.89,
+   "thickness": 0.45,
+   "slots": {
+    "surface": "library:preset-midgrey",
+    "side": "library:preset-midgrey"
+   },
+   "metadata": {}
+  },
+  "slab_yard_soil2": {
+   "object": "node",
+   "id": "slab_yard_soil2",
+   "type": "slab",
+   "name": "Bed soil 2",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.1067,
+     -3.5662
+    ],
+    [
+     0.8839,
+     -3.5662
+    ],
+    [
+     0.8839,
+     -5.273
+    ],
+    [
+     0.1067,
+     -5.273
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.87,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "library:preset-espresso",
+    "side": "library:preset-espresso"
+   },
+   "metadata": {}
+  },
+  "slab_yard_bench": {
+   "object": "node",
+   "id": "slab_yard_bench",
+   "type": "slab",
+   "name": "Built-in L bench (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.7432,
+     -6.6142
+    ],
+    [
+     4.572,
+     -6.6142
+    ],
+    [
+     4.572,
+     -3.9624
+    ],
+    [
+     3.9624,
+     -3.9624
+    ],
+    [
+     3.9624,
+     -6.0046
+    ],
+    [
+     2.7432,
+     -6.0046
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.89,
+   "thickness": 0.45,
+   "slots": {
+    "surface": "library:preset-white",
+    "side": "library:preset-white"
+   },
+   "metadata": {}
+  },
+  "slab_yard_cushion": {
+   "object": "node",
+   "id": "slab_yard_cushion",
+   "type": "slab",
+   "name": "Bench cushion",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.8042,
+     -6.5532
+    ],
+    [
+     4.511,
+     -6.5532
+    ],
+    [
+     4.511,
+     -4.0234
+    ],
+    [
+     4.0234,
+     -4.0234
+    ],
+    [
+     4.0234,
+     -6.0655
+    ],
+    [
+     2.8042,
+     -6.0655
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.77,
+   "thickness": 0.1,
+   "slots": {
+    "surface": "library:preset-cream",
+    "side": "library:preset-cream"
+   },
+   "metadata": {}
+  },
+  "slab_deck": {
+   "object": "node",
+   "id": "slab_deck",
+   "type": "slab",
+   "name": "Rear deck (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     1.2192,
+     0.1676
+    ],
+    [
+     2.7432,
+     0.1676
+    ],
+    [
+     2.7432,
+     -1.3564
+    ],
+    [
+     1.2192,
+     -1.3564
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0,
+   "thickness": 0.15,
+   "slots": {
+    "surface": "library:wood-woodplank48",
+    "side": "library:wood-woodplank48"
+   },
+   "metadata": {}
+  },
+  "stair_deck": {
+   "object": "node",
+   "id": "stair_deck",
+   "type": "stair",
+   "name": "Deck stairs (assumed)",
+   "parentId": "level_0",
+   "position": [
+    1.9812,
+    -1.34,
+    -3.1336
+   ],
+   "rotation": 0,
+   "stairType": "straight",
+   "fromLevelId": null,
+   "toLevelId": null,
+   "slabOpeningMode": "none",
+   "width": 0.9144,
+   "totalRise": 1.34,
+   "stepCount": 7,
+   "thickness": 0.25,
+   "fillToFloor": true,
+   "railingMode": "both",
+   "railingHeight": 0.92,
+   "children": [
+    "sseg_deck"
+   ],
+   "metadata": {}
+  },
+  "sseg_deck": {
+   "object": "node",
+   "id": "sseg_deck",
+   "type": "stair-segment",
+   "parentId": "stair_deck",
+   "segmentType": "stair",
+   "width": 0.9144,
+   "length": 1.7773,
+   "height": 1.34,
+   "stepCount": 7,
+   "attachmentSide": "front",
+   "fillToFloor": true,
+   "thickness": 0.25,
+   "metadata": {}
+  },
+  "fence_deck1": {
+   "object": "node",
+   "id": "fence_deck1",
+   "type": "fence",
+   "name": "Deck guard",
+   "parentId": "level_0",
+   "start": [
+    1.2192,
+    0.1676
+   ],
+   "end": [
+    1.2192,
+    -1.3564
+   ],
+   "height": 0.914,
+   "thickness": 0.08,
+   "style": "slat",
+   "baseStyle": "grounded",
+   "supportSlabId": "slab_deck",
+   "color": "#b98a57",
+   "metadata": {}
+  },
+  "fence_deck2": {
+   "object": "node",
+   "id": "fence_deck2",
+   "type": "fence",
+   "name": "Deck guard",
+   "parentId": "level_0",
+   "start": [
+    2.7432,
+    0.1676
+   ],
+   "end": [
+    2.7432,
+    -1.3564
+   ],
+   "height": 0.914,
+   "thickness": 0.08,
+   "style": "slat",
+   "baseStyle": "grounded",
+   "supportSlabId": "slab_deck",
+   "color": "#b98a57",
+   "metadata": {}
+  },
+  "fence_deck3": {
+   "object": "node",
+   "id": "fence_deck3",
+   "type": "fence",
+   "name": "Deck guard",
+   "parentId": "level_0",
+   "start": [
+    1.2192,
+    -1.3564
+   ],
+   "end": [
+    1.524,
+    -1.3564
+   ],
+   "height": 0.914,
+   "thickness": 0.08,
+   "style": "slat",
+   "baseStyle": "grounded",
+   "supportSlabId": "slab_deck",
+   "color": "#b98a57",
+   "metadata": {}
+  },
+  "fence_deck4": {
+   "object": "node",
+   "id": "fence_deck4",
+   "type": "fence",
+   "name": "Deck guard",
+   "parentId": "level_0",
+   "start": [
+    2.4384,
+    -1.3564
+   ],
+   "end": [
+    2.7432,
+    -1.3564
+   ],
+   "height": 0.914,
+   "thickness": 0.08,
+   "style": "slat",
+   "baseStyle": "grounded",
+   "supportSlabId": "slab_deck",
+   "color": "#b98a57",
+   "metadata": {}
+  },
+  "slab_stoop": {
+   "object": "node",
+   "id": "slab_stoop",
+   "type": "slab",
+   "name": "Front landing (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.061,
+     11.43
+    ],
+    [
+     1.0058,
+     11.43
+    ],
+    [
+     1.0058,
+     10.5156
+    ],
+    [
+     0.061,
+     10.5156
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0,
+   "thickness": 0.15,
+   "slots": {
+    "surface": "library:concrete-polished",
+    "side": "library:concrete-polished"
+   },
+   "metadata": {}
+  },
+  "slab_front_walk": {
+   "object": "node",
+   "id": "slab_front_walk",
+   "type": "slab",
+   "name": "Front walk (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0,
+     13.5636
+    ],
+    [
+     1.0516,
+     13.5636
+    ],
+    [
+     1.0516,
+     10.5156
+    ],
+    [
+     0,
+     10.5156
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.33,
+   "thickness": 0.12,
+   "slots": {
+    "surface": "library:concrete-polished",
+    "side": "library:concrete-polished"
+   },
+   "metadata": {}
+  },
+  "stair_front": {
+   "object": "node",
+   "id": "stair_front",
+   "type": "stair",
+   "name": "Front steps (assumed)",
+   "parentId": "level_0",
+   "position": [
+    0.5258,
+    -1.34,
+    13.2073
+   ],
+   "rotation": 3.141592653589793,
+   "stairType": "straight",
+   "fromLevelId": null,
+   "toLevelId": null,
+   "slabOpeningMode": "none",
+   "width": 0.9144,
+   "totalRise": 1.34,
+   "stepCount": 7,
+   "thickness": 0.25,
+   "fillToFloor": true,
+   "railingMode": "both",
+   "railingHeight": 0.92,
+   "children": [
+    "sseg_front"
+   ],
+   "metadata": {}
+  },
+  "sseg_front": {
+   "object": "node",
+   "id": "sseg_front",
+   "type": "stair-segment",
+   "parentId": "stair_front",
+   "segmentType": "stair",
+   "width": 0.9144,
+   "length": 1.7773,
+   "height": 1.34,
+   "stepCount": 7,
+   "attachmentSide": "front",
+   "fillToFloor": true,
+   "thickness": 0.25,
+   "metadata": {}
+  },
+  "fence_back": {
+   "object": "node",
+   "id": "fence_back",
+   "type": "fence",
+   "name": "Back fence (assumed)",
+   "parentId": "level_0",
+   "start": [
+    -0.0762,
+    -6.7056
+   ],
+   "end": [
+    4.6482,
+    -6.7056
+   ],
+   "height": 1.83,
+   "thickness": 0.05,
+   "style": "privacy",
+   "supportOffset": -1.34,
+   "color": "#c8a165",
+   "metadata": {}
+  },
+  "fence_west": {
+   "object": "node",
+   "id": "fence_west",
+   "type": "fence",
+   "name": "West yard fence (assumed)",
+   "parentId": "level_0",
+   "start": [
+    -0.0762,
+    0.1676
+   ],
+   "end": [
+    -0.0762,
+    -6.7056
+   ],
+   "height": 1.83,
+   "thickness": 0.05,
+   "style": "privacy",
+   "supportOffset": -1.34,
+   "color": "#c8a165",
+   "metadata": {}
+  },
+  "fence_east": {
+   "object": "node",
+   "id": "fence_east",
+   "type": "fence",
+   "name": "East yard fence (assumed)",
+   "parentId": "level_0",
+   "start": [
+    4.6482,
+    0.1676
+   ],
+   "end": [
+    4.6482,
+    -6.7056
+   ],
+   "height": 1.83,
+   "thickness": 0.05,
+   "style": "privacy",
+   "supportOffset": -1.34,
+   "color": "#c8a165",
+   "metadata": {}
+  },
   "item_m1": {
    "object": "node",
    "id": "item_m1",
@@ -3510,289 +5041,6 @@
    "id": "item_m8",
    "type": "item",
    "parentId": "level_0",
-   "name": "Kitchen Counter",
-   "position": [
-    3.399,
-    0,
-    6.294
-   ],
-   "rotation": [
-    0,
-    3.141592653589793,
-    0
-   ],
-   "scale": [
-    1.173,
-    1,
-    0.61
-   ],
-   "asset": {
-    "id": "kitchen-counter",
-    "category": "kitchen",
-    "name": "Kitchen Counter",
-    "thumbnail": "/items/kitchen-counter/thumbnail.webp",
-    "src": "/items/kitchen-counter/model.glb",
-    "dimensions": [
-     2,
-     0.8,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "storage",
-     "kitchen"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m9": {
-   "object": "node",
-   "id": "item_m9",
-   "type": "item",
-   "parentId": "level_0",
-   "name": "Kitchen Counter",
-   "position": [
-    4.267,
-    0,
-    5.639
-   ],
-   "rotation": [
-    0,
-    -1.5707963267948966,
-    0
-   ],
-   "scale": [
-    0.32,
-    1,
-    0.61
-   ],
-   "asset": {
-    "id": "kitchen-counter",
-    "category": "kitchen",
-    "name": "Kitchen Counter",
-    "thumbnail": "/items/kitchen-counter/thumbnail.webp",
-    "src": "/items/kitchen-counter/model.glb",
-    "dimensions": [
-     2,
-     0.8,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "storage",
-     "kitchen"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m10": {
-   "object": "node",
-   "id": "item_m10",
-   "type": "item",
-   "parentId": "level_0",
-   "name": "Kitchen Counter",
-   "position": [
-    3.749,
-    0,
-    4.084
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    0.823,
-    1,
-    0.61
-   ],
-   "asset": {
-    "id": "kitchen-counter",
-    "category": "kitchen",
-    "name": "Kitchen Counter",
-    "thumbnail": "/items/kitchen-counter/thumbnail.webp",
-    "src": "/items/kitchen-counter/model.glb",
-    "dimensions": [
-     2,
-     0.8,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "storage",
-     "kitchen"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m11": {
-   "object": "node",
-   "id": "item_m11",
-   "type": "item",
-   "parentId": "level_0",
-   "name": "Fridge",
-   "position": [
-    2.56,
-    0,
-    4.191
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    0.64,
-    0.64,
-    0.64
-   ],
-   "asset": {
-    "id": "fridge",
-    "category": "kitchen",
-    "name": "Fridge",
-    "thumbnail": "/items/fridge/thumbnail.webp",
-    "src": "/items/fridge/model.glb",
-    "dimensions": [
-     1,
-     2,
-     1
-    ],
-    "offset": [
-     0.01,
-     0,
-     -0.05
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "kitchen"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m12": {
-   "object": "node",
-   "id": "item_m12",
-   "type": "item",
-   "parentId": "level_0",
-   "name": "Stove",
-   "position": [
-    4.252,
-    0,
-    4.953
-   ],
-   "rotation": [
-    0,
-    -1.5707963267948966,
-    0
-   ],
-   "scale": [
-    0.64,
-    0.64,
-    0.64
-   ],
-   "asset": {
-    "id": "stove",
-    "category": "kitchen",
-    "name": "Stove",
-    "thumbnail": "/items/stove/thumbnail.webp",
-    "src": "/items/stove/model.glb",
-    "dimensions": [
-     1,
-     1,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     -0.05
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "kitchen"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m13": {
-   "object": "node",
-   "id": "item_m13",
-   "type": "item",
-   "parentId": "level_0",
    "name": "Washing Machine",
    "position": [
     0.336,
@@ -3845,9 +5093,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m14": {
+  "item_m9": {
    "object": "node",
-   "id": "item_m14",
+   "id": "item_m9",
    "type": "item",
    "parentId": "level_0",
    "name": "Toilet",
@@ -3901,16 +5149,16 @@
    "children": [],
    "metadata": {}
   },
-  "item_m15": {
+  "item_m10": {
    "object": "node",
-   "id": "item_m15",
+   "id": "item_m10",
    "type": "item",
    "parentId": "level_0",
    "name": "Bathroom Sink",
    "position": [
-    1.311,
+    0.488,
     0,
-    4.328
+    4.389
    ],
    "rotation": [
     0,
@@ -4509,6 +5757,230 @@
      "floor",
      "large",
      "bathroom"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y1": {
+   "object": "node",
+   "id": "item_y1",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Dining Table",
+   "position": [
+    3.048,
+    -1.34,
+    -4.877
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.549,
+    1,
+    0.914
+   ],
+   "asset": {
+    "id": "dining-table",
+    "category": "furniture",
+    "name": "Dining Table",
+    "thumbnail": "/items/dining-table/thumbnail.webp",
+    "src": "/items/dining-table/model.glb",
+    "dimensions": [
+     2.5,
+     0.8,
+     1
+    ],
+    "offset": [
+     0,
+     0,
+     -0.01
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "table",
+     "dining"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y2": {
+   "object": "node",
+   "id": "item_y2",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Dining Chair",
+   "position": [
+    2.073,
+    -1.34,
+    -4.877
+   ],
+   "rotation": [
+    0,
+    1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "dining-chair",
+    "category": "furniture",
+    "name": "Dining Chair",
+    "thumbnail": "/items/dining-chair/thumbnail.webp",
+    "src": "/items/dining-chair/model.glb",
+    "dimensions": [
+     0.5,
+     1,
+     0.5
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "seating",
+     "dining"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y3": {
+   "object": "node",
+   "id": "item_y3",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Dining Chair",
+   "position": [
+    2.743,
+    -1.34,
+    -4.145
+   ],
+   "rotation": [
+    0,
+    3.141592653589793,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "dining-chair",
+    "category": "furniture",
+    "name": "Dining Chair",
+    "thumbnail": "/items/dining-chair/thumbnail.webp",
+    "src": "/items/dining-chair/model.glb",
+    "dimensions": [
+     0.5,
+     1,
+     0.5
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "seating",
+     "dining"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y4": {
+   "object": "node",
+   "id": "item_y4",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Dining Chair",
+   "position": [
+    3.414,
+    -1.34,
+    -4.145
+   ],
+   "rotation": [
+    0,
+    3.141592653589793,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "dining-chair",
+    "category": "furniture",
+    "name": "Dining Chair",
+    "thumbnail": "/items/dining-chair/thumbnail.webp",
+    "src": "/items/dining-chair/model.glb",
+    "dimensions": [
+     0.5,
+     1,
+     0.5
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "seating",
+     "dining"
     ]
    },
    "children": [],
