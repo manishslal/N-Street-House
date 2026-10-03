@@ -249,17 +249,6 @@
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
    },
-   "faceRegions": [
-    {
-     "id": "accent_dining",
-     "face": "a",
-     "u0": 6.767,
-     "u1": 10.043,
-     "v0": 0,
-     "v1": 2.44,
-     "finish": "library:preset-terracotta"
-    }
-   ],
    "fillToTerrain": true
   },
   "wall_m3": {
@@ -1249,6 +1238,7 @@
    ],
    "holes": [],
    "height": 2.4384,
+   "children": [],
    "metadata": {}
   },
   "zone_m1": {
@@ -2835,6 +2825,7 @@
    ],
    "holes": [],
    "height": 2.4384,
+   "children": [],
    "metadata": {}
   },
   "zone_u1": {
@@ -4762,7 +4753,10 @@
      "floor",
      "table",
      "living"
-    ]
+    ],
+    "surface": {
+     "height": 0.3
+    }
    },
    "children": [],
    "metadata": {}
@@ -4818,7 +4812,10 @@
      "floor",
      "table",
      "dining"
-    ]
+    ],
+    "surface": {
+     "height": 0.8
+    }
    },
    "children": [],
    "metadata": {}
@@ -5824,7 +5821,10 @@
      "floor",
      "table",
      "dining"
-    ]
+    ],
+    "surface": {
+     "height": 0.8
+    }
    },
    "children": [],
    "metadata": {}

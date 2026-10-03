@@ -94,7 +94,6 @@
     "cabinet_k4",
     "cabinet_k5",
     "cabinet_k6",
-    "cabinet_k7",
     "slab_yard_lawn",
     "slab_yard_patio",
     "slab_yard_bed1",
@@ -115,6 +114,17 @@
     "fence_back",
     "fence_west",
     "fence_east",
+    "slab_shelf1",
+    "slab_shelf2",
+    "slab_hood",
+    "slab_stone1",
+    "slab_stone2",
+    "slab_stone3",
+    "slab_yard_gravel",
+    "slab_pillow1",
+    "slab_pillow2",
+    "slab_pillow3",
+    "slab_yard_shelf",
     "item_m1",
     "item_m2",
     "item_m3",
@@ -124,11 +134,25 @@
     "item_m7",
     "item_m8",
     "item_m9",
-    "item_m10",
+    "item_m23",
+    "item_m24",
+    "item_m25",
+    "item_m26",
+    "item_m27",
+    "item_m28",
+    "item_m29",
+    "item_m30",
     "item_y1",
     "item_y2",
     "item_y3",
     "item_y4",
+    "item_y5",
+    "item_y6",
+    "item_y7",
+    "item_y8",
+    "item_y9",
+    "item_y10",
+    "item_y11",
     "spawn_entry"
    ],
    "metadata": {}
@@ -251,13 +275,76 @@
    },
    "faceRegions": [
     {
-     "id": "accent_dining",
+     "id": "niche1",
      "face": "a",
-     "u0": 6.767,
-     "u1": 10.043,
-     "v0": 0,
-     "v1": 2.44,
-     "finish": "library:preset-terracotta"
+     "u0": 7.239,
+     "u1": 8.519,
+     "v0": 0.05,
+     "v1": 1.45,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch2",
+     "face": "a",
+     "u0": 7.239,
+     "u1": 7.422,
+     "v0": 1.45,
+     "v1": 1.753,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch3",
+     "face": "a",
+     "u0": 7.422,
+     "u1": 7.605,
+     "v0": 1.45,
+     "v1": 1.933,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch4",
+     "face": "a",
+     "u0": 7.605,
+     "u1": 7.788,
+     "v0": 1.45,
+     "v1": 2.014,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch5",
+     "face": "a",
+     "u0": 7.788,
+     "u1": 7.971,
+     "v0": 1.45,
+     "v1": 2.039,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch6",
+     "face": "a",
+     "u0": 7.971,
+     "u1": 8.153,
+     "v0": 1.45,
+     "v1": 2.014,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch7",
+     "face": "a",
+     "u0": 8.153,
+     "u1": 8.336,
+     "v0": 1.45,
+     "v1": 1.933,
+     "finish": "library:preset-olive"
+    },
+    {
+     "id": "arch8",
+     "face": "a",
+     "u0": 8.336,
+     "u1": 8.519,
+     "v0": 1.45,
+     "v1": 1.753,
+     "finish": "library:preset-olive"
     }
    ],
    "fillToTerrain": true
@@ -527,8 +614,8 @@
    "openingKind": "door",
    "metadata": {},
    "swingDirection": "inward",
-   "hingesSide": "left",
-   "handleSide": "right"
+   "hingesSide": "right",
+   "handleSide": "left"
   },
   "wall_m6": {
    "object": "node",
@@ -817,7 +904,27 @@
     "b": "library:preset-white",
     "aSkirting": "library:preset-white",
     "bSkirting": "library:preset-white"
-   }
+   },
+   "faceRegions": [
+    {
+     "id": "accent9",
+     "face": "a",
+     "u0": 0,
+     "u1": 2.484,
+     "v0": 0,
+     "v1": 2.44,
+     "finish": "library:preset-terracotta"
+    },
+    {
+     "id": "splash10",
+     "face": "b",
+     "u0": 0.762,
+     "u1": 2.484,
+     "v0": 0.94,
+     "v1": 1.45,
+     "finish": "library:flooring-statuarettowhite"
+    }
+   ]
   },
   "wall_m13": {
    "object": "node",
@@ -981,8 +1088,8 @@
    "openingKind": "door",
    "metadata": {},
    "swingDirection": "inward",
-   "hingesSide": "left",
-   "handleSide": "right"
+   "hingesSide": "right",
+   "handleSide": "left"
   },
   "wall_m16": {
    "object": "node",
@@ -1216,6 +1323,21 @@
    ],
    "holes": [],
    "height": 2.4384,
+   "children": [
+    "item_m10",
+    "item_m11",
+    "item_m12",
+    "item_m13",
+    "item_m14",
+    "item_m15",
+    "item_m16",
+    "item_m17",
+    "item_m18",
+    "item_m19",
+    "item_m20",
+    "item_m21",
+    "item_m22"
+   ],
    "metadata": {}
   },
   "zone_m1": {
@@ -2818,6 +2940,7 @@
    ],
    "holes": [],
    "height": 2.4384,
+   "children": [],
    "metadata": {}
   },
   "zone_u1": {
@@ -3821,11 +3944,11 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "front": "#b9bcc0",
+    "carcass": "#b9bcc0",
+    "plinth": "#b9bcc0",
+    "countertop": "#b9bcc0",
+    "hardware": "#b9bcc0"
    },
    "stack": [
     {
@@ -3855,11 +3978,11 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "front": "#b9bcc0",
+    "carcass": "#b9bcc0",
+    "plinth": "#b9bcc0",
+    "countertop": "#b9bcc0",
+    "hardware": "#b9bcc0"
    },
    "children": [
     "cabinet-module_k4_1"
@@ -4008,70 +4131,6 @@
    "parentId": "cabinet_k6",
    "cabinetType": "base",
    "position": [
-    0.38,
-    0,
-    0
-   ],
-   "rotation": 0,
-   "width": 0.76,
-   "depth": 0.5,
-   "carcassHeight": 0.7,
-   "frontStyle": "shaker",
-   "handleStyle": "knob",
-   "withCountertop": false,
-   "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
-   },
-   "stack": [
-    {
-     "id": "k6m0c0",
-     "type": "hood-pyramid"
-    }
-   ],
-   "metadata": {}
-  },
-  "cabinet_k6": {
-   "object": "node",
-   "id": "cabinet_k6",
-   "type": "cabinet",
-   "name": "Range hood",
-   "parentId": "level_0",
-   "runTier": "wall",
-   "position": [
-    4.3221,
-    1.5,
-    4.3891
-   ],
-   "rotation": -1.5707963267948966,
-   "width": 0.76,
-   "depth": 0.5,
-   "carcassHeight": 0.7,
-   "frontStyle": "shaker",
-   "handleStyle": "knob",
-   "withCountertop": false,
-   "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
-   },
-   "children": [
-    "cabinet-module_k6_1"
-   ],
-   "metadata": {}
-  },
-  "cabinet-module_k7_1": {
-   "object": "node",
-   "id": "cabinet-module_k7_1",
-   "type": "cabinet-module",
-   "parentId": "cabinet_k7",
-   "cabinetType": "base",
-   "position": [
     0.305,
     0.1,
     0
@@ -4084,26 +4143,26 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#6b4630",
+    "carcass": "#6b4630",
+    "plinth": "#6b4630",
+    "countertop": "#6b4630",
     "hardware": "library:metal-brass"
    },
    "stack": [
     {
-     "id": "k7m0c0",
+     "id": "k6m0c0",
      "type": "door",
      "doorType": "single-left"
     }
    ],
    "metadata": {}
   },
-  "cabinet-module_k7_2": {
+  "cabinet-module_k6_2": {
    "object": "node",
-   "id": "cabinet-module_k7_2",
+   "id": "cabinet-module_k6_2",
    "type": "cabinet-module",
-   "parentId": "cabinet_k7",
+   "parentId": "cabinet_k6",
    "cabinetType": "base",
    "position": [
     0.915,
@@ -4118,26 +4177,26 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#6b4630",
+    "carcass": "#6b4630",
+    "plinth": "#6b4630",
+    "countertop": "#6b4630",
     "hardware": "library:metal-brass"
    },
    "stack": [
     {
-     "id": "k7m1c0",
+     "id": "k6m1c0",
      "type": "drawer",
      "drawerCount": 3
     }
    ],
    "metadata": {}
   },
-  "cabinet-module_k7_3": {
+  "cabinet-module_k6_3": {
    "object": "node",
-   "id": "cabinet-module_k7_3",
+   "id": "cabinet-module_k6_3",
    "type": "cabinet-module",
-   "parentId": "cabinet_k7",
+   "parentId": "cabinet_k6",
    "cabinetType": "base",
    "position": [
     1.525,
@@ -4152,24 +4211,24 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#6b4630",
+    "carcass": "#6b4630",
+    "plinth": "#6b4630",
+    "countertop": "#6b4630",
     "hardware": "library:metal-brass"
    },
    "stack": [
     {
-     "id": "k7m2c0",
+     "id": "k6m2c0",
      "type": "door",
      "doorType": "single-right"
     }
    ],
    "metadata": {}
   },
-  "cabinet_k7": {
+  "cabinet_k6": {
    "object": "node",
-   "id": "cabinet_k7",
+   "id": "cabinet_k6",
    "type": "cabinet",
    "name": "Dining sideboard",
    "parentId": "level_0",
@@ -4187,16 +4246,16 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "library:preset-sage",
-    "carcass": "library:preset-sage",
-    "plinth": "library:preset-sage",
-    "countertop": "library:flooring-statuarettowhite",
+    "front": "#6b4630",
+    "carcass": "#6b4630",
+    "plinth": "#6b4630",
+    "countertop": "#6b4630",
     "hardware": "library:metal-brass"
    },
    "children": [
-    "cabinet-module_k7_1",
-    "cabinet-module_k7_2",
-    "cabinet-module_k7_3"
+    "cabinet-module_k6_1",
+    "cabinet-module_k6_2",
+    "cabinet-module_k6_3"
    ],
    "metadata": {}
   },
@@ -4827,6 +4886,452 @@
    "color": "#c8a165",
    "metadata": {}
   },
+  "slab_shelf1": {
+   "object": "node",
+   "id": "slab_shelf1",
+   "type": "slab",
+   "name": "Niche shelf",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     4.3434,
+     3.2004
+    ],
+    [
+     4.5629,
+     3.2004
+    ],
+    [
+     4.5629,
+     1.9202
+    ],
+    [
+     4.3434,
+     1.9202
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 1.3,
+   "thickness": 0.03,
+   "slots": {
+    "surface": "#6b4630",
+    "side": "#6b4630"
+   },
+   "metadata": {}
+  },
+  "slab_shelf2": {
+   "object": "node",
+   "id": "slab_shelf2",
+   "type": "slab",
+   "name": "Niche shelf",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     4.3434,
+     3.2004
+    ],
+    [
+     4.5629,
+     3.2004
+    ],
+    [
+     4.5629,
+     1.9202
+    ],
+    [
+     4.3434,
+     1.9202
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 1.6,
+   "thickness": 0.03,
+   "slots": {
+    "surface": "#6b4630",
+    "side": "#6b4630"
+   },
+   "metadata": {}
+  },
+  "slab_hood": {
+   "object": "node",
+   "id": "slab_hood",
+   "type": "slab",
+   "name": "Plaster range hood",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     4.0538,
+     5.2273
+    ],
+    [
+     4.5629,
+     5.2273
+    ],
+    [
+     4.5629,
+     4.3129
+    ],
+    [
+     4.0538,
+     4.3129
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 2.35,
+   "thickness": 0.85,
+   "slots": {
+    "surface": "library:preset-white",
+    "side": "library:preset-white"
+   },
+   "metadata": {}
+  },
+  "slab_stone1": {
+   "object": "node",
+   "id": "slab_stone1",
+   "type": "slab",
+   "name": "Stepping stone (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     1.8745,
+     -3.4138
+    ],
+    [
+     1.8425,
+     -3.5123
+    ],
+    [
+     1.7587,
+     -3.5732
+    ],
+    [
+     1.6551,
+     -3.5732
+    ],
+    [
+     1.5713,
+     -3.5123
+    ],
+    [
+     1.5392,
+     -3.4138
+    ],
+    [
+     1.5713,
+     -3.3152
+    ],
+    [
+     1.6551,
+     -3.2543
+    ],
+    [
+     1.7587,
+     -3.2543
+    ],
+    [
+     1.8425,
+     -3.3152
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.305,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "#c9c4b8",
+    "side": "#c9c4b8"
+   },
+   "metadata": {}
+  },
+  "slab_stone2": {
+   "object": "node",
+   "id": "slab_stone2",
+   "type": "slab",
+   "name": "Stepping stone (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.2403,
+     -3.81
+    ],
+    [
+     2.2083,
+     -3.9085
+    ],
+    [
+     2.1244,
+     -3.9694
+    ],
+    [
+     2.0208,
+     -3.9694
+    ],
+    [
+     1.937,
+     -3.9085
+    ],
+    [
+     1.905,
+     -3.81
+    ],
+    [
+     1.937,
+     -3.7115
+    ],
+    [
+     2.0208,
+     -3.6506
+    ],
+    [
+     2.1244,
+     -3.6506
+    ],
+    [
+     2.2083,
+     -3.7115
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.305,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "#c9c4b8",
+    "side": "#c9c4b8"
+   },
+   "metadata": {}
+  },
+  "slab_stone3": {
+   "object": "node",
+   "id": "slab_stone3",
+   "type": "slab",
+   "name": "Stepping stone (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     1.8136,
+     -4.1453
+    ],
+    [
+     1.7815,
+     -4.2438
+    ],
+    [
+     1.6977,
+     -4.3047
+    ],
+    [
+     1.5941,
+     -4.3047
+    ],
+    [
+     1.5103,
+     -4.2438
+    ],
+    [
+     1.4783,
+     -4.1453
+    ],
+    [
+     1.5103,
+     -4.0467
+    ],
+    [
+     1.5941,
+     -3.9858
+    ],
+    [
+     1.6977,
+     -3.9858
+    ],
+    [
+     1.7815,
+     -4.0467
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.305,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "#c9c4b8",
+    "side": "#c9c4b8"
+   },
+   "metadata": {}
+  },
+  "slab_yard_gravel": {
+   "object": "node",
+   "id": "slab_yard_gravel",
+   "type": "slab",
+   "name": "Gravel strip (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     0.9449,
+     -1.3411
+    ],
+    [
+     1.3716,
+     -1.3411
+    ],
+    [
+     1.3716,
+     -5.3645
+    ],
+    [
+     0.9449,
+     -5.3645
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -1.328,
+   "thickness": 0.05,
+   "slots": {
+    "surface": "#b8b1a4",
+    "side": "#b8b1a4"
+   },
+   "metadata": {}
+  },
+  "slab_pillow1": {
+   "object": "node",
+   "id": "slab_pillow1",
+   "type": "slab",
+   "name": "Bench pillow",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     3.048,
+     -6.4313
+    ],
+    [
+     3.3223,
+     -6.4313
+    ],
+    [
+     3.3223,
+     -6.538
+    ],
+    [
+     3.048,
+     -6.538
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.32,
+   "thickness": 0.35,
+   "slots": {
+    "surface": "library:preset-olive",
+    "side": "library:preset-olive"
+   },
+   "metadata": {}
+  },
+  "slab_pillow2": {
+   "object": "node",
+   "id": "slab_pillow2",
+   "type": "slab",
+   "name": "Bench pillow",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     3.4442,
+     -6.4313
+    ],
+    [
+     3.7186,
+     -6.4313
+    ],
+    [
+     3.7186,
+     -6.538
+    ],
+    [
+     3.4442,
+     -6.538
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.32,
+   "thickness": 0.35,
+   "slots": {
+    "surface": "library:preset-sage",
+    "side": "library:preset-sage"
+   },
+   "metadata": {}
+  },
+  "slab_pillow3": {
+   "object": "node",
+   "id": "slab_pillow3",
+   "type": "slab",
+   "name": "Bench pillow",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     4.4501,
+     -6.4313
+    ],
+    [
+     4.7244,
+     -6.4313
+    ],
+    [
+     4.7244,
+     -6.538
+    ],
+    [
+     4.4501,
+     -6.538
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": -0.32,
+   "thickness": 0.35,
+   "slots": {
+    "surface": "library:preset-cream",
+    "side": "library:preset-cream"
+   },
+   "metadata": {}
+  },
+  "slab_yard_shelf": {
+   "object": "node",
+   "id": "slab_yard_shelf",
+   "type": "slab",
+   "name": "Fence shelf (assumed)",
+   "parentId": "level_0",
+   "polygon": [
+    [
+     2.8956,
+     -6.5532
+    ],
+    [
+     4.1148,
+     -6.5532
+    ],
+    [
+     4.1148,
+     -6.6904
+    ],
+    [
+     2.8956,
+     -6.6904
+    ]
+   ],
+   "holes": [],
+   "holeMetadata": [],
+   "elevation": 0.31,
+   "thickness": 0.03,
+   "slots": {
+    "surface": "#6b4630",
+    "side": "#6b4630"
+   },
+   "metadata": {}
+  },
   "item_m1": {
    "object": "node",
    "id": "item_m1",
@@ -4934,7 +5439,10 @@
      "floor",
      "table",
      "living"
-    ]
+    ],
+    "surface": {
+     "height": 0.3
+    }
    },
    "children": [],
    "metadata": {}
@@ -4990,7 +5498,10 @@
      "floor",
      "table",
      "dining"
-    ]
+    ],
+    "surface": {
+     "height": 0.8
+    }
    },
    "children": [],
    "metadata": {}
@@ -5224,6 +5735,1797 @@
    "id": "item_m8",
    "type": "item",
    "parentId": "level_0",
+   "name": "Rectangular Carpet",
+   "position": [
+    2.743,
+    0,
+    2.042
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.713,
+    1,
+    0.943
+   ],
+   "asset": {
+    "id": "rectangular-carpet",
+    "category": "furniture",
+    "name": "Rectangular Carpet",
+    "thumbnail": "/items/rectangular-carpet/thumbnail.webp",
+    "src": "/items/rectangular-carpet/model.glb",
+    "dimensions": [
+     2.78,
+     0.04,
+     1.81
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "carpet",
+     "rug",
+     "mat",
+     "textile",
+     "woven",
+     "rectangular",
+     "modern",
+     "wool",
+     "cotton",
+     "minimalist",
+     "decor",
+     "plush"
+    ],
+    "surface": {
+     "height": 0.03
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m9": {
+   "object": "node",
+   "id": "item_m9",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Rectangular Carpet",
+   "position": [
+    2.896,
+    0,
+    8.23
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.932,
+    1,
+    1.044
+   ],
+   "asset": {
+    "id": "rectangular-carpet",
+    "category": "furniture",
+    "name": "Rectangular Carpet",
+    "thumbnail": "/items/rectangular-carpet/thumbnail.webp",
+    "src": "/items/rectangular-carpet/model.glb",
+    "dimensions": [
+     2.78,
+     0.04,
+     1.81
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "carpet",
+     "rug",
+     "mat",
+     "textile",
+     "woven",
+     "rectangular",
+     "modern",
+     "wool",
+     "cotton",
+     "minimalist",
+     "decor",
+     "plush"
+    ],
+    "surface": {
+     "height": 0.03
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m10": {
+   "object": "node",
+   "id": "item_m10",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Ceiling Lamp",
+   "position": [
+    2.743,
+    -0.86,
+    2.042
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "ceiling-lamp",
+    "category": "furniture",
+    "name": "Ceiling Lamp",
+    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
+    "src": "/items/ceiling-lamp/model.glb",
+    "dimensions": [
+     0.55,
+     0.86,
+     0.55
+    ],
+    "offset": [
+     0,
+     0.8545,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "lamp",
+     "light",
+     "chandelier",
+     "pendant",
+     "luminaire",
+     "fixture",
+     "lighting",
+     "modern",
+     "minimalist",
+     "glass",
+     "metal",
+     "indoor",
+     "illumination",
+     "interior"
+    ],
+    "attachTo": "ceiling",
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.3,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m11": {
+   "object": "node",
+   "id": "item_m11",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Ceiling Lamp",
+   "position": [
+    3.2,
+    -0.688,
+    5.669
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "asset": {
+    "id": "ceiling-lamp",
+    "category": "furniture",
+    "name": "Ceiling Lamp",
+    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
+    "src": "/items/ceiling-lamp/model.glb",
+    "dimensions": [
+     0.55,
+     0.86,
+     0.55
+    ],
+    "offset": [
+     0,
+     0.8545,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "lamp",
+     "light",
+     "chandelier",
+     "pendant",
+     "luminaire",
+     "fixture",
+     "lighting",
+     "modern",
+     "minimalist",
+     "glass",
+     "metal",
+     "indoor",
+     "illumination",
+     "interior"
+    ],
+    "attachTo": "ceiling",
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.3,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m12": {
+   "object": "node",
+   "id": "item_m12",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Ceiling Lamp",
+   "position": [
+    3.2,
+    -0.688,
+    4.816
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "asset": {
+    "id": "ceiling-lamp",
+    "category": "furniture",
+    "name": "Ceiling Lamp",
+    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
+    "src": "/items/ceiling-lamp/model.glb",
+    "dimensions": [
+     0.55,
+     0.86,
+     0.55
+    ],
+    "offset": [
+     0,
+     0.8545,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "lamp",
+     "light",
+     "chandelier",
+     "pendant",
+     "luminaire",
+     "fixture",
+     "lighting",
+     "modern",
+     "minimalist",
+     "glass",
+     "metal",
+     "indoor",
+     "illumination",
+     "interior"
+    ],
+    "attachTo": "ceiling",
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.3,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m13": {
+   "object": "node",
+   "id": "item_m13",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.499,
+    0,
+    5.791
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m14": {
+   "object": "node",
+   "id": "item_m14",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.499,
+    0,
+    4.694
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m15": {
+   "object": "node",
+   "id": "item_m15",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.78,
+    0,
+    5.791
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m16": {
+   "object": "node",
+   "id": "item_m16",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.78,
+    0,
+    4.694
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m17": {
+   "object": "node",
+   "id": "item_m17",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    1.676,
+    0,
+    9.449
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m18": {
+   "object": "node",
+   "id": "item_m18",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.743,
+    0,
+    9.449
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m19": {
+   "object": "node",
+   "id": "item_m19",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.962,
+    0,
+    9.449
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m20": {
+   "object": "node",
+   "id": "item_m20",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    1.676,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m21": {
+   "object": "node",
+   "id": "item_m21",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.743,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m22": {
+   "object": "node",
+   "id": "item_m22",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.962,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m23": {
+   "object": "node",
+   "id": "item_m23",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    4.45,
+    1.62,
+    2.896
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m24": {
+   "object": "node",
+   "id": "item_m24",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Coffee Machine",
+   "position": [
+    4.45,
+    0.96,
+    2.225
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1.5,
+    1.5,
+    1.5
+   ],
+   "asset": {
+    "id": "coffee-machine",
+    "category": "appliance",
+    "name": "Coffee Machine",
+    "thumbnail": "/items/coffee-machine/thumbnail.webp",
+    "src": "/items/coffee-machine/model.glb",
+    "dimensions": [
+     0.16,
+     0.24,
+     0.23
+    ],
+    "offset": [
+     0.0003,
+     0.0003,
+     -0.0366
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "coffee",
+     "machine",
+     "maker",
+     "espresso",
+     "brewer",
+     "kitchen",
+     "appliance",
+     "modern",
+     "metal",
+     "sleek",
+     "black",
+     "silver",
+     "beverage",
+     "brewing"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m25": {
+   "object": "node",
+   "id": "item_m25",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Picture",
+   "position": [
+    3.353,
+    1.5,
+    3.658
+   ],
+   "rotation": [
+    0,
+    3.141592653589793,
+    0
+   ],
+   "scale": [
+    0.75,
+    0.75,
+    0.75
+   ],
+   "asset": {
+    "id": "picture",
+    "category": "furniture",
+    "name": "Picture",
+    "thumbnail": "/items/picture/thumbnail.webp",
+    "src": "/items/picture/model.glb",
+    "dimensions": [
+     1.47,
+     0.82,
+     0.06
+    ],
+    "offset": [
+     0,
+     0.41,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "picture",
+     "frame",
+     "art",
+     "artwork",
+     "print",
+     "canvas",
+     "decor",
+     "modern",
+     "abstract",
+     "minimalist",
+     "decorative",
+     "glass",
+     "wood",
+     "illustration",
+     "portrait"
+    ],
+    "attachTo": "wall-side"
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m26": {
+   "object": "node",
+   "id": "item_m26",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Floor Lamp",
+   "position": [
+    4.359,
+    0,
+    6.949
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "floor-lamp",
+    "category": "furniture",
+    "name": "Floor Lamp",
+    "thumbnail": "/items/floor-lamp/thumbnail.webp",
+    "src": "/items/floor-lamp/model.glb",
+    "dimensions": [
+     0.7,
+     1.86,
+     0.69
+    ],
+    "offset": [
+     0.0341,
+     0.0045,
+     0.0219
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "lamp",
+     "luminaire",
+     "light",
+     "torchere",
+     "lighting",
+     "illumination",
+     "metal",
+     "brass",
+     "modern",
+     "minimalist",
+     "industrial",
+     "decor",
+     "ambient",
+     "reading",
+     "sleek"
+    ],
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        1.4,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m27": {
+   "object": "node",
+   "id": "item_m27",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Indoor Plant",
+   "position": [
+    4.359,
+    0,
+    9.997
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "indoor-plant",
+    "category": "furniture",
+    "name": "Indoor Plant",
+    "thumbnail": "/items/indoor-plant/thumbnail.webp",
+    "src": "/items/indoor-plant/model.glb",
+    "dimensions": [
+     0.69,
+     1.63,
+     0.83
+    ],
+    "offset": [
+     -0.0506,
+     0,
+     0.0664
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "plant",
+     "greenery",
+     "botanical",
+     "foliage",
+     "houseplant",
+     "organic",
+     "natural",
+     "modern",
+     "minimalist",
+     "tropical",
+     "decor",
+     "accent",
+     "green",
+     "ceramic"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m28": {
+   "object": "node",
+   "id": "item_m28",
+   "type": "item",
+   "parentId": "level_0",
    "name": "Washing Machine",
    "position": [
     0.336,
@@ -5276,9 +7578,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m9": {
+  "item_m29": {
    "object": "node",
-   "id": "item_m9",
+   "id": "item_m29",
    "type": "item",
    "parentId": "level_0",
    "name": "Toilet",
@@ -5332,9 +7634,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m10": {
+  "item_m30": {
    "object": "node",
-   "id": "item_m10",
+   "id": "item_m30",
    "type": "item",
    "parentId": "level_0",
    "name": "Bathroom Sink",
@@ -5996,7 +8298,10 @@
      "floor",
      "table",
      "dining"
-    ]
+    ],
+    "surface": {
+     "height": 0.8
+    }
    },
    "children": [],
    "metadata": {}
@@ -6164,6 +8469,396 @@
      "floor",
      "seating",
      "dining"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y5": {
+   "object": "node",
+   "id": "item_y5",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Tree",
+   "position": [
+    4.084,
+    -1.34,
+    -2.134
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    0.9,
+    0.9,
+    0.9
+   ],
+   "asset": {
+    "id": "tree",
+    "category": "outdoor",
+    "name": "Tree",
+    "thumbnail": "/items/tree/thumbnail.webp",
+    "src": "/items/tree/model.glb",
+    "dimensions": [
+     0.79,
+     5,
+     0.85
+    ],
+    "offset": [
+     -0.02,
+     0.17,
+     -0.04
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     0.65,
+     0.65,
+     0.65
+    ],
+    "tags": [
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y6": {
+   "object": "node",
+   "id": "item_y6",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.305,
+    -0.82,
+    -1.829
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y7": {
+   "object": "node",
+   "id": "item_y7",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.671,
+    -0.82,
+    -2.438
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y8": {
+   "object": "node",
+   "id": "item_y8",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.366,
+    -0.82,
+    -2.926
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y9": {
+   "object": "node",
+   "id": "item_y9",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.305,
+    -0.82,
+    -3.962
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y10": {
+   "object": "node",
+   "id": "item_y10",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.671,
+    -0.82,
+    -4.572
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y11": {
+   "object": "node",
+   "id": "item_y11",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Small Plant",
+   "position": [
+    0.305,
+    -0.82,
+    -5.06
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1.25,
+    1.25,
+    1.25
+   ],
+   "asset": {
+    "id": "small-indoor-plant",
+    "category": "furniture",
+    "name": "Small Plant",
+    "thumbnail": "/items/small-indoor-plant/thumbnail.webp",
+    "src": "/items/small-indoor-plant/model.glb",
+    "dimensions": [
+     0.4,
+     0.67,
+     0.38
+    ],
+    "offset": [
+     -0.0106,
+     0,
+     0.0067
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "countertop",
+     "decor",
+     "vegetation"
     ]
    },
    "children": [],

@@ -138,7 +138,7 @@ function build(layout){
       const tone=w.isNew?'library:preset-powderblue':(exterior?'library:preset-softwhite':'library:preset-white');
       wall.slots={a:tone,b:tone,aSkirting:'library:preset-white',bSkirting:'library:preset-white'};
       if(wall.name==='Rear wall') wall.slots.a=FIN.MAT.siding;                    // exterior face (north) is white vinyl lap siding
-      if(wall.name==='East party wall'&&floor==='main') FIN.dining_accent(wall);  // terracotta accent through the dining area
+      if(floor==='main') FIN.wallFinish(wall,w);                                  // dining accent / niche / kitchen backsplash (proposed only)
       if(exterior&&floor==='main') wall.fillToTerrain=true;                       // the main floor sits above the yard; close the walls down to grade
       L.children.push(id);
       let on=0;
@@ -172,7 +172,7 @@ function build(layout){
       L.children.push(rid); });
     // ceiling at the wall-top height; the main-floor ceiling is open over the stairwell
     const cl=add({object:'node',id:`ceiling_${floor[0]}`,type:'ceiling',parentId:L.id,name:floor==='main'?'Main floor ceiling':'Upper floor ceiling',
-      polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),metadata:{}});
+      polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),children:[],metadata:{}});
     L.children.push(cl.id);
     // zones
     zonesFor(layout,floor).forEach((z,i)=>{
@@ -195,26 +195,32 @@ function build(layout){
 
   FIN.kitchen({add,L0});
   FIN.yard({add,L0});
+  FIN.details({add,L0});
 
   // furniture from the built-in catalog (floor items are children of their level)
   for(const floor of ['main','upper','yard']){
     const L=floor==='upper'?L1:L0; let n=0; const yOff=floor==='yard'?-FIN.GROUND_DROP:0;
     for(const [id,cx,cz,yaw,fit] of FURN[floor]){
+      if(fit&&fit.only&&fit.only!==layout) continue;
       const a=CATALOG[id]; if(!a) throw new Error('unknown catalog item '+id);
       n++; const [dw,dh,dd]=a.dimensions; let sc=[1,1,1];
       if(fit&&fit.scale){ sc=[fit.scale,fit.scale,fit.scale]; }
       else if(fit&&fit.w&&fit.d){ // non-rotated footprint in item space: w along local x, d along local z (feet -> metres)
         const sx=(fit.w*FT)/dw, sz=(fit.d*FT)/dd; const u=fit.byWidth?sx:Math.min(sx,sz);
-        // keep proportions unless the catalog piece is far off (tables/counters are stretched, everything else scales uniformly)
-        sc=(id==='kitchen-counter'||id==='dining-table'||id==='tv-stand'||id==='closet')?[r3(sx),1,r3(sz)]:[r3(u),r3(u),r3(u)];
+        // keep proportions unless the catalog piece is far off (tables/counters/rugs are stretched, everything else scales uniformly)
+        sc=(id==='kitchen-counter'||id==='dining-table'||id==='tv-stand'||id==='closet'||id==='rectangular-carpet')?[r3(sx),id==='rectangular-carpet'?1:1,r3(sz)]:[r3(u),r3(u),r3(u)];
       }
       // keep the footprint inside the house shell (centre-placed pieces can poke a few cm into a wall)
       const hw=Math.abs(Math.cos(yaw))*dw*sc[0]/2+Math.abs(Math.sin(yaw))*dd*sc[2]/2, hd=Math.abs(Math.sin(yaw))*dw*sc[0]/2+Math.abs(Math.cos(yaw))*dd*sc[2]/2;
-      const px=floor==='yard'?m(cx):Math.min(Math.max(m(cx),hw),15*FT-hw), pz=floor==='yard'?m(D-cz):Math.min(Math.max(m(D-cz),(D-32.7)*FT+hd),D*FT-hd);
+      const free=floor==='yard'||(fit&&fit.free);
+      const px=free?m(cx):Math.min(Math.max(m(cx),hw),15*FT-hw), pz=free?m(D-cz):Math.min(Math.max(m(D-cz),(D-32.7)*FT+hd),D*FT-hd);
       const nid=`item_${floor==='yard'?'y':floor[0]}${n}`;
-      add({object:'node',id:nid,type:'item',parentId:L.id,name:a.name,position:[r3(px),yOff,r3(pz)],rotation:[0,yaw,0],scale:sc,
-        asset:{id:a.id,category:a.category,name:a.name,thumbnail:(process.env.ASSET_BASE||'')+a.thumbnail,src:(process.env.ASSET_BASE||'')+a.src,dimensions:a.dimensions,offset:a.offset||[0,0,0],rotation:a.rotation||[0,0,0],scale:a.scale||[1,1,1],tags:a.tags},children:[],metadata:{}});
-      L.children.push(nid);
+      const ceil=a.attachTo==='ceiling'; const host=ceil?nodes[`ceiling_${floor[0]}`]:L;
+      const py=ceil?(a.recessed?0:-r3(dh*sc[1])):r3(yOff+((fit&&fit.y)||0));
+      const extra={}; for(const k of ['attachTo','recessed','interactive','surface']) if(a[k]!==undefined) extra[k]=a[k];
+      add({object:'node',id:nid,type:'item',parentId:host.id,name:a.name,position:[r3(px),py,r3(pz)],rotation:[0,yaw,0],scale:sc,
+        asset:{id:a.id,category:a.category,name:a.name,thumbnail:(process.env.ASSET_BASE||'')+a.thumbnail,src:(process.env.ASSET_BASE||'')+a.src,dimensions:a.dimensions,offset:a.offset||[0,0,0],rotation:a.rotation||[0,0,0],scale:a.scale||[1,1,1],tags:a.tags,...extra},children:[],metadata:{}});
+      host.children.push(nid);
     }
   }
   // walkthrough start: just inside the front door, facing into the house
