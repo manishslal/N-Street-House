@@ -1,6 +1,7 @@
 // Finishes, kitchen cabinetry and backyard (assumptions flagged in names where not measured).
 // Palette comes from the owners' first-floor reference renders: warm white walls, terracotta accent,
 // sage shaker cabinets, marble tops, brass hardware, wood floors, terrazzo kitchen floor, cedar fence.
+const HALL=require('./hall.cjs');
 const FT=0.3048, D=34;
 const m=(v)=>Math.round(v*FT*10000)/10000;
 const r3=(v)=>Math.round(v*1000)/1000;
@@ -10,17 +11,40 @@ const P=(x,z)=>[m(x),m(D-z)];
 const GROUND_DROP=1.34; // metres
 
 const MAT={
-  wood:'library:wood-woodplank48', terrazzo:'library:flooring-terrazzo19', bathTile:'library:flooring-lightceramic24',
+  wood:'library:wood-woodplank48', terrazzo:'library:flooring-tile79', bathTile:'library:flooring-lightceramic24',
   marble:'library:flooring-statuarettowhite', sage:'library:preset-sage', brass:'library:metal-brass',
-  terracotta:'library:preset-terracotta', cream:'library:preset-cream', white:'library:preset-white',
+  terracotta:'scene:mat_terracotta', cream:'library:preset-cream', white:'scene:mat_white',
   concrete:'library:concrete-polished', cedar:'#c8a165', lawn:'library:preset-forest', soil:'library:preset-espresso',
-  steel:'library:preset-midgrey', olive:'library:preset-olive', walnut:'#6b4630', stainless:'#b9bcc0', plaster:'library:preset-white', gravel:'#b8b1a4', stone:'#c9c4b8', pillowOlive:'library:preset-olive', pillowSage:'library:preset-sage', pillowBlush:'library:preset-cream', siding:'library:siding-lap-white',
+  steel:'library:preset-midgrey', olive:'scene:mat_olive', walnut:'scene:mat_walnut', stainless:'#b9bcc0', plaster:'scene:mat_plaster', gravel:'scene:mat_gravel', stone:'scene:mat_stone', pillowOlive:'library:preset-olive', pillowSage:'library:preset-sage', pillowBlush:'library:preset-cream', siding:'scene:mat_siding',
 };
 
 // Existing house as photographed (walkthrough frames): dark grey plank floor, beige vinyl tile and brown wood cabinets with
 // black marble-look tops in the kitchen, brown/beige vinyl in the powder room, bare plywood subfloor upstairs, grey plank in the baths.
-const EXIST={base:{main:'#3e3c42',upper:'#b9895a'},kitchenFloor:'#d9cfb0',powder:'#8c7b69',bath:'#8a8a8c',
-  cab:'#8a5a2b',top:'#1d1d20',hw:'library:metal-brass'};
+const EXIST={base:{main:'scene:mat_dark_plank',upper:'scene:mat_plywood'},kitchenFloor:'library:flooring-tile20',powder:'scene:mat_powder_vinyl',bath:'scene:mat_bath_grey',
+  cab:'scene:mat_exist_cab',top:'scene:mat_black_top',hw:'library:metal-brass'};
+// Flat paint colours as scene materials (library:preset-white is the unpainted-drywall texture: grey with white dots).
+// Wall colours are read from the walkthrough photos: warm white, slightly cream.
+const PAINT={
+  mat_wall:{name:'Wall paint (warm white)',color:'#fffaf0',roughness:0.92},
+  mat_trim:{name:'Trim (white)',color:'#f8f6f0',roughness:0.6},
+  mat_ceiling:{name:'Ceiling (white)',color:'#f6f4ef',roughness:0.95},
+  mat_siding:{name:'Vinyl siding (beige)',color:'#d6cbb3',roughness:0.8},
+  mat_white:{name:'White',color:'#f4f1ea',roughness:0.7},
+  mat_terracotta:{name:'Terracotta paint',color:'#d4805a',roughness:0.92},
+  mat_olive:{name:'Olive paint',color:'#86915a',roughness:0.92},
+  mat_plaster:{name:'Plaster',color:'#f1ece1',roughness:0.95},
+  mat_dark_plank:{name:'Dark grey plank floor (existing)',color:'#4a4850',roughness:0.6},
+  mat_plywood:{name:'Plywood subfloor (existing)',color:'#c49a6a',roughness:0.9},
+  mat_powder_vinyl:{name:'Brown vinyl (existing powder room)',color:'#8c7b69',roughness:0.7},
+  mat_bath_grey:{name:'Grey plank (existing baths)',color:'#8d8d90',roughness:0.6},
+  mat_exist_cab:{name:'Brown wood cabinets (existing)',color:'#8a5a2b',roughness:0.6},
+  mat_black_top:{name:'Black marble-look top (existing)',color:'#1d1d20',roughness:0.3},
+  mat_walnut:{name:'Walnut',color:'#6b4630',roughness:0.5},
+  mat_gravel:{name:'Gravel',color:'#b8b1a4',roughness:1},
+  mat_stone:{name:'Stepping stone',color:'#c9c4b8',roughness:0.95},
+  mat_lavender:{name:'Lavender paint',color:'#cdb4d8',roughness:0.92},
+};
+const sceneMaterials=()=>Object.fromEntries(Object.entries(PAINT).map(([id,m])=>[id,{id,name:m.name,material:{preset:'custom',properties:{color:m.color,roughness:m.roughness,metalness:0,opacity:1,transparent:false,side:'front'}}}]));
 let LAYOUT='prop';
 function setLayout(l){LAYOUT=l;}
 const isExist=()=>LAYOUT==='exist';
@@ -28,6 +52,10 @@ function baseFloor(floor){return isExist()?EXIST.base[floor]:MAT.wood;}
 
 // ---- floors: room-specific finishes cut out of the base wood slab (rectangles in plan feet)
 function floorRooms(floor){
+  const rs=floorRoomsRaw(floor);
+  return floor==='main'?rs.map(r=>({...r,pts:r.pts.map(HALL.mapPt)})):rs;
+}
+function floorRoomsRaw(floor){
   if(isExist()){
     if(floor==='main') return [
       {name:'Kitchen floor',pts:[[7.3,12.35],[15,12.35],[15,21.6],[7.3,21.6]],surface:EXIST.kitchenFloor},
@@ -57,45 +85,46 @@ function kitchen({add,L0}){
   const run=(name,tier,origin,yaw,len,depth,mods,extra={})=>{
     n++; const id=`cabinet_k${n}`;
     const y=extra.y||0;
+    const SL={...(extra.slots||slots),...(extra.appliance?{appliance:extra.appliance}:{})};
     const kids=[]; let x=0;
     mods.forEach((md,i)=>{
       const mid=`cabinet-module_k${n}_${i+1}`; const w=md.w;
       add({object:'node',id:mid,type:'cabinet-module',parentId:id,cabinetType:tier==='tall'?'tall':'base',
         position:[r3(x+w/2),tier==='base'?0.1:0,0],rotation:0,width:r3(w),depth,carcassHeight:extra.carcass||(tier==='base'?0.8:0.8),
-        frontStyle:'shaker',handleStyle:'knob',withCountertop:tier==='base',slots:extra.slots||slots,stack:md.stack.map((s,j)=>({id:`k${n}m${i}c${j}`,...s})),metadata:{}});
+        frontStyle:'shaker',handleStyle:'knob',withCountertop:tier==='base',slots:SL,stack:md.stack.map((s,j)=>({id:`k${n}m${i}c${j}`,...s})),metadata:{}});
       kids.push(mid); x+=w;
     });
     add({object:'node',id:id,type:'cabinet',name,parentId:L0.id,runTier:tier,position:[m(origin[0]),y,m(D-origin[1])],rotation:yaw,
-      width:r3(len),depth,carcassHeight:extra.carcass||0.8,frontStyle:'shaker',handleStyle:'knob',withCountertop:tier==='base',slots:extra.slots||slots,children:kids,metadata:{}});
+      width:r3(len),depth,carcassHeight:extra.carcass||0.8,frontStyle:'shaker',handleStyle:'knob',withCountertop:tier==='base',slots:SL,children:kids,metadata:{}});
     L0.children.push(id); out.push(id);
   };
   const d=0.61, PI=Math.PI;
   // south run under the pass-through window (west -> east: dishwasher, double sink, drawers); yaw pi so local +x runs west from the east end
-  run('Kitchen sink run','base',[15,13.35],PI,2.347,d,[
-    {w:0.64,stack:[{type:'drawer',drawerCount:3}]},
-    {w:1.097,stack:[{type:'sink',sinkLayout:'double'}]},
-    {w:0.61,stack:[{type:'dishwasher'}]},
-  ]);
+  run('Kitchen sink run','base',[15,13.35],PI,2.0,d,[
+    {w:0.45,stack:[{type:'drawer',drawerCount:3}]},
+    {w:1.0,stack:[{type:'sink',sinkLayout:'double'},{type:'door',doorType:'double'}]},
+    {w:0.55,stack:[{type:'dishwasher'}]},
+  ],{appliance:isExist()?'library:preset-white':'library:preset-sage'});
   // east run: range then base cabinet (yaw -pi/2: local +x runs south from the north end)
   run('Kitchen range run','base',[14.0,19.6],-PI/2,1.6,d,[
     {w:0.76,stack:[{type:'cooktop-gas',cooktopLayout:'gas-4burner'},{type:'oven'}]},
     {w:0.84,stack:[{type:'door',doorType:'double'}]},
-  ]);
+  ],{appliance:isExist()?'library:preset-nearblack':'library:preset-cream'});
   // north run
-  run('Kitchen north run','base',[9.6,20.6],0,1.646,d,[
-    {w:0.6,stack:[{type:'door',doorType:'double'}]},
-    {w:0.6,stack:[{type:'drawer',drawerCount:3}]},
-    {w:0.446,stack:[{type:'door',doorType:'single-left'}]},
+  run('Kitchen north run','base',[10.5,20.6],0,1.35,d,[
+    {w:0.45,stack:[{type:'door',doorType:'double'}]},
+    {w:0.45,stack:[{type:'drawer',drawerCount:3}]},
+    {w:0.45,stack:[{type:'door',doorType:'single-left'}]},
   ]);
   // fridge
-  run('Kitchen refrigerator','tall',[7.35,20.45],0,0.655,0.7,[
+  run('Kitchen refrigerator','tall',[HALL.mapX(7.35),20.45],0,0.655,0.7,[
     {w:0.655,stack:[{type:'fridge-double'}]},
-  ],{carcass:1.8,slots:isExist()?undefined:{front:MAT.stainless,carcass:MAT.stainless,plinth:MAT.stainless,countertop:MAT.stainless,hardware:MAT.stainless}});
+  ],{carcass:1.8,appliance:isExist()?'library:preset-nearblack':'library:metal-polished'});
   // upper glass-front cabinets over the north run
-  run('Kitchen upper cabinets','wall',[9.6,21.025],0,1.646,0.35,[
-    {w:0.6,stack:[{type:'door',doorType:'glass'}]},
-    {w:0.6,stack:[{type:'door',doorType:'glass'}]},
-    {w:0.446,stack:[{type:'door',doorType:'glass'}]},
+  run('Kitchen upper cabinets','wall',[10.5,21.025],0,1.35,0.35,[
+    {w:0.45,stack:[{type:'door',doorType:'glass'}]},
+    {w:0.45,stack:[{type:'door',doorType:'glass'}]},
+    {w:0.45,stack:[{type:'door',doorType:'glass'}]},
   ],{y:1.45,carcass:0.762});
   // range hood (proposed: smooth plaster hood as a slab box, built in details())
   if(isExist()) run('Range hood','wall',[14.18,19.6],-PI/2,0.76,0.5,[
@@ -171,6 +200,12 @@ function details({add,L0}){
     L0.children.push(id); };
   // dining: two floating walnut shelves inside the arched niche (east wall face at plan x 15.0)
   [['slab_shelf1',1.30],['slab_shelf2',1.60]].forEach(([id,e])=>slab(id,'Niche shelf',[[14.25,23.5],[14.97,23.5],[14.97,27.7],[14.25,27.7]],e,0.03,MAT.walnut));
+  // dining: olive arched niche on the east wall, built from 7 thin wall strips of stepped height (1.0.3 has no per-region wall paint)
+  { const zc=25.6, wd=1.28, r=wd/2, n=7, step=wd/n, spring=1.45, x=15.0-0.03;
+    for(let k=0;k<n;k++){ const dz=(-r+(k+0.5)*step), hh=Math.sqrt(Math.max(r*r-dz*dz,0))*0.94, z0=zc*FT+(-r+k*step), z1=z0+step; // metres along plan z
+      const id=`wall_niche${k+1}`;
+      add({object:'node',id,type:'wall',name:'Niche arch strip',parentId:L0.id,start:[m(x),r3(D*FT-z0)],end:[m(x),r3(D*FT-z1)],thickness:0.04,height:r3(spring+hh),
+        children:[],frontSide:'interior',backSide:'interior',slots:{interior:MAT.olive,exterior:MAT.olive},metadata:{}}); L0.children.push(id); } }
   // kitchen: smooth plaster hood over the range (box from 1.5 m to 2.35 m)
   slab('slab_hood','Plaster range hood',[[13.3,16.85],[14.97,16.85],[14.97,19.85],[13.3,19.85]],2.35,0.85,MAT.plaster);
   // backyard
@@ -182,25 +217,29 @@ function details({add,L0}){
   slab('slab_yard_shelf','Fence shelf (assumed)',[[9.5,55.5],[13.5,55.5],[13.5,55.95],[9.5,55.95]],G+1.65,0.03,MAT.walnut);
 }
 
-// ---- wall finishes, proposed layout only (the existing house keeps its plain white walls)
-// faceRegions are rectangles in (u along the wall from its start, v up from the floor) on face 'a' or 'b'.
-const regionId=(()=>{let k=0;return(p)=>`${p}${++k}`;})();
+// ---- wall finishes. Pascal 1.0.3 walls take paint through slots `interior` / `exterior` (+ band slots when faceBands is on); a
+// wall's frontSide / backSide say which of its faces uses which slot (front = face a = the +normal side). There are no per-region
+// paints in 1.0.3, so the accent wall is a whole face painted through the `exterior` slot of a partition wall.
+const PAINT_WALL=process.env.PAINT||'scene:mat_wall';      // #ebe7df, warm white like the photos
+function wallSlots(){ return {interior:PAINT_WALL,exterior:MAT.siding,skirtingInterior:'library:preset-white',skirtingExterior:'library:preset-softwhite'}; }
 function wallFinish(wall,w){
   if(isExist()) return;
   const along=Math.abs(w.start[1]-w.end[1])<1e-6?'x':'z';
-  const regs=[];
-  if(wall.name==='East party wall'){
-    // olive arched niche behind the dining sideboard (the render's green arch), built from thin strips so the arch top is round
-    const zc=25.6, wd=1.28, r=wd/2, uc=(zc+0.25)*FT, spring=1.45, n=7, step=wd/n;  // Pascal allows at most 8 paint regions per wall face
-    regs.push({id:regionId('niche'),face:'a',u0:r3(uc-r),u1:r3(uc+r),v0:0.05,v1:spring,finish:MAT.olive});
-    for(let k=0;k<n;k++){ const u0=uc-r+k*step,u1=u0+step,dx=(u0+u1)/2-uc,hh=Math.sqrt(Math.max(r*r-dx*dx,0))*0.92;
-      if(hh>0.01) regs.push({id:regionId('arch'),face:'a',u0:r3(u0),u1:r3(u1),v0:spring,v1:r3(spring+hh),finish:MAT.olive}); }
-  } else if(along==='x'&&Math.abs(w.start[1]-21.77)<0.05&&w.start[0]<8){
-    // wall between kitchen (face b) and dining (face a): terracotta accent on the dining side, marble splash behind the north run
-    regs.push({id:regionId('accent'),face:'a',u0:0,u1:r3((15.25-7.1)*FT),v0:0,v1:2.44,finish:MAT.terracotta});
-    regs.push({id:regionId('splash'),face:'b',u0:r3((9.6-7.1)*FT),u1:r3((15.25-7.1)*FT),v0:0.94,v1:1.45,finish:MAT.marble});
+  if(along==='x'&&Math.abs(w.start[1]-21.77)<0.05&&w.start[0]<9){
+    // wall between kitchen (south, back face) and dining (north, front face a): terracotta on the dining side, marble splash on the kitchen side
+    wall.frontSide='interior'; wall.backSide='exterior';
+    wall.slots.exterior=MAT.terracotta;
+    wall.faceBands={enabled:true,count:3,lowerHeight:0.84,middleHeight:0.61,upperHeight:0.61};
+    wall.slots.lowerInterior=PAINT_WALL; wall.slots.middleInterior=MAT.marble; wall.slots.upperInterior=PAINT_WALL;
+    wall.slots.lowerExterior=MAT.terracotta; wall.slots.middleExterior=MAT.terracotta; wall.slots.upperExterior=MAT.terracotta;
   }
-  if(regs.length) wall.faceRegions=regs;
+}
+// which faces are outside, from the wall's role: front wall a=in, rear a=out, west party a=out, east party a=in, everything else in/in
+function wallSides(wall){
+  const n=wall.name;
+  if(n==='Front wall'||n==='East party wall') return ['exterior','interior'];
+  if(n==='Rear wall'||n==='West party wall') return ['interior','exterior'];
+  return ['interior','interior'];
 }
 
-module.exports={details,setLayout,baseFloor,isExist,EXIST,GROUND_DROP,MAT,floorRooms,kitchen,yard,wallFinish};
+module.exports={wallSlots,wallSides,sceneMaterials,details,setLayout,baseFloor,isExist,EXIST,GROUND_DROP,MAT,floorRooms,kitchen,yard,wallFinish};

@@ -209,14 +209,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "West party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -240,14 +240,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "East party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -275,14 +275,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "Front wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -378,14 +378,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "Rear wall",
    "slots": {
-    "a": "library:siding-lap-white",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -459,14 +459,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m5_1": {
@@ -539,14 +539,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m7": {
@@ -569,14 +569,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m8": {
@@ -589,7 +589,7 @@
     3.1318
    ],
    "end": [
-    1.6612,
+    1.4021,
     3.1318
    ],
    "thickness": 0.1067,
@@ -599,14 +599,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m9": {
@@ -619,7 +619,7 @@
     4.1224
    ],
    "end": [
-    1.6078,
+    1.3487,
     4.1224
    ],
    "thickness": 0.1067,
@@ -629,14 +629,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m10": {
@@ -645,11 +645,11 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    1.6078,
+    1.3487,
     6.7056
    ],
    "end": [
-    1.6078,
+    1.3487,
     3.1318
    ],
    "thickness": 0.1067,
@@ -663,14 +663,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m10_1": {
@@ -745,8 +745,8 @@
    "openingKind": "door",
    "metadata": {},
    "swingDirection": "inward",
-   "hingesSide": "right",
-   "handleSide": "left"
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_m11": {
    "object": "node",
@@ -758,7 +758,7 @@
     4.7549
    ],
    "end": [
-    1.6078,
+    1.3487,
     4.7549
    ],
    "thickness": 0.1219,
@@ -768,14 +768,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m12": {
@@ -784,7 +784,7 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     3.7262
    ],
    "end": [
@@ -798,14 +798,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m13": {
@@ -814,11 +814,11 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     6.6523
    ],
    "end": [
-    2.1641,
+    2.4536,
     3.7262
    ],
    "thickness": 0.1219,
@@ -830,14 +830,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m13_1": {
@@ -868,7 +868,7 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     6.6523
    ],
    "end": [
@@ -884,14 +884,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_m14_1": {
@@ -902,7 +902,7 @@
    "parentId": "wall_m14",
    "wallId": "wall_m14",
    "position": [
-    1.219,
+    0.93,
     1.6,
     0
    ],
@@ -936,14 +936,14 @@
     "isNew": false,
     "half": true
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Half wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m16": {
@@ -966,14 +966,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m17": {
@@ -996,14 +996,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m18": {
@@ -1026,14 +1026,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m19": {
@@ -1046,7 +1046,7 @@
     5.8064
    ],
    "end": [
-    1.6078,
+    1.3487,
     5.8064
    ],
    "thickness": 0.0914,
@@ -1056,14 +1056,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "slab_m": {
@@ -1093,7 +1093,7 @@
    "holes": [
     [
      [
-      2.225,
+      2.5146,
       6.5989
      ],
      [
@@ -1105,7 +1105,7 @@
       3.7795
      ],
      [
-      2.225,
+      2.5146,
       3.7795
      ]
     ],
@@ -1139,7 +1139,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "#3e3c42",
+    "surface": "scene:mat_dark_plank",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1152,7 +1152,7 @@
    "parentId": "level_0",
    "polygon": [
     [
-     2.225,
+     2.5146,
      6.5989
     ],
     [
@@ -1164,7 +1164,7 @@
      3.7795
     ],
     [
-     2.225,
+     2.5146,
      3.7795
     ]
    ],
@@ -1173,7 +1173,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "#d9cfb0",
+    "surface": "library:flooring-tile20",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1207,7 +1207,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "#8c7b69",
+    "surface": "scene:mat_powder_vinyl",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1239,6 +1239,9 @@
    "holes": [],
    "height": 2.4384,
    "children": [],
+   "slots": {
+    "surface": "library:preset-softwhite"
+   },
    "metadata": {}
   },
   "zone_m1": {
@@ -1373,11 +1376,11 @@
      6.5837
     ],
     [
-     1.5545,
+     1.2954,
      6.5837
     ],
     [
-     1.5545,
+     1.2954,
      5.8522
     ],
     [
@@ -1413,11 +1416,11 @@
      5.7607
     ],
     [
-     1.5545,
+     1.2954,
      5.7607
     ],
     [
-     1.5545,
+     1.2954,
      4.8158
     ],
     [
@@ -1449,7 +1452,7 @@
    "name": "Kitchen",
    "polygon": [
     [
-     2.225,
+     2.5146,
      6.5989
     ],
     [
@@ -1461,7 +1464,7 @@
      3.7795
     ],
     [
-     2.225,
+     2.5146,
      3.7795
     ]
    ],
@@ -1489,7 +1492,7 @@
    "name": "Dining",
    "polygon": [
     [
-     2.1641,
+     2.4536,
      3.6728
     ],
     [
@@ -1509,7 +1512,7 @@
      3.0785
     ],
     [
-     2.1641,
+     2.4536,
      3.0785
     ]
    ],
@@ -1541,11 +1544,11 @@
      4.6939
     ],
     [
-     1.5545,
+     1.2954,
      4.6939
     ],
     [
-     1.5545,
+     1.2954,
      4.1758
     ],
     [
@@ -1585,19 +1588,19 @@
    "name": "Hall",
    "polygon": [
     [
-     1.6612,
+     1.4021,
      6.5989
     ],
     [
-     2.1641,
+     2.4536,
      6.5989
     ],
     [
-     2.1641,
+     2.4536,
      3.6728
     ],
     [
-     1.6612,
+     1.4021,
      3.6728
     ]
    ],
@@ -1629,11 +1632,11 @@
      4.0691
     ],
     [
-     1.5545,
+     1.2954,
      4.0691
     ],
     [
-     1.5545,
+     1.2954,
      3.1852
     ],
     [
@@ -1757,14 +1760,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "West party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u2": {
@@ -1787,14 +1790,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "East party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u3": {
@@ -1821,14 +1824,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "Front wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_u3_1": {
@@ -1920,14 +1923,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "Rear wall",
    "slots": {
-    "a": "library:siding-lap-white",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_u4_1": {
@@ -1996,14 +1999,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u5_1": {
@@ -2048,14 +2051,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u7": {
@@ -2080,14 +2083,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u7_1": {
@@ -2135,14 +2138,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u9": {
@@ -2168,14 +2171,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u9_1": {
@@ -2248,14 +2251,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u11": {
@@ -2278,14 +2281,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u12": {
@@ -2310,14 +2313,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u12_1": {
@@ -2367,14 +2370,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u13_1": {
@@ -2425,14 +2428,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u14_1": {
@@ -2505,14 +2508,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u16": {
@@ -2535,14 +2538,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u17": {
@@ -2565,14 +2568,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u18": {
@@ -2597,14 +2600,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u18_1": {
@@ -2726,7 +2729,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "#b9895a",
+    "surface": "scene:mat_plywood",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2760,7 +2763,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "#8a8a8c",
+    "surface": "scene:mat_bath_grey",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2794,7 +2797,7 @@
    "elevation": 0.01,
    "thickness": 0.4063,
    "slots": {
-    "surface": "#8a8a8c",
+    "surface": "scene:mat_bath_grey",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -2826,6 +2829,9 @@
    "holes": [],
    "height": 2.4384,
    "children": [],
+   "slots": {
+    "surface": "library:preset-softwhite"
+   },
    "metadata": {}
   },
   "zone_u1": {
@@ -3390,23 +3396,24 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    0.32,
+    0.225,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.64,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-white"
    },
    "stack": [
     {
@@ -3424,29 +3431,35 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    1.189,
+    0.95,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 1.097,
+   "width": 1,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-white"
    },
    "stack": [
     {
      "id": "k1m1c0",
      "type": "sink",
      "sinkLayout": "double"
+    },
+    {
+     "id": "k1m1c1",
+     "type": "door",
+     "doorType": "double"
     }
    ],
    "metadata": {}
@@ -3458,23 +3471,24 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    2.042,
+    1.725,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.61,
+   "width": 0.55,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-white"
    },
    "stack": [
     {
@@ -3497,18 +3511,19 @@
     6.2941
    ],
    "rotation": 3.141592653589793,
-   "width": 2.347,
+   "width": 2,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-white"
    },
    "children": [
     "cabinet-module_k1_1",
@@ -3536,11 +3551,12 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-nearblack"
    },
    "stack": [
     {
@@ -3574,11 +3590,12 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-nearblack"
    },
    "stack": [
     {
@@ -3609,11 +3626,12 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-nearblack"
    },
    "children": [
     "cabinet-module_k2_1",
@@ -3628,22 +3646,22 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    0.3,
+    0.225,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3662,22 +3680,22 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    0.9,
+    0.675,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3696,22 +3714,22 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    1.423,
+    1.125,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.446,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3731,22 +3749,22 @@
    "parentId": "level_0",
    "runTier": "base",
    "position": [
-    2.9261,
+    3.2004,
     0,
     4.0843
    ],
    "rotation": 0,
-   "width": 1.646,
+   "width": 1.35,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3775,11 +3793,12 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-nearblack"
    },
    "stack": [
     {
@@ -3797,7 +3816,7 @@
    "parentId": "level_0",
    "runTier": "tall",
    "position": [
-    2.2403,
+    2.5298,
     0,
     4.13
    ],
@@ -3809,11 +3828,12 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
-    "hardware": "library:metal-brass"
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-nearblack"
    },
    "children": [
     "cabinet-module_k4_1"
@@ -3827,22 +3847,22 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    0.3,
+    0.225,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3861,22 +3881,22 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    0.9,
+    0.675,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3895,22 +3915,22 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    1.423,
+    1.125,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.446,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -3930,22 +3950,22 @@
    "parentId": "level_0",
    "runTier": "wall",
    "position": [
-    2.9261,
+    3.2004,
     1.45,
     3.9548
    ],
    "rotation": 0,
-   "width": 1.646,
+   "width": 1.35,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -3974,10 +3994,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -4008,10 +4028,10 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#8a5a2b",
-    "carcass": "#8a5a2b",
-    "plinth": "#8a5a2b",
-    "countertop": "#1d1d20",
+    "front": "scene:mat_exist_cab",
+    "carcass": "scene:mat_exist_cab",
+    "plinth": "scene:mat_exist_cab",
+    "countertop": "scene:mat_black_top",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -4260,8 +4280,8 @@
    "elevation": -0.89,
    "thickness": 0.45,
    "slots": {
-    "surface": "library:preset-white",
-    "side": "library:preset-white"
+    "surface": "scene:mat_white",
+    "side": "scene:mat_white"
    },
    "metadata": {}
   },
@@ -5118,9 +5138,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -5174,9 +5194,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -5331,7 +5351,7 @@
    "parentId": "level_1",
    "name": "Double Bed",
    "position": [
-    0.701,
+    0.975,
     0,
     1.097
    ],
@@ -5341,9 +5361,9 @@
     0
    ],
    "scale": [
-    0.561,
-    0.561,
-    0.561
+    0.686,
+    0.686,
+    0.686
    ],
    "asset": {
     "id": "double-bed",
@@ -5384,11 +5404,11 @@
    "id": "item_u4",
    "type": "item",
    "parentId": "level_1",
-   "name": "Double Bed",
+   "name": "Single Bed",
    "position": [
-    3.871,
+    3.719,
     0,
-    1.097
+    1.219
    ],
    "rotation": [
     0,
@@ -5396,25 +5416,25 @@
     0
    ],
    "scale": [
-    0.561,
-    0.561,
-    0.561
+    0.66,
+    0.66,
+    0.66
    ],
    "asset": {
-    "id": "double-bed",
+    "id": "single-bed",
     "category": "furniture",
-    "name": "Double Bed",
-    "thumbnail": "/items/double-bed/thumbnail.webp",
-    "src": "/items/double-bed/model.glb",
+    "name": "Single Bed",
+    "thumbnail": "/items/single-bed/thumbnail.webp",
+    "src": "/items/single-bed/model.glb",
     "dimensions": [
-     2,
-     0.8,
+     1.5,
+     0.7,
      2.5
     ],
     "offset": [
      0,
      0,
-     -0.03
+     0
     ],
     "rotation": [
      0,
@@ -5451,9 +5471,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -5507,9 +5527,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -5609,7 +5629,7 @@
    "parentId": "level_1",
    "name": "Toilet",
    "position": [
-    4.359,
+    4.351,
     0,
     3.78
    ],
@@ -5619,9 +5639,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -5665,7 +5685,7 @@
    "parentId": "level_1",
    "name": "Bathroom Sink",
    "position": [
-    4.367,
+    4.343,
     0,
     4.511
    ],
@@ -5675,9 +5695,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -6008,7 +6028,7 @@
     0,
     9.9365
    ],
-   "rotation": 3.141592653589793,
+   "rotation": 0,
    "metadata": {}
   }
  },
@@ -6016,6 +6036,277 @@
   "site_main"
  ],
  "collections": {},
- "materials": {},
+ "materials": {
+  "mat_wall": {
+   "id": "mat_wall",
+   "name": "Wall paint (warm white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#fffaf0",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_trim": {
+   "id": "mat_trim",
+   "name": "Trim (white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f8f6f0",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_ceiling": {
+   "id": "mat_ceiling",
+   "name": "Ceiling (white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f6f4ef",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_siding": {
+   "id": "mat_siding",
+   "name": "Vinyl siding (beige)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#d6cbb3",
+     "roughness": 0.8,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_white": {
+   "id": "mat_white",
+   "name": "White",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f4f1ea",
+     "roughness": 0.7,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_terracotta": {
+   "id": "mat_terracotta",
+   "name": "Terracotta paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#d4805a",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_olive": {
+   "id": "mat_olive",
+   "name": "Olive paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#86915a",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_plaster": {
+   "id": "mat_plaster",
+   "name": "Plaster",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f1ece1",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_dark_plank": {
+   "id": "mat_dark_plank",
+   "name": "Dark grey plank floor (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#4a4850",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_plywood": {
+   "id": "mat_plywood",
+   "name": "Plywood subfloor (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#c49a6a",
+     "roughness": 0.9,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_powder_vinyl": {
+   "id": "mat_powder_vinyl",
+   "name": "Brown vinyl (existing powder room)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8c7b69",
+     "roughness": 0.7,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_bath_grey": {
+   "id": "mat_bath_grey",
+   "name": "Grey plank (existing baths)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8d8d90",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_exist_cab": {
+   "id": "mat_exist_cab",
+   "name": "Brown wood cabinets (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8a5a2b",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_black_top": {
+   "id": "mat_black_top",
+   "name": "Black marble-look top (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#1d1d20",
+     "roughness": 0.3,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_walnut": {
+   "id": "mat_walnut",
+   "name": "Walnut",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#6b4630",
+     "roughness": 0.5,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_gravel": {
+   "id": "mat_gravel",
+   "name": "Gravel",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#b8b1a4",
+     "roughness": 1,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_stone": {
+   "id": "mat_stone",
+   "name": "Stepping stone",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#c9c4b8",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_lavender": {
+   "id": "mat_lavender",
+   "name": "Lavender paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#cdb4d8",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  }
+ },
  "installedPlugins": []
 }

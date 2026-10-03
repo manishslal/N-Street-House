@@ -116,6 +116,13 @@
     "fence_east",
     "slab_shelf1",
     "slab_shelf2",
+    "wall_niche1",
+    "wall_niche2",
+    "wall_niche3",
+    "wall_niche4",
+    "wall_niche5",
+    "wall_niche6",
+    "wall_niche7",
     "slab_hood",
     "slab_stone1",
     "slab_stone2",
@@ -134,14 +141,18 @@
     "item_m7",
     "item_m8",
     "item_m9",
-    "item_m23",
-    "item_m24",
-    "item_m25",
-    "item_m26",
+    "item_m10",
+    "item_m11",
+    "item_m12",
+    "item_m13",
     "item_m27",
     "item_m28",
     "item_m29",
     "item_m30",
+    "item_m31",
+    "item_m32",
+    "item_m33",
+    "item_m34",
     "item_y1",
     "item_y2",
     "item_y3",
@@ -153,6 +164,8 @@
     "item_y9",
     "item_y10",
     "item_y11",
+    "item_y12",
+    "item_y13",
     "spawn_entry"
    ],
    "metadata": {}
@@ -233,14 +246,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "West party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -264,89 +277,15 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "East party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
-   "faceRegions": [
-    {
-     "id": "niche1",
-     "face": "a",
-     "u0": 7.239,
-     "u1": 8.519,
-     "v0": 0.05,
-     "v1": 1.45,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch2",
-     "face": "a",
-     "u0": 7.239,
-     "u1": 7.422,
-     "v0": 1.45,
-     "v1": 1.753,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch3",
-     "face": "a",
-     "u0": 7.422,
-     "u1": 7.605,
-     "v0": 1.45,
-     "v1": 1.933,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch4",
-     "face": "a",
-     "u0": 7.605,
-     "u1": 7.788,
-     "v0": 1.45,
-     "v1": 2.014,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch5",
-     "face": "a",
-     "u0": 7.788,
-     "u1": 7.971,
-     "v0": 1.45,
-     "v1": 2.039,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch6",
-     "face": "a",
-     "u0": 7.971,
-     "u1": 8.153,
-     "v0": 1.45,
-     "v1": 2.014,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch7",
-     "face": "a",
-     "u0": 8.153,
-     "u1": 8.336,
-     "v0": 1.45,
-     "v1": 1.933,
-     "finish": "library:preset-olive"
-    },
-    {
-     "id": "arch8",
-     "face": "a",
-     "u0": 8.336,
-     "u1": 8.519,
-     "v0": 1.45,
-     "v1": 1.753,
-     "finish": "library:preset-olive"
-    }
-   ],
    "fillToTerrain": true
   },
   "wall_m3": {
@@ -373,14 +312,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "Front wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -476,14 +415,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "Rear wall",
    "slots": {
-    "a": "library:siding-lap-white",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    },
    "fillToTerrain": true
   },
@@ -557,14 +496,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m5_1": {
@@ -614,8 +553,8 @@
    "openingKind": "door",
    "metadata": {},
    "swingDirection": "inward",
-   "hingesSide": "right",
-   "handleSide": "left"
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_m6": {
    "object": "node",
@@ -637,14 +576,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m7": {
@@ -667,14 +606,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m8": {
@@ -687,7 +626,7 @@
     3.1318
    ],
    "end": [
-    1.6612,
+    1.4021,
     3.1318
    ],
    "thickness": 0.1067,
@@ -697,14 +636,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m9": {
@@ -717,7 +656,7 @@
     4.1224
    ],
    "end": [
-    1.6078,
+    1.3487,
     4.1224
    ],
    "thickness": 0.1067,
@@ -727,14 +666,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m10": {
@@ -743,11 +682,11 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    1.6078,
+    1.3487,
     5.7379
    ],
    "end": [
-    1.6078,
+    1.3487,
     3.1318
    ],
    "thickness": 0.1067,
@@ -761,14 +700,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m10_1": {
@@ -792,7 +731,7 @@
    "height": 2.042,
    "openingKind": "door",
    "metadata": {},
-   "swingDirection": "outward",
+   "swingDirection": "inward",
    "hingesSide": "left",
    "handleSide": "right"
   },
@@ -843,8 +782,8 @@
    "openingKind": "door",
    "metadata": {},
    "swingDirection": "inward",
-   "hingesSide": "right",
-   "handleSide": "left"
+   "hingesSide": "left",
+   "handleSide": "right"
   },
   "wall_m11": {
    "object": "node",
@@ -856,7 +795,7 @@
     4.7549
    ],
    "end": [
-    1.6078,
+    1.3487,
     4.7549
    ],
    "thickness": 0.1219,
@@ -866,14 +805,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m12": {
@@ -882,7 +821,7 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     3.7262
    ],
    "end": [
@@ -896,35 +835,28 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_terracotta",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite",
+    "lowerInterior": "scene:mat_wall",
+    "middleInterior": "library:flooring-statuarettowhite",
+    "upperInterior": "scene:mat_wall",
+    "lowerExterior": "scene:mat_terracotta",
+    "middleExterior": "scene:mat_terracotta",
+    "upperExterior": "scene:mat_terracotta"
    },
-   "faceRegions": [
-    {
-     "id": "accent9",
-     "face": "a",
-     "u0": 0,
-     "u1": 2.484,
-     "v0": 0,
-     "v1": 2.44,
-     "finish": "library:preset-terracotta"
-    },
-    {
-     "id": "splash10",
-     "face": "b",
-     "u0": 0.762,
-     "u1": 2.484,
-     "v0": 0.94,
-     "v1": 1.45,
-     "finish": "library:flooring-statuarettowhite"
-    }
-   ]
+   "faceBands": {
+    "enabled": true,
+    "count": 3,
+    "lowerHeight": 0.84,
+    "middleHeight": 0.61,
+    "upperHeight": 0.61
+   }
   },
   "wall_m13": {
    "object": "node",
@@ -932,11 +864,11 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     6.6523
    ],
    "end": [
-    2.1641,
+    2.4536,
     3.7262
    ],
    "thickness": 0.1219,
@@ -948,14 +880,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m13_1": {
@@ -986,7 +918,7 @@
    "type": "wall",
    "parentId": "level_0",
    "start": [
-    2.1641,
+    2.4536,
     6.6523
    ],
    "end": [
@@ -1002,14 +934,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_m14_1": {
@@ -1020,7 +952,7 @@
    "parentId": "wall_m14",
    "wallId": "wall_m14",
    "position": [
-    1.219,
+    0.93,
     1.6,
     0
    ],
@@ -1056,14 +988,14 @@
     "isNew": true,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "New wall (proposed)",
    "slots": {
-    "a": "library:preset-powderblue",
-    "b": "library:preset-powderblue",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_m15_1": {
@@ -1101,7 +1033,7 @@
     5.7379
    ],
    "end": [
-    1.6612,
+    1.4021,
     5.7379
    ],
    "thickness": 0.1067,
@@ -1111,14 +1043,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_m17": {
@@ -1141,14 +1073,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "slab_m": {
@@ -1178,7 +1110,7 @@
    "holes": [
     [
      [
-      2.225,
+      2.5146,
       6.5989
      ],
      [
@@ -1190,7 +1122,7 @@
       3.7795
      ],
      [
-      2.225,
+      2.5146,
       3.7795
      ]
     ],
@@ -1237,7 +1169,7 @@
    "parentId": "level_0",
    "polygon": [
     [
-     2.225,
+     2.5146,
      6.5989
     ],
     [
@@ -1249,7 +1181,7 @@
      3.7795
     ],
     [
-     2.225,
+     2.5146,
      3.7795
     ]
    ],
@@ -1258,7 +1190,7 @@
    "elevation": 0.01,
    "thickness": 0.1,
    "slots": {
-    "surface": "library:flooring-terrazzo19",
+    "surface": "library:flooring-tile79",
     "side": "library:preset-lightgrey"
    },
    "metadata": {}
@@ -1324,10 +1256,6 @@
    "holes": [],
    "height": 2.4384,
    "children": [
-    "item_m10",
-    "item_m11",
-    "item_m12",
-    "item_m13",
     "item_m14",
     "item_m15",
     "item_m16",
@@ -1336,8 +1264,15 @@
     "item_m19",
     "item_m20",
     "item_m21",
-    "item_m22"
+    "item_m22",
+    "item_m23",
+    "item_m24",
+    "item_m25",
+    "item_m26"
    ],
+   "slots": {
+    "surface": "library:preset-softwhite"
+   },
    "metadata": {}
   },
   "zone_m1": {
@@ -1480,11 +1415,11 @@
      6.7056
     ],
     [
-     1.6612,
+     1.4021,
      6.7056
     ],
     [
-     1.6612,
+     1.4021,
      5.7912
     ],
     [
@@ -1520,11 +1455,11 @@
      5.6845
     ],
     [
-     1.5545,
+     1.2954,
      5.6845
     ],
     [
-     1.5545,
+     1.2954,
      4.8158
     ],
     [
@@ -1556,7 +1491,7 @@
    "name": "Kitchen",
    "polygon": [
     [
-     2.225,
+     2.5146,
      6.5989
     ],
     [
@@ -1568,7 +1503,7 @@
      3.7795
     ],
     [
-     2.225,
+     2.5146,
      3.7795
     ]
    ],
@@ -1596,7 +1531,7 @@
    "name": "Dining",
    "polygon": [
     [
-     2.1641,
+     2.4536,
      3.6728
     ],
     [
@@ -1616,7 +1551,7 @@
      3.0785
     ],
     [
-     2.1641,
+     2.4536,
      3.0785
     ]
    ],
@@ -1648,11 +1583,11 @@
      4.6939
     ],
     [
-     1.5545,
+     1.2954,
      4.6939
     ],
     [
-     1.5545,
+     1.2954,
      4.1758
     ],
     [
@@ -1692,19 +1627,19 @@
    "name": "Hall",
    "polygon": [
     [
-     1.6612,
+     1.4021,
      6.5989
     ],
     [
-     2.1641,
+     2.4536,
      6.5989
     ],
     [
-     2.1641,
+     2.4536,
      3.6728
     ],
     [
-     1.6612,
+     1.4021,
      3.6728
     ]
    ],
@@ -1736,11 +1671,11 @@
      4.0691
     ],
     [
-     1.5545,
+     1.2954,
      4.0691
     ],
     [
-     1.5545,
+     1.2954,
      3.1852
     ],
     [
@@ -1864,14 +1799,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "West party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u2": {
@@ -1894,14 +1829,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "East party wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u3": {
@@ -1928,14 +1863,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "exterior",
+   "backSide": "interior",
    "name": "Front wall",
    "slots": {
-    "a": "library:preset-softwhite",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_u3_1": {
@@ -2027,14 +1962,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "exterior",
    "name": "Rear wall",
    "slots": {
-    "a": "library:siding-lap-white",
-    "b": "library:preset-softwhite",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "window_u4_1": {
@@ -2103,14 +2038,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u5_1": {
@@ -2155,14 +2090,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u7": {
@@ -2187,14 +2122,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u7_1": {
@@ -2242,14 +2177,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u9": {
@@ -2274,14 +2209,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u9_1": {
@@ -2329,14 +2264,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u11": {
@@ -2359,14 +2294,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u12": {
@@ -2391,14 +2326,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u12_1": {
@@ -2446,14 +2381,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u14": {
@@ -2479,14 +2414,14 @@
     "isNew": false,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "Interior wall",
    "slots": {
-    "a": "library:preset-white",
-    "b": "library:preset-white",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u14_1": {
@@ -2559,14 +2494,14 @@
     "isNew": true,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "New wall (proposed)",
    "slots": {
-    "a": "library:preset-powderblue",
-    "b": "library:preset-powderblue",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u16": {
@@ -2589,14 +2524,14 @@
     "isNew": true,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "New wall (proposed)",
    "slots": {
-    "a": "library:preset-powderblue",
-    "b": "library:preset-powderblue",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "wall_u17": {
@@ -2621,14 +2556,14 @@
     "isNew": true,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "New wall (proposed)",
    "slots": {
-    "a": "library:preset-powderblue",
-    "b": "library:preset-powderblue",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u17_1": {
@@ -2679,14 +2614,14 @@
     "isNew": true,
     "half": false
    },
-   "frontSide": "unknown",
-   "backSide": "unknown",
+   "frontSide": "interior",
+   "backSide": "interior",
    "name": "New wall (proposed)",
    "slots": {
-    "a": "library:preset-powderblue",
-    "b": "library:preset-powderblue",
-    "aSkirting": "library:preset-white",
-    "bSkirting": "library:preset-white"
+    "interior": "scene:mat_wall",
+    "exterior": "scene:mat_siding",
+    "skirtingInterior": "library:preset-white",
+    "skirtingExterior": "library:preset-softwhite"
    }
   },
   "door_u18_1": {
@@ -2941,6 +2876,9 @@
    "holes": [],
    "height": 2.4384,
    "children": [],
+   "slots": {
+    "surface": "library:preset-softwhite"
+   },
    "metadata": {}
   },
   "zone_u1": {
@@ -3559,12 +3497,12 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    0.32,
+    0.225,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.64,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3575,7 +3513,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-sage"
    },
    "stack": [
     {
@@ -3593,12 +3532,12 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    1.189,
+    0.95,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 1.097,
+   "width": 1,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3609,13 +3548,19 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-sage"
    },
    "stack": [
     {
      "id": "k1m1c0",
      "type": "sink",
      "sinkLayout": "double"
+    },
+    {
+     "id": "k1m1c1",
+     "type": "door",
+     "doorType": "double"
     }
    ],
    "metadata": {}
@@ -3627,12 +3572,12 @@
    "parentId": "cabinet_k1",
    "cabinetType": "base",
    "position": [
-    2.042,
+    1.725,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.61,
+   "width": 0.55,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3643,7 +3588,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-sage"
    },
    "stack": [
     {
@@ -3666,7 +3612,7 @@
     6.2941
    ],
    "rotation": 3.141592653589793,
-   "width": 2.347,
+   "width": 2,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3677,7 +3623,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-sage"
    },
    "children": [
     "cabinet-module_k1_1",
@@ -3709,7 +3656,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-cream"
    },
    "stack": [
     {
@@ -3747,7 +3695,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-cream"
    },
    "stack": [
     {
@@ -3782,7 +3731,8 @@
     "carcass": "library:preset-sage",
     "plinth": "library:preset-sage",
     "countertop": "library:flooring-statuarettowhite",
-    "hardware": "library:metal-brass"
+    "hardware": "library:metal-brass",
+    "appliance": "library:preset-cream"
    },
    "children": [
     "cabinet-module_k2_1",
@@ -3797,12 +3747,12 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    0.3,
+    0.225,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3831,12 +3781,12 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    0.9,
+    0.675,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3865,12 +3815,12 @@
    "parentId": "cabinet_k3",
    "cabinetType": "base",
    "position": [
-    1.423,
+    1.125,
     0.1,
     0
    ],
    "rotation": 0,
-   "width": 0.446,
+   "width": 0.45,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3900,12 +3850,12 @@
    "parentId": "level_0",
    "runTier": "base",
    "position": [
-    2.9261,
+    3.2004,
     0,
     4.0843
    ],
    "rotation": 0,
-   "width": 1.646,
+   "width": 1.35,
    "depth": 0.61,
    "carcassHeight": 0.8,
    "frontStyle": "shaker",
@@ -3944,11 +3894,12 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#b9bcc0",
-    "carcass": "#b9bcc0",
-    "plinth": "#b9bcc0",
-    "countertop": "#b9bcc0",
-    "hardware": "#b9bcc0"
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass",
+    "appliance": "library:metal-polished"
    },
    "stack": [
     {
@@ -3966,7 +3917,7 @@
    "parentId": "level_0",
    "runTier": "tall",
    "position": [
-    2.2403,
+    2.5298,
     0,
     4.13
    ],
@@ -3978,11 +3929,12 @@
    "handleStyle": "knob",
    "withCountertop": false,
    "slots": {
-    "front": "#b9bcc0",
-    "carcass": "#b9bcc0",
-    "plinth": "#b9bcc0",
-    "countertop": "#b9bcc0",
-    "hardware": "#b9bcc0"
+    "front": "library:preset-sage",
+    "carcass": "library:preset-sage",
+    "plinth": "library:preset-sage",
+    "countertop": "library:flooring-statuarettowhite",
+    "hardware": "library:metal-brass",
+    "appliance": "library:metal-polished"
    },
    "children": [
     "cabinet-module_k4_1"
@@ -3996,12 +3948,12 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    0.3,
+    0.225,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
@@ -4030,12 +3982,12 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    0.9,
+    0.675,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.6,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
@@ -4064,12 +4016,12 @@
    "parentId": "cabinet_k5",
    "cabinetType": "base",
    "position": [
-    1.423,
+    1.125,
     0,
     0
    ],
    "rotation": 0,
-   "width": 0.446,
+   "width": 0.45,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
@@ -4099,12 +4051,12 @@
    "parentId": "level_0",
    "runTier": "wall",
    "position": [
-    2.9261,
+    3.2004,
     1.45,
     3.9548
    ],
    "rotation": 0,
-   "width": 1.646,
+   "width": 1.35,
    "depth": 0.35,
    "carcassHeight": 0.762,
    "frontStyle": "shaker",
@@ -4143,10 +4095,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#6b4630",
-    "carcass": "#6b4630",
-    "plinth": "#6b4630",
-    "countertop": "#6b4630",
+    "front": "scene:mat_walnut",
+    "carcass": "scene:mat_walnut",
+    "plinth": "scene:mat_walnut",
+    "countertop": "scene:mat_walnut",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -4177,10 +4129,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#6b4630",
-    "carcass": "#6b4630",
-    "plinth": "#6b4630",
-    "countertop": "#6b4630",
+    "front": "scene:mat_walnut",
+    "carcass": "scene:mat_walnut",
+    "plinth": "scene:mat_walnut",
+    "countertop": "scene:mat_walnut",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -4211,10 +4163,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#6b4630",
-    "carcass": "#6b4630",
-    "plinth": "#6b4630",
-    "countertop": "#6b4630",
+    "front": "scene:mat_walnut",
+    "carcass": "scene:mat_walnut",
+    "plinth": "scene:mat_walnut",
+    "countertop": "scene:mat_walnut",
     "hardware": "library:metal-brass"
    },
    "stack": [
@@ -4246,10 +4198,10 @@
    "handleStyle": "knob",
    "withCountertop": true,
    "slots": {
-    "front": "#6b4630",
-    "carcass": "#6b4630",
-    "plinth": "#6b4630",
-    "countertop": "#6b4630",
+    "front": "scene:mat_walnut",
+    "carcass": "scene:mat_walnut",
+    "plinth": "scene:mat_walnut",
+    "countertop": "scene:mat_walnut",
     "hardware": "library:metal-brass"
    },
    "children": [
@@ -4500,8 +4452,8 @@
    "elevation": -0.89,
    "thickness": 0.45,
    "slots": {
-    "surface": "library:preset-white",
-    "side": "library:preset-white"
+    "surface": "scene:mat_white",
+    "side": "scene:mat_white"
    },
    "metadata": {}
   },
@@ -4915,8 +4867,8 @@
    "elevation": 1.3,
    "thickness": 0.03,
    "slots": {
-    "surface": "#6b4630",
-    "side": "#6b4630"
+    "surface": "scene:mat_walnut",
+    "side": "scene:mat_walnut"
    },
    "metadata": {}
   },
@@ -4949,8 +4901,183 @@
    "elevation": 1.6,
    "thickness": 0.03,
    "slots": {
-    "surface": "#6b4630",
-    "side": "#6b4630"
+    "surface": "scene:mat_walnut",
+    "side": "scene:mat_walnut"
+   },
+   "metadata": {}
+  },
+  "wall_niche1": {
+   "object": "node",
+   "id": "wall_niche1",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    3.2
+   ],
+   "end": [
+    4.5629,
+    3.017
+   ],
+   "thickness": 0.04,
+   "height": 1.76,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche2": {
+   "object": "node",
+   "id": "wall_niche2",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    3.017
+   ],
+   "end": [
+    4.5629,
+    2.835
+   ],
+   "thickness": 0.04,
+   "height": 1.944,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche3": {
+   "object": "node",
+   "id": "wall_niche3",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    2.835
+   ],
+   "end": [
+    4.5629,
+    2.652
+   ],
+   "thickness": 0.04,
+   "height": 2.027,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche4": {
+   "object": "node",
+   "id": "wall_niche4",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    2.652
+   ],
+   "end": [
+    4.5629,
+    2.469
+   ],
+   "thickness": 0.04,
+   "height": 2.052,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche5": {
+   "object": "node",
+   "id": "wall_niche5",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    2.469
+   ],
+   "end": [
+    4.5629,
+    2.286
+   ],
+   "thickness": 0.04,
+   "height": 2.027,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche6": {
+   "object": "node",
+   "id": "wall_niche6",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    2.286
+   ],
+   "end": [
+    4.5629,
+    2.103
+   ],
+   "thickness": 0.04,
+   "height": 1.944,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
+   },
+   "metadata": {}
+  },
+  "wall_niche7": {
+   "object": "node",
+   "id": "wall_niche7",
+   "type": "wall",
+   "name": "Niche arch strip",
+   "parentId": "level_0",
+   "start": [
+    4.5629,
+    2.103
+   ],
+   "end": [
+    4.5629,
+    1.92
+   ],
+   "thickness": 0.04,
+   "height": 1.76,
+   "children": [],
+   "frontSide": "interior",
+   "backSide": "interior",
+   "slots": {
+    "interior": "scene:mat_olive",
+    "exterior": "scene:mat_olive"
    },
    "metadata": {}
   },
@@ -4983,8 +5110,8 @@
    "elevation": 2.35,
    "thickness": 0.85,
    "slots": {
-    "surface": "library:preset-white",
-    "side": "library:preset-white"
+    "surface": "scene:mat_plaster",
+    "side": "scene:mat_plaster"
    },
    "metadata": {}
   },
@@ -5041,8 +5168,8 @@
    "elevation": -1.305,
    "thickness": 0.05,
    "slots": {
-    "surface": "#c9c4b8",
-    "side": "#c9c4b8"
+    "surface": "scene:mat_stone",
+    "side": "scene:mat_stone"
    },
    "metadata": {}
   },
@@ -5099,8 +5226,8 @@
    "elevation": -1.305,
    "thickness": 0.05,
    "slots": {
-    "surface": "#c9c4b8",
-    "side": "#c9c4b8"
+    "surface": "scene:mat_stone",
+    "side": "scene:mat_stone"
    },
    "metadata": {}
   },
@@ -5157,8 +5284,8 @@
    "elevation": -1.305,
    "thickness": 0.05,
    "slots": {
-    "surface": "#c9c4b8",
-    "side": "#c9c4b8"
+    "surface": "scene:mat_stone",
+    "side": "scene:mat_stone"
    },
    "metadata": {}
   },
@@ -5191,8 +5318,8 @@
    "elevation": -1.328,
    "thickness": 0.05,
    "slots": {
-    "surface": "#b8b1a4",
-    "side": "#b8b1a4"
+    "surface": "scene:mat_gravel",
+    "side": "scene:mat_gravel"
    },
    "metadata": {}
   },
@@ -5327,8 +5454,8 @@
    "elevation": 0.31,
    "thickness": 0.03,
    "slots": {
-    "surface": "#6b4630",
-    "side": "#6b4630"
+    "surface": "scene:mat_walnut",
+    "side": "scene:mat_walnut"
    },
    "metadata": {}
   },
@@ -5452,11 +5579,11 @@
    "id": "item_m3",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Table",
+   "name": "Round pedestal table",
    "position": [
-    2.743,
+    2.621,
     0,
-    2.042
+    2.317
    ],
    "rotation": [
     0,
@@ -5464,25 +5591,25 @@
     0
    ],
    "scale": [
-    0.488,
     1,
-    1.036
+    1,
+    1
    ],
    "asset": {
-    "id": "dining-table",
+    "id": "round-table",
     "category": "furniture",
-    "name": "Dining Table",
-    "thumbnail": "/items/dining-table/thumbnail.webp",
-    "src": "/items/dining-table/model.glb",
+    "name": "Round pedestal table",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/round_table.glb",
     "dimensions": [
-     2.5,
-     0.8,
+     1,
+     0.77,
      1
     ],
     "offset": [
      0,
      0,
-     -0.01
+     0
     ],
     "rotation": [
      0,
@@ -5498,10 +5625,7 @@
      "floor",
      "table",
      "dining"
-    ],
-    "surface": {
-     "height": 0.8
-    }
+    ]
    },
    "children": [],
    "metadata": {}
@@ -5511,11 +5635,11 @@
    "id": "item_m4",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Bentwood chair",
    "position": [
-    2.652,
+    2.621,
     0,
-    2.865
+    2.941
    ],
    "rotation": [
     0,
@@ -5528,15 +5652,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "bentwood-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Bentwood chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/bentwood_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.8,
+     0.538
     ],
     "offset": [
      0,
@@ -5567,15 +5691,15 @@
    "id": "item_m5",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Bentwood chair",
    "position": [
-    3.2,
+    1.996,
     0,
-    2.865
+    2.317
    ],
    "rotation": [
     0,
-    3.141592653589793,
+    1.5707963267948966,
     0
    ],
    "scale": [
@@ -5584,15 +5708,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "bentwood-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Bentwood chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/bentwood_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.8,
+     0.538
     ],
     "offset": [
      0,
@@ -5623,11 +5747,11 @@
    "id": "item_m6",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Bentwood chair",
    "position": [
-    2.652,
+    2.621,
     0,
-    1.219
+    1.692
    ],
    "rotation": [
     0,
@@ -5640,15 +5764,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "bentwood-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Bentwood chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/bentwood_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.8,
+     0.538
     ],
     "offset": [
      0,
@@ -5679,11 +5803,11 @@
    "id": "item_m7",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Curved boucle sofa",
    "position": [
-    3.2,
+    3.749,
     0,
-    1.219
+    0.914
    ],
    "rotation": [
     0,
@@ -5696,15 +5820,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "curved-sofa",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Curved boucle sofa",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/curved_sofa.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     1.927,
+     0.799,
+     0.88
     ],
     "offset": [
      0,
@@ -5724,7 +5848,7 @@
     "tags": [
      "floor",
      "seating",
-     "dining"
+     "sofa"
     ]
    },
    "children": [],
@@ -5735,11 +5859,11 @@
    "id": "item_m8",
    "type": "item",
    "parentId": "level_0",
-   "name": "Rectangular Carpet",
+   "name": "Sheer curtain panel",
    "position": [
     2.743,
     0,
-    2.042
+    0.427
    ],
    "rotation": [
     0,
@@ -5747,20 +5871,20 @@
     0
    ],
    "scale": [
-    0.713,
     1,
-    0.943
+    1,
+    1
    ],
    "asset": {
-    "id": "rectangular-carpet",
+    "id": "sheer-curtain",
     "category": "furniture",
-    "name": "Rectangular Carpet",
-    "thumbnail": "/items/rectangular-carpet/thumbnail.webp",
-    "src": "/items/rectangular-carpet/model.glb",
+    "name": "Sheer curtain panel",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/sheer_curtain.glb",
     "dimensions": [
-     2.78,
-     0.04,
-     1.81
+     0.7,
+     2.432,
+     0.03
     ],
     "offset": [
      0,
@@ -5778,22 +5902,9 @@
      1
     ],
     "tags": [
-     "carpet",
-     "rug",
-     "mat",
-     "textile",
-     "woven",
-     "rectangular",
-     "modern",
-     "wool",
-     "cotton",
-     "minimalist",
-     "decor",
-     "plush"
-    ],
-    "surface": {
-     "height": 0.03
-    }
+     "floor",
+     "decor"
+    ]
    },
    "children": [],
    "metadata": {}
@@ -5803,7 +5914,227 @@
    "id": "item_m9",
    "type": "item",
    "parentId": "level_0",
-   "name": "Rectangular Carpet",
+   "name": "Sheer curtain panel",
+   "position": [
+    4.435,
+    0,
+    0.427
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "sheer-curtain",
+    "category": "furniture",
+    "name": "Sheer curtain panel",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/sheer_curtain.glb",
+    "dimensions": [
+     0.7,
+     2.432,
+     0.03
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "decor"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m10": {
+   "object": "node",
+   "id": "item_m10",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Potted plant",
+   "position": [
+    4.359,
+    0,
+    1.341
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "monstera",
+    "category": "furniture",
+    "name": "Potted plant",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/monstera.glb",
+    "dimensions": [
+     0.647,
+     1.026,
+     0.786
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "plant"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m11": {
+   "object": "node",
+   "id": "item_m11",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Brass wall sconce",
+   "position": [
+    4.542,
+    2,
+    2.56
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "brass-sconce",
+    "category": "furniture",
+    "name": "Brass wall sconce",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/brass_sconce.glb",
+    "dimensions": [
+     0.2,
+     0.2,
+     0.199
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "wall",
+     "light"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m12": {
+   "object": "node",
+   "id": "item_m12",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Patterned rug",
+   "position": [
+    2.621,
+    0,
+    2.317
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "persian-rug",
+    "category": "furniture",
+    "name": "Patterned rug",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/persian_rug.glb",
+    "dimensions": [
+     2.4,
+     0.015,
+     1.7
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "rug"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m13": {
+   "object": "node",
+   "id": "item_m13",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Patterned rug",
    "position": [
     2.896,
     0,
@@ -5815,20 +6146,20 @@
     0
    ],
    "scale": [
-    0.932,
-    1,
-    1.044
+    1.2,
+    1.2,
+    1.2
    ],
    "asset": {
-    "id": "rectangular-carpet",
+    "id": "persian-rug",
     "category": "furniture",
-    "name": "Rectangular Carpet",
-    "thumbnail": "/items/rectangular-carpet/thumbnail.webp",
-    "src": "/items/rectangular-carpet/model.glb",
+    "name": "Patterned rug",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/persian_rug.glb",
     "dimensions": [
-     2.78,
-     0.04,
-     1.81
+     2.4,
+     0.015,
+     1.7
     ],
     "offset": [
      0,
@@ -5846,419 +6177,9 @@
      1
     ],
     "tags": [
-     "carpet",
-     "rug",
-     "mat",
-     "textile",
-     "woven",
-     "rectangular",
-     "modern",
-     "wool",
-     "cotton",
-     "minimalist",
-     "decor",
-     "plush"
-    ],
-    "surface": {
-     "height": 0.03
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m10": {
-   "object": "node",
-   "id": "item_m10",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Ceiling Lamp",
-   "position": [
-    2.743,
-    -0.86,
-    2.042
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    1,
-    1,
-    1
-   ],
-   "asset": {
-    "id": "ceiling-lamp",
-    "category": "furniture",
-    "name": "Ceiling Lamp",
-    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
-    "src": "/items/ceiling-lamp/model.glb",
-    "dimensions": [
-     0.55,
-     0.86,
-     0.55
-    ],
-    "offset": [
-     0,
-     0.8545,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "lamp",
-     "light",
-     "chandelier",
-     "pendant",
-     "luminaire",
-     "fixture",
-     "lighting",
-     "modern",
-     "minimalist",
-     "glass",
-     "metal",
-     "indoor",
-     "illumination",
-     "interior"
-    ],
-    "attachTo": "ceiling",
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.3,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m11": {
-   "object": "node",
-   "id": "item_m11",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Ceiling Lamp",
-   "position": [
-    3.2,
-    -0.688,
-    5.669
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    0.8,
-    0.8,
-    0.8
-   ],
-   "asset": {
-    "id": "ceiling-lamp",
-    "category": "furniture",
-    "name": "Ceiling Lamp",
-    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
-    "src": "/items/ceiling-lamp/model.glb",
-    "dimensions": [
-     0.55,
-     0.86,
-     0.55
-    ],
-    "offset": [
-     0,
-     0.8545,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "lamp",
-     "light",
-     "chandelier",
-     "pendant",
-     "luminaire",
-     "fixture",
-     "lighting",
-     "modern",
-     "minimalist",
-     "glass",
-     "metal",
-     "indoor",
-     "illumination",
-     "interior"
-    ],
-    "attachTo": "ceiling",
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.3,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m12": {
-   "object": "node",
-   "id": "item_m12",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Ceiling Lamp",
-   "position": [
-    3.2,
-    -0.688,
-    4.816
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    0.8,
-    0.8,
-    0.8
-   ],
-   "asset": {
-    "id": "ceiling-lamp",
-    "category": "furniture",
-    "name": "Ceiling Lamp",
-    "thumbnail": "/items/ceiling-lamp/thumbnail.webp",
-    "src": "/items/ceiling-lamp/model.glb",
-    "dimensions": [
-     0.55,
-     0.86,
-     0.55
-    ],
-    "offset": [
-     0,
-     0.8545,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "lamp",
-     "light",
-     "chandelier",
-     "pendant",
-     "luminaire",
-     "fixture",
-     "lighting",
-     "modern",
-     "minimalist",
-     "glass",
-     "metal",
-     "indoor",
-     "illumination",
-     "interior"
-    ],
-    "attachTo": "ceiling",
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.3,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m13": {
-   "object": "node",
-   "id": "item_m13",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Recessed Light",
-   "position": [
-    2.499,
-    0,
-    5.791
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    1,
-    1,
-    1
-   ],
-   "asset": {
-    "id": "recessed-light",
-    "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
-    "dimensions": [
-     0.23,
-     0.06,
-     0.23
-    ],
-    "offset": [
-     0,
-     0.0057,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
-    ],
-    "attachTo": "ceiling",
-    "recessed": true,
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.1,
-        0
-       ]
-      }
-     ]
-    }
+     "floor",
+     "rug"
+    ]
    },
    "children": [],
    "metadata": {}
@@ -6268,11 +6189,11 @@
    "id": "item_m14",
    "type": "item",
    "parentId": "ceiling_m",
-   "name": "Recessed Light",
+   "name": "Brass dome pendant",
    "position": [
-    2.499,
-    0,
-    4.694
+    2.621,
+    -1.18,
+    2.317
    ],
    "rotation": [
     0,
@@ -6285,19 +6206,19 @@
     1
    ],
    "asset": {
-    "id": "recessed-light",
+    "id": "dome-pendant",
     "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
+    "name": "Brass dome pendant",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/dome_pendant.glb",
     "dimensions": [
-     0.23,
-     0.06,
-     0.23
+     0.46,
+     1.18,
+     0.46
     ],
     "offset": [
      0,
-     0.0057,
+     0,
      0
     ],
     "rotation": [
@@ -6311,23 +6232,10 @@
      1
     ],
     "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
+     "ceiling",
+     "light"
     ],
     "attachTo": "ceiling",
-    "recessed": true,
     "interactive": {
      "controls": [
       {
@@ -6353,7 +6261,7 @@
        "color": "#ffffff",
        "offset": [
         0,
-        -0.1,
+        -0.3,
         0
        ]
       }
@@ -6368,11 +6276,11 @@
    "id": "item_m15",
    "type": "item",
    "parentId": "ceiling_m",
-   "name": "Recessed Light",
+   "name": "Amber globe pendant",
    "position": [
-    3.78,
-    0,
-    5.791
+    3.2,
+    -1.105,
+    5.669
    ],
    "rotation": [
     0,
@@ -6385,19 +6293,19 @@
     1
    ],
    "asset": {
-    "id": "recessed-light",
+    "id": "globe-pendant",
     "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
+    "name": "Amber globe pendant",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/globe_pendant.glb",
     "dimensions": [
-     0.23,
-     0.06,
-     0.23
+     0.26,
+     1.105,
+     0.26
     ],
     "offset": [
      0,
-     0.0057,
+     0,
      0
     ],
     "rotation": [
@@ -6411,23 +6319,10 @@
      1
     ],
     "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
+     "ceiling",
+     "light"
     ],
     "attachTo": "ceiling",
-    "recessed": true,
     "interactive": {
      "controls": [
       {
@@ -6453,7 +6348,7 @@
        "color": "#ffffff",
        "offset": [
         0,
-        -0.1,
+        -0.3,
         0
        ]
       }
@@ -6468,11 +6363,11 @@
    "id": "item_m16",
    "type": "item",
    "parentId": "ceiling_m",
-   "name": "Recessed Light",
+   "name": "Amber globe pendant",
    "position": [
-    3.78,
-    0,
-    4.694
+    3.2,
+    -1.105,
+    4.816
    ],
    "rotation": [
     0,
@@ -6485,19 +6380,19 @@
     1
    ],
    "asset": {
-    "id": "recessed-light",
+    "id": "globe-pendant",
     "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
+    "name": "Amber globe pendant",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/globe_pendant.glb",
     "dimensions": [
-     0.23,
-     0.06,
-     0.23
+     0.26,
+     1.105,
+     0.26
     ],
     "offset": [
      0,
-     0.0057,
+     0,
      0
     ],
     "rotation": [
@@ -6511,23 +6406,10 @@
      1
     ],
     "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
+     "ceiling",
+     "light"
     ],
     "attachTo": "ceiling",
-    "recessed": true,
     "interactive": {
      "controls": [
       {
@@ -6553,7 +6435,7 @@
        "color": "#ffffff",
        "offset": [
         0,
-        -0.1,
+        -0.3,
         0
        ]
       }
@@ -6570,9 +6452,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    1.676,
+    2.499,
     0,
-    9.449
+    5.791
    ],
    "rotation": [
     0,
@@ -6670,9 +6552,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    2.743,
+    2.499,
     0,
-    9.449
+    4.694
    ],
    "rotation": [
     0,
@@ -6770,9 +6652,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    3.962,
+    3.78,
     0,
-    9.449
+    5.791
    ],
    "rotation": [
     0,
@@ -6870,9 +6752,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    1.676,
+    3.78,
     0,
-    7.772
+    4.694
    ],
    "rotation": [
     0,
@@ -6970,9 +6852,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    2.743,
+    1.676,
     0,
-    7.772
+    9.449
    ],
    "rotation": [
     0,
@@ -7070,9 +6952,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    3.962,
+    2.743,
     0,
-    7.772
+    9.449
    ],
    "rotation": [
     0,
@@ -7167,6 +7049,406 @@
    "object": "node",
    "id": "item_m23",
    "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.962,
+    0,
+    9.449
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m24": {
+   "object": "node",
+   "id": "item_m24",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    1.676,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m25": {
+   "object": "node",
+   "id": "item_m25",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.743,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m26": {
+   "object": "node",
+   "id": "item_m26",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.962,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m27": {
+   "object": "node",
+   "id": "item_m27",
+   "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
    "position": [
@@ -7219,9 +7501,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m24": {
+  "item_m28": {
    "object": "node",
-   "id": "item_m24",
+   "id": "item_m28",
    "type": "item",
    "parentId": "level_0",
    "name": "Coffee Machine",
@@ -7286,9 +7568,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m25": {
+  "item_m29": {
    "object": "node",
-   "id": "item_m25",
+   "id": "item_m29",
    "type": "item",
    "parentId": "level_0",
    "name": "Picture",
@@ -7355,9 +7637,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m26": {
+  "item_m30": {
    "object": "node",
-   "id": "item_m26",
+   "id": "item_m30",
    "type": "item",
    "parentId": "level_0",
    "name": "Floor Lamp",
@@ -7454,9 +7736,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m27": {
+  "item_m31": {
    "object": "node",
-   "id": "item_m27",
+   "id": "item_m31",
    "type": "item",
    "parentId": "level_0",
    "name": "Indoor Plant",
@@ -7521,9 +7803,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m28": {
+  "item_m32": {
    "object": "node",
-   "id": "item_m28",
+   "id": "item_m32",
    "type": "item",
    "parentId": "level_0",
    "name": "Washing Machine",
@@ -7578,9 +7860,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m29": {
+  "item_m33": {
    "object": "node",
-   "id": "item_m29",
+   "id": "item_m33",
    "type": "item",
    "parentId": "level_0",
    "name": "Toilet",
@@ -7595,9 +7877,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -7634,9 +7916,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m30": {
+  "item_m34": {
    "object": "node",
-   "id": "item_m30",
+   "id": "item_m34",
    "type": "item",
    "parentId": "level_0",
    "name": "Bathroom Sink",
@@ -7651,9 +7933,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -7808,7 +8090,7 @@
    "parentId": "level_1",
    "name": "Double Bed",
    "position": [
-    0.701,
+    0.975,
     0,
     1.097
    ],
@@ -7818,9 +8100,9 @@
     0
    ],
    "scale": [
-    0.561,
-    0.561,
-    0.561
+    0.686,
+    0.686,
+    0.686
    ],
    "asset": {
     "id": "double-bed",
@@ -7861,11 +8143,11 @@
    "id": "item_u4",
    "type": "item",
    "parentId": "level_1",
-   "name": "Double Bed",
+   "name": "Single Bed",
    "position": [
-    3.871,
+    3.719,
     0,
-    1.097
+    1.219
    ],
    "rotation": [
     0,
@@ -7873,25 +8155,25 @@
     0
    ],
    "scale": [
-    0.561,
-    0.561,
-    0.561
+    0.66,
+    0.66,
+    0.66
    ],
    "asset": {
-    "id": "double-bed",
+    "id": "single-bed",
     "category": "furniture",
-    "name": "Double Bed",
-    "thumbnail": "/items/double-bed/thumbnail.webp",
-    "src": "/items/double-bed/model.glb",
+    "name": "Single Bed",
+    "thumbnail": "/items/single-bed/thumbnail.webp",
+    "src": "/items/single-bed/model.glb",
     "dimensions": [
-     2,
-     0.8,
+     1.5,
+     0.7,
      2.5
     ],
     "offset": [
      0,
      0,
-     -0.03
+     0
     ],
     "rotation": [
      0,
@@ -7928,9 +8210,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -7984,9 +8266,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -8086,7 +8368,7 @@
    "parentId": "level_1",
    "name": "Toilet",
    "position": [
-    4.359,
+    4.351,
     0,
     3.78
    ],
@@ -8096,9 +8378,9 @@
     0
    ],
    "scale": [
-    0.427,
-    0.427,
-    0.427
+    0.442,
+    0.442,
+    0.442
    ],
    "asset": {
     "id": "toilet",
@@ -8142,7 +8424,7 @@
    "parentId": "level_1",
    "name": "Bathroom Sink",
    "position": [
-    4.367,
+    4.343,
     0,
     4.511
    ],
@@ -8152,9 +8434,9 @@
     0
    ],
    "scale": [
-    0.274,
-    0.274,
-    0.274
+    0.305,
+    0.305,
+    0.305
    ],
    "asset": {
     "id": "bathroom-sink",
@@ -8311,9 +8593,9 @@
    "id": "item_y2",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Rattan chair",
    "position": [
-    2.073,
+    2.134,
     -1.34,
     -4.877
    ],
@@ -8328,15 +8610,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "rattan-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Rattan chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/rattan_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.911,
+     0.44
     ],
     "offset": [
      0,
@@ -8356,7 +8638,7 @@
     "tags": [
      "floor",
      "seating",
-     "dining"
+     "outdoor"
     ]
    },
    "children": [],
@@ -8367,11 +8649,11 @@
    "id": "item_y3",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Rattan chair",
    "position": [
     2.743,
     -1.34,
-    -4.145
+    -4.206
    ],
    "rotation": [
     0,
@@ -8384,15 +8666,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "rattan-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Rattan chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/rattan_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.911,
+     0.44
     ],
     "offset": [
      0,
@@ -8412,7 +8694,7 @@
     "tags": [
      "floor",
      "seating",
-     "dining"
+     "outdoor"
     ]
    },
    "children": [],
@@ -8423,11 +8705,11 @@
    "id": "item_y4",
    "type": "item",
    "parentId": "level_0",
-   "name": "Dining Chair",
+   "name": "Rattan chair",
    "position": [
     3.414,
     -1.34,
-    -4.145
+    -4.206
    ],
    "rotation": [
     0,
@@ -8440,15 +8722,15 @@
     1
    ],
    "asset": {
-    "id": "dining-chair",
+    "id": "rattan-chair",
     "category": "furniture",
-    "name": "Dining Chair",
-    "thumbnail": "/items/dining-chair/thumbnail.webp",
-    "src": "/items/dining-chair/model.glb",
+    "name": "Rattan chair",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/rattan_chair.glb",
     "dimensions": [
-     0.5,
-     1,
-     0.5
+     0.44,
+     0.911,
+     0.44
     ],
     "offset": [
      0,
@@ -8468,7 +8750,7 @@
     "tags": [
      "floor",
      "seating",
-     "dining"
+     "outdoor"
     ]
    },
    "children": [],
@@ -8477,6 +8759,118 @@
   "item_y5": {
    "object": "node",
    "id": "item_y5",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Tomato trellis",
+   "position": [
+    0.488,
+    -0.82,
+    -2.316
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "tomato-trellis",
+    "category": "outdoor",
+    "name": "Tomato trellis",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/tomato_trellis.glb",
+    "dimensions": [
+     1.047,
+     1.6,
+     0.282
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "plant",
+     "outdoor"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y6": {
+   "object": "node",
+   "id": "item_y6",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Tomato trellis",
+   "position": [
+    0.488,
+    -0.82,
+    -4.45
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "tomato-trellis",
+    "category": "outdoor",
+    "name": "Tomato trellis",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/tomato_trellis.glb",
+    "dimensions": [
+     1.047,
+     1.6,
+     0.282
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "floor",
+     "plant",
+     "outdoor"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_y7": {
+   "object": "node",
+   "id": "item_y7",
    "type": "item",
    "parentId": "level_0",
    "name": "Tree",
@@ -8528,9 +8922,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y6": {
+  "item_y8": {
    "object": "node",
-   "id": "item_y6",
+   "id": "item_y8",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8584,9 +8978,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y7": {
+  "item_y9": {
    "object": "node",
-   "id": "item_y7",
+   "id": "item_y9",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8640,9 +9034,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y8": {
+  "item_y10": {
    "object": "node",
-   "id": "item_y8",
+   "id": "item_y10",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8696,9 +9090,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y9": {
+  "item_y11": {
    "object": "node",
-   "id": "item_y9",
+   "id": "item_y11",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8752,9 +9146,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y10": {
+  "item_y12": {
    "object": "node",
-   "id": "item_y10",
+   "id": "item_y12",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8808,9 +9202,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_y11": {
+  "item_y13": {
    "object": "node",
-   "id": "item_y11",
+   "id": "item_y13",
    "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
@@ -8875,7 +9269,7 @@
     0,
     9.9365
    ],
-   "rotation": 3.141592653589793,
+   "rotation": 0,
    "metadata": {}
   }
  },
@@ -8883,6 +9277,277 @@
   "site_main"
  ],
  "collections": {},
- "materials": {},
+ "materials": {
+  "mat_wall": {
+   "id": "mat_wall",
+   "name": "Wall paint (warm white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#fffaf0",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_trim": {
+   "id": "mat_trim",
+   "name": "Trim (white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f8f6f0",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_ceiling": {
+   "id": "mat_ceiling",
+   "name": "Ceiling (white)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f6f4ef",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_siding": {
+   "id": "mat_siding",
+   "name": "Vinyl siding (beige)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#d6cbb3",
+     "roughness": 0.8,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_white": {
+   "id": "mat_white",
+   "name": "White",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f4f1ea",
+     "roughness": 0.7,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_terracotta": {
+   "id": "mat_terracotta",
+   "name": "Terracotta paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#d4805a",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_olive": {
+   "id": "mat_olive",
+   "name": "Olive paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#86915a",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_plaster": {
+   "id": "mat_plaster",
+   "name": "Plaster",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#f1ece1",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_dark_plank": {
+   "id": "mat_dark_plank",
+   "name": "Dark grey plank floor (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#4a4850",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_plywood": {
+   "id": "mat_plywood",
+   "name": "Plywood subfloor (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#c49a6a",
+     "roughness": 0.9,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_powder_vinyl": {
+   "id": "mat_powder_vinyl",
+   "name": "Brown vinyl (existing powder room)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8c7b69",
+     "roughness": 0.7,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_bath_grey": {
+   "id": "mat_bath_grey",
+   "name": "Grey plank (existing baths)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8d8d90",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_exist_cab": {
+   "id": "mat_exist_cab",
+   "name": "Brown wood cabinets (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#8a5a2b",
+     "roughness": 0.6,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_black_top": {
+   "id": "mat_black_top",
+   "name": "Black marble-look top (existing)",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#1d1d20",
+     "roughness": 0.3,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_walnut": {
+   "id": "mat_walnut",
+   "name": "Walnut",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#6b4630",
+     "roughness": 0.5,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_gravel": {
+   "id": "mat_gravel",
+   "name": "Gravel",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#b8b1a4",
+     "roughness": 1,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_stone": {
+   "id": "mat_stone",
+   "name": "Stepping stone",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#c9c4b8",
+     "roughness": 0.95,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  },
+  "mat_lavender": {
+   "id": "mat_lavender",
+   "name": "Lavender paint",
+   "material": {
+    "preset": "custom",
+    "properties": {
+     "color": "#cdb4d8",
+     "roughness": 0.92,
+     "metalness": 0,
+     "opacity": 1,
+     "transparent": false,
+     "side": "front"
+    }
+   }
+  }
+ },
  "installedPlugins": []
 }

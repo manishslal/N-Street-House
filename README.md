@@ -29,6 +29,7 @@ furniture models are fetched from npm / `editor.pascal.app`).
 
 ```bash
 scripts/start-pascal.sh          # prints the editor URL/port
+scripts/serve-models.sh          # leave running: serves the custom furniture models on :8765
 scripts/load-scenes.sh <port>    # loads both scenes
 # open http://localhost:<port>/scene/house-proposed   (or house-existing)
 ```

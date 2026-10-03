@@ -1,8 +1,11 @@
 // Emits a Pascal scene envelope for one layout ('exist' | 'prop') from Bethan's geometry.
 const fs=require('fs');
 const {levelWalls,FT,FH,r3}=require('./plan.cjs');
+const HALL=require('./hall.cjs');
 const FURN=require('./furniture.cjs');
 const FIN=require('./finish.cjs');
+const MODEL_BASE=process.env.MODEL_BASE||'http://localhost:8765';
+const resolveAsset=(u)=>u.startsWith('@models/')?`${MODEL_BASE}/${u.slice(8)}`:(process.env.ASSET_BASE||'')+u;
 const CATALOG=Object.fromEntries(require('./catalog.json').map(a=>[a.id,a]));
 const D=34; // plan z (front=0) is flipped to Pascal Z so the house keeps its handedness (x east, front faces south)
 const m=(v)=>Math.round(v*FT*10000)/10000;
@@ -127,6 +130,12 @@ function build(layout){
     // walls
     let wn=0;
     for(const w of levelWalls(name)){
+      if(floor==='main'){ // widen the hall (see hall.cjs); keep openings at the same absolute x on walls whose start moved
+        const ox=w.start[0], dir=Math.sign(w.end[0]-w.start[0])||1, horiz=Math.abs(w.start[1]-w.end[1])<1e-6;
+        const nsx=HALL.mapX(w.start[0]), nex=HALL.mapX(w.end[0]);
+        if(horiz&&w.openings) for(const o of w.openings){ const a0=ox+dir*o.u0, a1=ox+dir*o.u1; const n0=dir*(a0-nsx), n1=dir*(a1-nsx); o.u0=Math.min(n0,n1); o.u1=Math.max(n0,n1); }
+        w.start=[nsx,w.start[1]]; w.end=[nex,w.end[1]];
+      }
       wn++; const id=`wall_${floor[0]}${wn}`;
       const len=Math.hypot(w.end[0]-w.start[0],w.end[1]-w.start[1])*FT;
       const exterior=w.thickness>=0.5;
@@ -135,10 +144,9 @@ function build(layout){
       const along=Math.abs(w.start[1]-w.end[1])<1e-6?'x':'z', cc=along==='x'?w.start[1]:w.start[0];
       wall.name=w.isNew?'New wall (proposed)':w.half?'Half wall':exterior
         ?(along==='x'?(cc<10?'Front wall':'Rear wall'):(cc<5?'West party wall':'East party wall')):'Interior wall';
-      const tone=w.isNew?'library:preset-powderblue':(exterior?'library:preset-softwhite':'library:preset-white');
-      wall.slots={a:tone,b:tone,aSkirting:'library:preset-white',bSkirting:'library:preset-white'};
-      if(wall.name==='Rear wall') wall.slots.a=FIN.MAT.siding;                    // exterior face (north) is white vinyl lap siding
-      if(floor==='main') FIN.wallFinish(wall,w);                                  // dining accent / niche / kitchen backsplash (proposed only)
+      wall.slots=FIN.wallSlots();
+      [wall.frontSide,wall.backSide]=FIN.wallSides(wall);
+      FIN.wallFinish(wall,w);                                                     // accent wall + marble splash (proposed only)
       if(exterior&&floor==='main') wall.fillToTerrain=true;                       // the main floor sits above the yard; close the walls down to grade
       L.children.push(id);
       let on=0;
@@ -172,12 +180,12 @@ function build(layout){
       L.children.push(rid); });
     // ceiling at the wall-top height; the main-floor ceiling is open over the stairwell
     const cl=add({object:'node',id:`ceiling_${floor[0]}`,type:'ceiling',parentId:L.id,name:floor==='main'?'Main floor ceiling':'Upper floor ceiling',
-      polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),children:[],metadata:{}});
+      polygon:s.outer.map(p=>P(...p)),holes:floor==='main'?s.holes.map(h=>h.map(p=>P(...p))):[],height:m(8),children:[],slots:{surface:'library:preset-softwhite'},metadata:{}});
     L.children.push(cl.id);
     // zones
     zonesFor(layout,floor).forEach((z,i)=>{
       const id=`zone_${floor[0]}${i+1}`;
-      add({object:'node',id,type:'zone',parentId:L.id,name:z.name,polygon:z.pts.map(p=>P(...p)),spaceRole:z.role,camera:cameraFor(floor,z),metadata:{}});
+      add({object:'node',id,type:'zone',parentId:L.id,name:z.name,polygon:z.pts.map(p=>P(...(floor==='main'?HALL.mapPt(p):p))),spaceRole:z.role,camera:cameraFor(floor,z),metadata:{}});
       L.children.push(id);
     });
   }
@@ -202,6 +210,7 @@ function build(layout){
     const L=floor==='upper'?L1:L0; let n=0; const yOff=floor==='yard'?-FIN.GROUND_DROP:0;
     for(const [id,cx,cz,yaw,fit] of FURN[floor]){
       if(fit&&fit.only&&fit.only!==layout) continue;
+      if(process.env.NOLIGHT&&CATALOG[id]&&CATALOG[id].attachTo==='ceiling') continue;
       const a=CATALOG[id]; if(!a) throw new Error('unknown catalog item '+id);
       n++; const [dw,dh,dd]=a.dimensions; let sc=[1,1,1];
       if(fit&&fit.scale){ sc=[fit.scale,fit.scale,fit.scale]; }
@@ -219,15 +228,15 @@ function build(layout){
       const py=ceil?(a.recessed?0:-r3(dh*sc[1])):r3(yOff+((fit&&fit.y)||0));
       const extra={}; for(const k of ['attachTo','recessed','interactive','surface']) if(a[k]!==undefined) extra[k]=a[k];
       add({object:'node',id:nid,type:'item',parentId:host.id,name:a.name,position:[r3(px),py,r3(pz)],rotation:[0,yaw,0],scale:sc,
-        asset:{id:a.id,category:a.category,name:a.name,thumbnail:(process.env.ASSET_BASE||'')+a.thumbnail,src:(process.env.ASSET_BASE||'')+a.src,dimensions:a.dimensions,offset:a.offset||[0,0,0],rotation:a.rotation||[0,0,0],scale:a.scale||[1,1,1],tags:a.tags,...extra},children:[],metadata:{}});
+        asset:{id:a.id,category:a.category,name:a.name,thumbnail:resolveAsset(a.thumbnail),src:resolveAsset(a.src),dimensions:a.dimensions,offset:a.offset||[0,0,0],rotation:a.rotation||[0,0,0],scale:a.scale||[1,1,1],tags:a.tags,...extra},children:[],metadata:{}});
       host.children.push(nid);
     }
   }
   // walkthrough start: just inside the front door, facing into the house
-  add({object:'node',id:'spawn_entry',type:'spawn',parentId:L0.id,name:'Front door',position:[P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[0],0,P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[1]],rotation:parseFloat(process.env.SPAWN_YAW||String(Math.PI)),metadata:{}});
+  add({object:'node',id:'spawn_entry',type:'spawn',parentId:L0.id,name:'Front door',position:[P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[0],0,P(...(process.env.SPAWN_XZ||'1.6,1.4').split(',').map(Number))[1]],rotation:parseFloat(process.env.SPAWN_YAW||String(0)),metadata:{}});
   L0.children.push('spawn_entry');
   require('./swing.cjs').chooseSwings(nodes);   // hang every hinged door so it opens into free space
-  return {nodes,rootNodeIds:[site.id],collections:{},materials:{},installedPlugins:[]};
+  return {nodes,rootNodeIds:[site.id],collections:{},materials:FIN.sceneMaterials(),installedPlugins:[]};
 }
 module.exports={build};
 if(require.main===module){

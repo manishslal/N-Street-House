@@ -1,0 +1,177 @@
+{
+ "round-table": {
+  "id": "round-table",
+  "name": "Round pedestal table",
+  "category": "furniture",
+  "dimensions": [
+   1,
+   0.77,
+   1
+  ],
+  "tags": [
+   "floor",
+   "table",
+   "dining"
+  ]
+ },
+ "bentwood-chair": {
+  "id": "bentwood-chair",
+  "name": "Bentwood chair",
+  "category": "furniture",
+  "dimensions": [
+   0.44,
+   0.8,
+   0.538
+  ],
+  "tags": [
+   "floor",
+   "seating",
+   "dining"
+  ]
+ },
+ "rattan-chair": {
+  "id": "rattan-chair",
+  "name": "Rattan chair",
+  "category": "furniture",
+  "dimensions": [
+   0.44,
+   0.911,
+   0.44
+  ],
+  "tags": [
+   "floor",
+   "seating",
+   "outdoor"
+  ]
+ },
+ "curved-sofa": {
+  "id": "curved-sofa",
+  "name": "Curved boucle sofa",
+  "category": "furniture",
+  "dimensions": [
+   1.927,
+   0.799,
+   0.88
+  ],
+  "tags": [
+   "floor",
+   "seating",
+   "sofa"
+  ]
+ },
+ "globe-pendant": {
+  "id": "globe-pendant",
+  "name": "Amber globe pendant",
+  "category": "furniture",
+  "dimensions": [
+   0.26,
+   1.105,
+   0.26
+  ],
+  "tags": [
+   "ceiling",
+   "light"
+  ],
+  "attachTo": "ceiling"
+ },
+ "dome-pendant": {
+  "id": "dome-pendant",
+  "name": "Brass dome pendant",
+  "category": "furniture",
+  "dimensions": [
+   0.46,
+   1.18,
+   0.46
+  ],
+  "tags": [
+   "ceiling",
+   "light"
+  ],
+  "attachTo": "ceiling"
+ },
+ "oak-stool": {
+  "id": "oak-stool",
+  "name": "Oak stool",
+  "category": "furniture",
+  "dimensions": [
+   0.415,
+   0.682,
+   0.416
+  ],
+  "tags": [
+   "floor",
+   "seating"
+  ]
+ },
+ "monstera": {
+  "id": "monstera",
+  "name": "Potted plant",
+  "category": "furniture",
+  "dimensions": [
+   0.647,
+   1.026,
+   0.786
+  ],
+  "tags": [
+   "floor",
+   "plant"
+  ]
+ },
+ "sheer-curtain": {
+  "id": "sheer-curtain",
+  "name": "Sheer curtain panel",
+  "category": "furniture",
+  "dimensions": [
+   0.7,
+   2.432,
+   0.03
+  ],
+  "tags": [
+   "floor",
+   "decor"
+  ]
+ },
+ "persian-rug": {
+  "id": "persian-rug",
+  "name": "Patterned rug",
+  "category": "furniture",
+  "dimensions": [
+   2.4,
+   0.015,
+   1.7
+  ],
+  "tags": [
+   "floor",
+   "rug"
+  ]
+ },
+ "brass-sconce": {
+  "id": "brass-sconce",
+  "name": "Brass wall sconce",
+  "category": "furniture",
+  "dimensions": [
+   0.2,
+   0.2,
+   0.199
+  ],
+  "tags": [
+   "wall",
+   "light"
+  ]
+ },
+ "tomato-trellis": {
+  "id": "tomato-trellis",
+  "name": "Tomato trellis",
+  "category": "outdoor",
+  "dimensions": [
+   1.047,
+   1.6,
+   0.282
+  ],
+  "tags": [
+   "floor",
+   "plant",
+   "outdoor"
+  ]
+ }
+}

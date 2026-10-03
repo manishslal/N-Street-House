@@ -1661,5 +1661,458 @@
    0.65,
    0.65
   ]
+ },
+ {
+  "id": "round-table",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "table",
+   "dining"
+  ],
+  "name": "Round pedestal table",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/round_table.glb",
+  "dimensions": [
+   1,
+   0.77,
+   1
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "bentwood-chair",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "seating",
+   "dining"
+  ],
+  "name": "Bentwood chair",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/bentwood_chair.glb",
+  "dimensions": [
+   0.44,
+   0.8,
+   0.538
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "rattan-chair",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "seating",
+   "outdoor"
+  ],
+  "name": "Rattan chair",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/rattan_chair.glb",
+  "dimensions": [
+   0.44,
+   0.911,
+   0.44
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "curved-sofa",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "seating",
+   "sofa"
+  ],
+  "name": "Curved boucle sofa",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/curved_sofa.glb",
+  "dimensions": [
+   1.927,
+   0.799,
+   0.88
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "globe-pendant",
+  "category": "furniture",
+  "tags": [
+   "ceiling",
+   "light"
+  ],
+  "name": "Amber globe pendant",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/globe_pendant.glb",
+  "dimensions": [
+   0.26,
+   1.105,
+   0.26
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true,
+  "attachTo": "ceiling",
+  "interactive": {
+   "controls": [
+    {
+     "kind": "toggle"
+    },
+    {
+     "kind": "slider",
+     "label": "Intensity",
+     "min": 0,
+     "max": 100,
+     "unit": "%",
+     "displayMode": "dial",
+     "default": 100
+    }
+   ],
+   "effects": [
+    {
+     "kind": "light",
+     "intensityRange": [
+      0,
+      2
+     ],
+     "color": "#ffffff",
+     "offset": [
+      0,
+      -0.3,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "dome-pendant",
+  "category": "furniture",
+  "tags": [
+   "ceiling",
+   "light"
+  ],
+  "name": "Brass dome pendant",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/dome_pendant.glb",
+  "dimensions": [
+   0.46,
+   1.18,
+   0.46
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true,
+  "attachTo": "ceiling",
+  "interactive": {
+   "controls": [
+    {
+     "kind": "toggle"
+    },
+    {
+     "kind": "slider",
+     "label": "Intensity",
+     "min": 0,
+     "max": 100,
+     "unit": "%",
+     "displayMode": "dial",
+     "default": 100
+    }
+   ],
+   "effects": [
+    {
+     "kind": "light",
+     "intensityRange": [
+      0,
+      2
+     ],
+     "color": "#ffffff",
+     "offset": [
+      0,
+      -0.3,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "oak-stool",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "seating"
+  ],
+  "name": "Oak stool",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/oak_stool.glb",
+  "dimensions": [
+   0.415,
+   0.682,
+   0.416
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "monstera",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "plant"
+  ],
+  "name": "Potted plant",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/monstera.glb",
+  "dimensions": [
+   0.647,
+   1.026,
+   0.786
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "sheer-curtain",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "decor"
+  ],
+  "name": "Sheer curtain panel",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/sheer_curtain.glb",
+  "dimensions": [
+   0.7,
+   2.432,
+   0.03
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "persian-rug",
+  "category": "furniture",
+  "tags": [
+   "floor",
+   "rug"
+  ],
+  "name": "Patterned rug",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/persian_rug.glb",
+  "dimensions": [
+   2.4,
+   0.015,
+   1.7
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "brass-sconce",
+  "category": "furniture",
+  "tags": [
+   "wall",
+   "light"
+  ],
+  "name": "Brass wall sconce",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/brass_sconce.glb",
+  "dimensions": [
+   0.2,
+   0.2,
+   0.199
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "tomato-trellis",
+  "category": "outdoor",
+  "tags": [
+   "floor",
+   "plant",
+   "outdoor"
+  ],
+  "name": "Tomato trellis",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/tomato_trellis.glb",
+  "dimensions": [
+   1.047,
+   1.6,
+   0.282
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
  }
 ]

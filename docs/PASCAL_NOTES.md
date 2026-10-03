@@ -80,3 +80,36 @@ Settings → Save and load → Load build, and `/import?src=<url>` **[source]**.
 * `*.localhost` hostnames do not resolve in some sandboxes (Node can't), which breaks the scene page's
   server-side fetch; use `http://localhost:<port>`.
 * The npm install of the monorepo needs GitHub-hosted plugin tarballs; use the published CLI instead.
+
+## Runtime 1.0.3 vs the Pascal source on GitHub (read this before trusting the source)
+
+The editor you run (`@pascal-app/cli@1.0.3`) is an older build than the source on `main`. Features that exist only in newer source silently
+do nothing in 1.0.3. Verified by rendering:
+
+* **Wall paint** uses slots `interior` / `exterior` (plus `skirtingInterior`, `crownInterior`, band slots `lowerInterior` / `middleInterior` /
+  `upperInterior` and the `…Exterior` twins when `faceBands` is on). The `a` / `b` slots and `faceRegions` of newer source are ignored.
+  The default for every wall slot is `library:concrete-drywall`, which is the grey wall with white dots.
+* Which face uses which slot comes from `frontSide` / `backSide`. Mapping found by looking at renders, not by reading code: for an east-west wall
+  drawn start to end with +x, `frontSide` is the **south** face (smaller plan z). For the exterior walls this generator sets them so the siding
+  colour lands outside. See `wallSides()` in `generator/finish.cjs`.
+* `library:preset-*` are flat colour presets (softwhite #ebe7df, terracotta, olive, sage, cream...). `scene:<id>` materials in the scene
+  envelope's `materials` map **do work** on walls, slabs and ceilings in 1.0.3, so exact colours are possible (`PAINT` in `generator/finish.cjs`).
+  Raw hex strings in a slot do **not** work (they fall back to the default).
+* Fence style `guard` / base style `raised` are rejected by the scene API in 1.0.3.
+* Door `hingesSide` / `swingDirection` work (`generator/swing.cjs` sets them).
+* Library material ids that look like textures can surprise you: `flooring-terrazzo19` is a teal medallion tile, `concrete-drywall` is the dotted
+  grey wall. Preview thumbnails (`/material/.../*_thumb.webp` on editor.pascal.app) are the quickest way to choose.
+
+## Custom models
+Items accept any `http://localhost:<port>/...glb` (or https) as `asset.src`. `models/build-models.cjs` writes the custom furniture and
+lights (round table, bentwood and rattan chairs, curved sofa, pendants, sconce, rug, curtains, stool, plant, trellis) and
+`scripts/serve-models.sh` serves them with CORS on port 8765. `generator/emit.cjs` points items with `@models/...` sources at that server
+(`MODEL_BASE` overrides the origin). If the server is not running those items show as hatched boxes.
+
+## Walkthrough camera
+In the walkthrough the camera looks along (-sin yaw, -cos yaw): spawn yaw 0 faces north (into the house from the front door), yaw pi faces the
+front door. This is the opposite of the item convention above. The default spawn is now yaw 0.
+
+## Looking at it from the sandbox
+The headless-browser screenshots now show real textures and models. The earlier "flat grey" screenshots were a TLS problem: Chromium needs
+`ignoreHTTPSErrors` behind the sandbox proxy. `tools/eyeshot.cjs` takes eye-level shots through the walkthrough.

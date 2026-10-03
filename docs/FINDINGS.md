@@ -41,9 +41,8 @@ should have been an open archway, and gaps between room polygons.
 * **Climbing the whole stair in the walkthrough.** The software renderer is too slow and its synthetic mouse
   input fights the walkthrough controls. Start pose, forward movement and the HUD were confirmed; reaching the
   upper floor was not. Please try this in a real browser first.
-* **Furniture and textures.** The runtime fetches models and textures from `editor.pascal.app`, which was not
-  reachable from the build sandbox, so items showed as outline boxes (correct footprint, no model). Furniture
-  orientation follows Pascal's documented convention but is unconfirmed visually.
+* **Furniture and textures** were first checked with outline boxes only. The screenshots in `screenshots/eye-*.png` were taken later with real
+  textures and models loading (see `docs/PASCAL_NOTES.md`, "Looking at it from the sandbox").
 * **The hosted editor.** Everything was exercised against Pascal 1.0.3 run locally. Loading via the hosted
   editor's "Load build" / `/import` was read from source, not tried.
 * Rendered colours in the screenshots are flat grey for the same CDN reason, and a few hatched boxes float in
@@ -110,3 +109,15 @@ Keep going with Pascal, in this order:
 
 If Pascal's UI proves too heavy for casual browsing, its viewer packages can be embedded in a slimmer page
 without redoing any of this — the scenes are the asset that carries over.
+
+
+## Update: hall, finishes and custom furniture
+* The original's main hall (1.8 ft centre to centre) could not be walked. `generator/hall.cjs` widens it to about 3.6 ft centre to centre by moving
+  its two walls (0.85 ft west, 0.95 ft east). This is an **estimate from the walkthrough photos**; set `HALL_WEST` / `HALL_EAST` or the constants once measured.
+  The kitchen lost 0.95 ft to it (cabinet runs shortened).
+* Wall colour: warm white (`scene:mat_wall`), exterior faces beige siding, accent wall terracotta, marble band behind the north counter run.
+  The old grey wall with white dots was the default drywall texture; 1.0.3 ignored the slots earlier versions of this generator wrote.
+* Proposed scene furniture is partly custom (round table, chairs, curved sofa, pendants, rug...). Existing scene keeps the catalog pieces and the
+  finishes seen in the walkthrough photos.
+* Upper-floor fixtures and beds use standard sizes (full 4.5 x 6.3 ft, twin 3.25 x 6.3 ft, toilet 1.45 x 2.3 ft, vanity 2.0 x 1.75 ft). The rooms are
+  too small for them to clear everything (`node generator/audit.cjs prop`): that is a finding, not a bug.

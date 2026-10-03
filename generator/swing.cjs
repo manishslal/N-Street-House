@@ -13,7 +13,8 @@ function context(g){
   const nodes=Object.values(g);
   const levelOf=(n)=>{while(n&&n.type!=='level')n=g[n.parentId];return n&&n.id;};
   const walls=nodes.filter(n=>n.type==='wall').map(w=>({w,lv:levelOf(w),...wallRect(w)}));
-  const items=nodes.filter(n=>n.type==='item').map(n=>{
+  const SOFT=['rectangular-carpet','round-carpet','ceiling-lamp','recessed-light','picture','round-mirror','small-indoor-plant','coffee-machine'];
+  const items=nodes.filter(n=>n.type==='item'&&!SOFT.includes(n.asset.id)).map(n=>{
     const s=Array.isArray(n.scale)?n.scale:[n.scale||1,n.scale||1,n.scale||1];const d=n.asset.dimensions;
     const W=d[0]*s[0],D=d[2]*s[2],yaw=n.rotation[1],fx=Math.sin(yaw),fz=Math.cos(yaw);
     return {n,lv:levelOf(n),W,D,fx,fz,poly:rect(n.position[0],n.position[2],-fz,fx,W,D)};});
