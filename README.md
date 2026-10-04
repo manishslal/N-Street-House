@@ -28,9 +28,8 @@ Requires Node 22.13+ and network access (the editor runtime, textures and
 furniture models are fetched from npm / `editor.pascal.app`).
 
 ```bash
-scripts/start-pascal.sh          # prints the editor URL/port
-scripts/serve-models.sh          # leave running: serves the custom furniture models on :8765
-scripts/load-scenes.sh <port>    # loads both scenes
+scripts/start-pascal.sh          # prints the editor URL/port; also copies the custom furniture models into the editor (restarts it once)
+scripts/load-scenes.sh <port>    # loads both scenes (re-run it after every git pull)
 # open http://localhost:<port>/scene/house-proposed   (or house-existing)
 ```
 

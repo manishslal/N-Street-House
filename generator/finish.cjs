@@ -132,7 +132,7 @@ function kitchen({add,L0}){
   ],{y:1.5,carcass:0.7});
   if(!isExist()){
     // dining sideboard against the terracotta east wall (plan z 28.6 -> 22.6), echoing the render's built-in
-    run('Dining sideboard','base',[14.65,28.6],-PI/2,1.83,0.45,[
+    run('Dining sideboard','base',[14.25,28.6],-PI/2,1.83,0.45,[
       {w:0.61,stack:[{type:'door',doorType:'single-left'}]},
       {w:0.61,stack:[{type:'drawer',drawerCount:3}]},
       {w:0.61,stack:[{type:'door',doorType:'single-right'}]},

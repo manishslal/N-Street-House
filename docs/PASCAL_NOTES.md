@@ -103,8 +103,9 @@ do nothing in 1.0.3. Verified by rendering:
 ## Custom models
 Items accept any `http://localhost:<port>/...glb` (or https) as `asset.src`. `models/build-models.cjs` writes the custom furniture and
 lights (round table, bentwood and rattan chairs, curved sofa, pendants, sconce, rug, curtains, stool, plant, trellis) and
-`scripts/serve-models.sh` serves them with CORS on port 8765. `generator/emit.cjs` points items with `@models/...` sources at that server
-(`MODEL_BASE` overrides the origin). If the server is not running those items show as hatched boxes.
+`scripts/start-pascal.sh` copies them into the editor runtime's `public/custom-models/` (the runtime only reads that folder at startup, hence the restart),
+and `scripts/load-scenes.sh` rewrites the model URLs in the scene to that same address. `scripts/serve-models.sh` (port 8765) is only a fallback.
+If a model fails to load, Pascal draws a red wireframe box in its footprint.
 
 ## Walkthrough camera
 In the walkthrough the camera looks along (-sin yaw, -cos yaw): spawn yaw 0 faces north (into the house from the front door), yaw pi faces the

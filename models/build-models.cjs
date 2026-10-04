@@ -68,7 +68,9 @@ const hex=(c)=>{const n=parseInt(c.slice(1),16);return [(n>>16&255)/255,(n>>8&25
 const srgb2lin=(c)=>c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4);
 function mat(color,{rough=0.7,metal=0,alpha=1,emissive=null,tex=null}={}){const c=hex(color).map(srgb2lin);
   return {color:[...c,alpha],rough,metal,alpha,emissive:emissive?hex(emissive).map(srgb2lin):null,tex};}
-function writeGlb(name,parts){ // parts: [{geo,mat}]
+function writeGlb(name,parts,opts={}){ // parts: [{geo,mat}]
+  if(opts.center!==false){ let mn=[1e9,1e9],mx=[-1e9,-1e9]; for(const p of parts)for(let k=0;k<p.geo.p.length;k+=3){mn[0]=Math.min(mn[0],p.geo.p[k]);mx[0]=Math.max(mx[0],p.geo.p[k]);mn[1]=Math.min(mn[1],p.geo.p[k+2]);mx[1]=Math.max(mx[1],p.geo.p[k+2]);}
+    const dx=-(mn[0]+mx[0])/2, dz=-(mn[1]+mx[1])/2; for(const p of parts) p.geo.apply(q=>[q[0]+dx,q[1],q[2]+dz]); }
   const bin=[];let off=0;const bufferViews=[],accessors=[],meshPrims=[],materials=[],images=[],textures=[],samplers=[];
   const push=(buf,target)=>{const pad=(4-(buf.length%4))%4;bufferViews.push({buffer:0,byteOffset:off,byteLength:buf.length,...(target?{target}:{})});bin.push(buf,Buffer.alloc(pad));off+=buf.length+pad;return bufferViews.length-1;};
   const mats=new Map();
@@ -156,7 +158,7 @@ rec('rattan-chair','Rattan chair','furniture',writeGlb('rattan_chair',chairParts
   rec('persian-rug','Patterned rug','furniture',writeGlb('persian_rug',parts),{tags:['floor','rug']}); }
 // 10 wall sconce (brass dome on a bracket); mounts on the wall at the item's back (-z)
 { const parts=[{geo:T(RX(sphere(0.1,20,8,0,Math.PI/2),-Math.PI/2),0,0,0.14),mat:BRASS},{geo:T(box(0.02,0.02,0.12),0,0.0,0.06),mat:BRASS},{geo:T(box(0.06,0.12,0.015),0,0,0.01),mat:BRASS},{geo:T(sphere(0.03,10,6),0,0,0.17),mat:WARMLIGHT}];
-  rec('brass-sconce','Brass wall sconce','furniture',writeGlb('brass_sconce',parts.map(p=>({geo:T(p.geo,0,0.1,0),mat:p.mat}))),{tags:['wall','light']}); }
+  rec('brass-sconce','Brass wall sconce','furniture',writeGlb('brass_sconce',parts.map(p=>({geo:T(p.geo,0,0.1,0),mat:p.mat})),{center:false}),{tags:['wall','light']}); }
 // 11 olive-green wall niche shelf bracket set not needed. 12 planter trellis with tomatoes (backyard)
 { const parts=[]; for(const x of [-0.45,0,0.45]) parts.push({geo:T(cyl(0.008,0.008,1.6,6),x,0,0),mat:CANEDARK}); parts.push({geo:T(box(1.0,0.01,0.01),0,1.1,0),mat:CANEDARK},{geo:T(box(1.0,0.01,0.01),0,0.6,0),mat:CANEDARK});
   for(let k=0;k<22;k++){ const x=((k*53)%100)/100-0.5, y=0.1+((k*29)%100)/100*1.3; parts.push({geo:T(sphere(0.07+((k*7)%4)*0.012,10,6),x*0.9,y,0.02+((k%3)-1)*0.04),mat:k%5==0?TERRA:(k%2?GREEN:GREEN2)}); }

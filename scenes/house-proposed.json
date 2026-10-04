@@ -150,7 +150,6 @@
     "item_m29",
     "item_m30",
     "item_m31",
-    "item_m32",
     "item_m33",
     "item_m34",
     "item_y1",
@@ -217,10 +216,8 @@
     "item_u2",
     "item_u3",
     "item_u4",
-    "item_u5",
     "item_u6",
     "item_u7",
-    "item_u8",
     "item_u9",
     "item_u10"
    ],
@@ -528,7 +525,7 @@
    "openingKind": "door",
    "doorType": "double",
    "metadata": {},
-   "swingDirection": "inward",
+   "swingDirection": "outward",
    "hingesSide": "left"
   },
   "door_m5_2": {
@@ -4186,7 +4183,7 @@
    "parentId": "level_0",
    "runTier": "base",
    "position": [
-    4.4653,
+    4.3434,
     0,
     1.6459
    ],
@@ -5472,7 +5469,7 @@
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    -1.5708,
     0
    ],
    "scale": [
@@ -5637,13 +5634,13 @@
    "parentId": "level_0",
    "name": "Bentwood chair",
    "position": [
-    2.621,
+    2.698,
     0,
-    2.941
+    3.126
    ],
    "rotation": [
     0,
-    3.141592653589793,
+    3.1416,
     0
    ],
    "scale": [
@@ -5693,13 +5690,13 @@
    "parentId": "level_0",
    "name": "Bentwood chair",
    "position": [
-    1.996,
+    1.896,
     0,
     2.317
    ],
    "rotation": [
     0,
-    1.5707963267948966,
+    3.1416,
     0
    ],
    "scale": [
@@ -5751,11 +5748,11 @@
    "position": [
     2.621,
     0,
-    1.692
+    1.592
    ],
    "rotation": [
     0,
-    0,
+    1.5708,
     0
    ],
    "scale": [
@@ -5805,7 +5802,7 @@
    "parentId": "level_0",
    "name": "Curved boucle sofa",
    "position": [
-    3.749,
+    3.599,
     0,
     0.914
    ],
@@ -5971,9 +5968,9 @@
    "parentId": "level_0",
    "name": "Potted plant",
    "position": [
-    4.359,
+    3.741,
     0,
-    1.341
+    1.849
    ],
    "rotation": [
     0,
@@ -5992,9 +5989,9 @@
     "thumbnail": "http://localhost:8765/thumb.png",
     "src": "http://localhost:8765/monstera.glb",
     "dimensions": [
-     0.647,
-     1.026,
-     0.786
+     0.702,
+     1.071,
+     0.859
     ],
     "offset": [
      0,
@@ -7452,7 +7449,7 @@
    "parentId": "level_0",
    "name": "Small Plant",
    "position": [
-    4.45,
+    4.42,
     1.62,
     2.896
    ],
@@ -7508,7 +7505,7 @@
    "parentId": "level_0",
    "name": "Coffee Machine",
    "position": [
-    4.45,
+    4.343,
     0.96,
     2.225
    ],
@@ -7644,13 +7641,13 @@
    "parentId": "level_0",
    "name": "Floor Lamp",
    "position": [
-    4.359,
+    3.169,
     0,
-    6.949
+    7.106
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    -1.5708,
     0
    ],
    "scale": [
@@ -7743,9 +7740,9 @@
    "parentId": "level_0",
    "name": "Indoor Plant",
    "position": [
-    4.359,
+    4.174,
     0,
-    9.997
+    9.92
    ],
    "rotation": [
     0,
@@ -7803,63 +7800,6 @@
    "children": [],
    "metadata": {}
   },
-  "item_m32": {
-   "object": "node",
-   "id": "item_m32",
-   "type": "item",
-   "parentId": "level_0",
-   "name": "Washing Machine",
-   "position": [
-    0.336,
-    0,
-    2.621
-   ],
-   "rotation": [
-    0,
-    1.5707963267948966,
-    0
-   ],
-   "scale": [
-    0.671,
-    0.671,
-    0.671
-   ],
-   "asset": {
-    "id": "washing-machine",
-    "category": "bathroom",
-    "name": "Washing Machine",
-    "thumbnail": "/items/washing-machine/thumbnail.webp",
-    "src": "/items/washing-machine/model.glb",
-    "dimensions": [
-     1,
-     1,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "electronics",
-     "laundry"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
   "item_m33": {
    "object": "node",
    "id": "item_m33",
@@ -7867,7 +7807,7 @@
    "parentId": "level_0",
    "name": "Toilet",
    "position": [
-    0.625,
+    0.575,
     0,
     3.353
    ],
@@ -7929,7 +7869,7 @@
    ],
    "rotation": [
     0,
-    3.141592653589793,
+    3.1416,
     0
    ],
    "scale": [
@@ -7985,7 +7925,7 @@
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    0,
     0
    ],
    "scale": [
@@ -8034,13 +7974,13 @@
    "parentId": "level_1",
    "name": "Closet",
    "position": [
-    0.183,
+    0.233,
     0,
     9.449
    ],
    "rotation": [
     0,
-    1.5707963267948966,
+    1.5708,
     0
    ],
    "scale": [
@@ -8096,7 +8036,7 @@
    ],
    "rotation": [
     0,
-    1.5707963267948966,
+    1.5708,
     0
    ],
    "scale": [
@@ -8151,7 +8091,7 @@
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    -1.5708,
     0
    ],
    "scale": [
@@ -8193,62 +8133,6 @@
    "children": [],
    "metadata": {}
   },
-  "item_u5": {
-   "object": "node",
-   "id": "item_u5",
-   "type": "item",
-   "parentId": "level_1",
-   "name": "Toilet",
-   "position": [
-    3.17,
-    0,
-    5.288
-   ],
-   "rotation": [
-    0,
-    1.5707963267948966,
-    0
-   ],
-   "scale": [
-    0.442,
-    0.442,
-    0.442
-   ],
-   "asset": {
-    "id": "toilet",
-    "category": "bathroom",
-    "name": "Toilet",
-    "thumbnail": "/items/toilet/thumbnail.webp",
-    "src": "/items/toilet/model.glb",
-    "dimensions": [
-     1,
-     0.9,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     -0.23
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "bathroom"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
   "item_u6": {
    "object": "node",
    "id": "item_u6",
@@ -8256,13 +8140,13 @@
    "parentId": "level_1",
    "name": "Bathroom Sink",
    "position": [
-    3.17,
+    3.22,
     0,
     5.822
    ],
    "rotation": [
     0,
-    1.5707963267948966,
+    1.5708,
     0
    ],
    "scale": [
@@ -8312,13 +8196,13 @@
    "parentId": "level_1",
    "name": "Bathtub",
    "position": [
-    4.191,
+    4.141,
     0,
     5.837
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    -1.5708,
     0
    ],
    "scale": [
@@ -8361,62 +8245,6 @@
    "children": [],
    "metadata": {}
   },
-  "item_u8": {
-   "object": "node",
-   "id": "item_u8",
-   "type": "item",
-   "parentId": "level_1",
-   "name": "Toilet",
-   "position": [
-    4.351,
-    0,
-    3.78
-   ],
-   "rotation": [
-    0,
-    -1.5707963267948966,
-    0
-   ],
-   "scale": [
-    0.442,
-    0.442,
-    0.442
-   ],
-   "asset": {
-    "id": "toilet",
-    "category": "bathroom",
-    "name": "Toilet",
-    "thumbnail": "/items/toilet/thumbnail.webp",
-    "src": "/items/toilet/model.glb",
-    "dimensions": [
-     1,
-     0.9,
-     1
-    ],
-    "offset": [
-     0,
-     0,
-     -0.23
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "floor",
-     "large",
-     "bathroom"
-    ]
-   },
-   "children": [],
-   "metadata": {}
-  },
   "item_u9": {
    "object": "node",
    "id": "item_u9",
@@ -8424,13 +8252,13 @@
    "parentId": "level_1",
    "name": "Bathroom Sink",
    "position": [
-    4.343,
+    4.266,
     0,
-    4.511
+    4.696
    ],
    "rotation": [
     0,
-    -1.5707963267948966,
+    0,
     0
    ],
    "scale": [
@@ -8480,9 +8308,9 @@
    "parentId": "level_1",
    "name": "Squared Shower",
    "position": [
-    3.414,
+    3.704,
     0,
-    3.841
+    3.919
    ],
    "rotation": [
     0,

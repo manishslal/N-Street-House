@@ -122,3 +122,9 @@ without redoing any of this — the scenes are the asset that carries over.
 * Upper-floor fixtures and beds use standard sizes (full 4.5 x 6.3 ft, twin 3.25 x 6.3 ft, toilet 1.45 x 2.3 ft, vanity 2.0 x 1.75 ft). The rooms are
   too small for them to clear everything (`node generator/audit.cjs prop`): that is a finding, not a bug.
 * `generator/verify.cjs` now reports about 87 % overlap with the original: the difference is the intentional hall widening and the niche strips, not a regression (the 99.9 % figure above was for the unmodified geometry; run with `HALL_WEST=0 HALL_EAST=0` and without the niche to reproduce it).
+
+## Update: does it all fit? (`docs/FIT_REPORT.md`)
+Before this pass about 15 floor pieces cut into walls, stood outside their room or overlapped each other (Pascal's own checker listed 22 overlaps). `generator/fitsolve.cjs`
+now runs on every build: each piece moves to the nearest spot where it is inside its room, clear of walls, other pieces, door swings and the stairwell, and pieces
+that cannot fit are removed and listed in `docs/FIT_REPORT.md`. Pieces that do not fit in the proposed layout: the washing machine (laundry), and the toilets in the
+en suite and the shower bath. Re-run `node generator/fit.cjs prop` after any change.

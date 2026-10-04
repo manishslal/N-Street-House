@@ -1,13 +1,13 @@
 #!/bin/bash
 # Loads both generated scenes into a running local Pascal editor through its scene API.
 # usage: scripts/load-scenes.sh <port>      (port printed by `npx @pascal-app/cli status`)
+# Custom model URLs in the scene files point at :8765; here they are rewritten to this editor's own /custom-models folder (see start-pascal.sh).
 # Needs a hosts entry or the Host header below; the sandbox the spike was built in cannot resolve *.localhost, so we send the header explicitly.
 PORT=${1:?usage: load-scenes.sh <port>}
-if ! curl -s -o /dev/null -m 2 http://localhost:8765/thumb.png; then echo "WARNING: model server not running on :8765 - custom furniture will show as red boxes. Run scripts/serve-models.sh in another terminal (start-pascal.sh also starts it)."; fi
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
 load(){ id=$1; name=$2; file=$3
   curl -s -o /dev/null -X DELETE -H "Host: pascal.localhost:$PORT" "http://127.0.0.1:$PORT/api/scenes/$id"
-  node -e "const g=JSON.parse(require('fs').readFileSync('$file','utf8'));process.stdout.write(JSON.stringify({id:'$id',name:'$name',graph:g}))" > /tmp/house-spike-body.json
+  node -e "const g=JSON.parse(require('fs').readFileSync('$file','utf8'));process.stdout.write(JSON.stringify({id:'$id',name:'$name',graph:g}).split('http://localhost:8765').join('http://localhost:$PORT/custom-models'))" > /tmp/house-spike-body.json
   curl -s -w "\n$id -> HTTP %{http_code}\n" -X POST -H "Host: pascal.localhost:$PORT" -H 'content-type: application/json' --data @/tmp/house-spike-body.json "http://127.0.0.1:$PORT/api/scenes" | tail -1
 }
 load house-existing "House - Existing" "$HERE/scenes/house-existing.json"
