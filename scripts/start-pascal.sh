@@ -15,3 +15,5 @@ if ! cmp -s "$HERE/models/round_table.glb" "$PUB/custom-models/round_table.glb" 
   echo "custom models copied into the editor and the editor restarted"
 fi
 $CLI status
+echo
+echo "Next: scripts/load-scenes.sh   (it finds the editor port itself; if you pass one, use the port after 'is running at', not the MCP port)"
