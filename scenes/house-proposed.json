@@ -114,8 +114,6 @@
     "fence_back",
     "fence_west",
     "fence_east",
-    "slab_shelf1",
-    "slab_shelf2",
     "wall_niche1",
     "wall_niche2",
     "wall_niche3",
@@ -123,7 +121,6 @@
     "wall_niche5",
     "wall_niche6",
     "wall_niche7",
-    "slab_hood",
     "slab_stone1",
     "slab_stone2",
     "slab_stone3",
@@ -145,13 +142,16 @@
     "item_m11",
     "item_m12",
     "item_m13",
-    "item_m27",
-    "item_m28",
-    "item_m29",
+    "item_m14",
+    "item_m15",
+    "item_m16",
     "item_m30",
     "item_m31",
+    "item_m32",
     "item_m33",
     "item_m34",
+    "item_m36",
+    "item_m37",
     "item_y1",
     "item_y2",
     "item_y3",
@@ -1253,9 +1253,6 @@
    "holes": [],
    "height": 2.4384,
    "children": [
-    "item_m14",
-    "item_m15",
-    "item_m16",
     "item_m17",
     "item_m18",
     "item_m19",
@@ -1265,7 +1262,10 @@
     "item_m23",
     "item_m24",
     "item_m25",
-    "item_m26"
+    "item_m26",
+    "item_m27",
+    "item_m28",
+    "item_m29"
    ],
    "slots": {
     "surface": "library:preset-softwhite"
@@ -4835,74 +4835,6 @@
    "color": "#c8a165",
    "metadata": {}
   },
-  "slab_shelf1": {
-   "object": "node",
-   "id": "slab_shelf1",
-   "type": "slab",
-   "name": "Niche shelf",
-   "parentId": "level_0",
-   "polygon": [
-    [
-     4.3434,
-     3.2004
-    ],
-    [
-     4.5629,
-     3.2004
-    ],
-    [
-     4.5629,
-     1.9202
-    ],
-    [
-     4.3434,
-     1.9202
-    ]
-   ],
-   "holes": [],
-   "holeMetadata": [],
-   "elevation": 1.3,
-   "thickness": 0.03,
-   "slots": {
-    "surface": "scene:mat_walnut",
-    "side": "scene:mat_walnut"
-   },
-   "metadata": {}
-  },
-  "slab_shelf2": {
-   "object": "node",
-   "id": "slab_shelf2",
-   "type": "slab",
-   "name": "Niche shelf",
-   "parentId": "level_0",
-   "polygon": [
-    [
-     4.3434,
-     3.2004
-    ],
-    [
-     4.5629,
-     3.2004
-    ],
-    [
-     4.5629,
-     1.9202
-    ],
-    [
-     4.3434,
-     1.9202
-    ]
-   ],
-   "holes": [],
-   "holeMetadata": [],
-   "elevation": 1.6,
-   "thickness": 0.03,
-   "slots": {
-    "surface": "scene:mat_walnut",
-    "side": "scene:mat_walnut"
-   },
-   "metadata": {}
-  },
   "wall_niche1": {
    "object": "node",
    "id": "wall_niche1",
@@ -5075,40 +5007,6 @@
    "slots": {
     "interior": "scene:mat_olive",
     "exterior": "scene:mat_olive"
-   },
-   "metadata": {}
-  },
-  "slab_hood": {
-   "object": "node",
-   "id": "slab_hood",
-   "type": "slab",
-   "name": "Plaster range hood",
-   "parentId": "level_0",
-   "polygon": [
-    [
-     4.0538,
-     5.2273
-    ],
-    [
-     4.5629,
-     5.2273
-    ],
-    [
-     4.5629,
-     4.3129
-    ],
-    [
-     4.0538,
-     4.3129
-    ]
-   ],
-   "holes": [],
-   "holeMetadata": [],
-   "elevation": 2.35,
-   "thickness": 0.85,
-   "slots": {
-    "surface": "scene:mat_plaster",
-    "side": "scene:mat_plaster"
    },
    "metadata": {}
   },
@@ -6076,6 +5974,172 @@
    "id": "item_m12",
    "type": "item",
    "parentId": "level_0",
+   "name": "Walnut wall shelf",
+   "position": [
+    4.435,
+    1.3,
+    2.56
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "niche-shelf",
+    "category": "furniture",
+    "name": "Walnut wall shelf",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/niche_shelf.glb",
+    "dimensions": [
+     1.28,
+     0.035,
+     0.23
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "wall",
+     "shelf"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m13": {
+   "object": "node",
+   "id": "item_m13",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Walnut wall shelf",
+   "position": [
+    4.435,
+    1.6,
+    2.56
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "niche-shelf",
+    "category": "furniture",
+    "name": "Walnut wall shelf",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/niche_shelf.glb",
+    "dimensions": [
+     1.28,
+     0.035,
+     0.23
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "wall",
+     "shelf"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m14": {
+   "object": "node",
+   "id": "item_m14",
+   "type": "item",
+   "parentId": "level_0",
+   "name": "Plaster range hood",
+   "position": [
+    4.322,
+    1.5,
+    4.77
+   ],
+   "rotation": [
+    0,
+    -1.5707963267948966,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "plaster-hood",
+    "category": "kitchen",
+    "name": "Plaster range hood",
+    "thumbnail": "http://localhost:8765/thumb.png",
+    "src": "http://localhost:8765/plaster_hood.glb",
+    "dimensions": [
+     0.97,
+     0.88,
+     0.54
+    ],
+    "offset": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "wall",
+     "kitchen",
+     "hood"
+    ]
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m15": {
+   "object": "node",
+   "id": "item_m15",
+   "type": "item",
+   "parentId": "level_0",
    "name": "Patterned rug",
    "position": [
     2.621,
@@ -6126,9 +6190,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m13": {
+  "item_m16": {
    "object": "node",
-   "id": "item_m13",
+   "id": "item_m16",
    "type": "item",
    "parentId": "level_0",
    "name": "Patterned rug",
@@ -6181,9 +6245,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m14": {
+  "item_m17": {
    "object": "node",
-   "id": "item_m14",
+   "id": "item_m17",
    "type": "item",
    "parentId": "ceiling_m",
    "name": "Brass dome pendant",
@@ -6268,9 +6332,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m15": {
+  "item_m18": {
    "object": "node",
-   "id": "item_m15",
+   "id": "item_m18",
    "type": "item",
    "parentId": "ceiling_m",
    "name": "Amber globe pendant",
@@ -6355,9 +6419,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m16": {
+  "item_m19": {
    "object": "node",
-   "id": "item_m16",
+   "id": "item_m19",
    "type": "item",
    "parentId": "ceiling_m",
    "name": "Amber globe pendant",
@@ -6442,306 +6506,6 @@
    "children": [],
    "metadata": {}
   },
-  "item_m17": {
-   "object": "node",
-   "id": "item_m17",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Recessed Light",
-   "position": [
-    2.499,
-    0,
-    5.791
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    1,
-    1,
-    1
-   ],
-   "asset": {
-    "id": "recessed-light",
-    "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
-    "dimensions": [
-     0.23,
-     0.06,
-     0.23
-    ],
-    "offset": [
-     0,
-     0.0057,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
-    ],
-    "attachTo": "ceiling",
-    "recessed": true,
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.1,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m18": {
-   "object": "node",
-   "id": "item_m18",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Recessed Light",
-   "position": [
-    2.499,
-    0,
-    4.694
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    1,
-    1,
-    1
-   ],
-   "asset": {
-    "id": "recessed-light",
-    "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
-    "dimensions": [
-     0.23,
-     0.06,
-     0.23
-    ],
-    "offset": [
-     0,
-     0.0057,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
-    ],
-    "attachTo": "ceiling",
-    "recessed": true,
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.1,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
-  "item_m19": {
-   "object": "node",
-   "id": "item_m19",
-   "type": "item",
-   "parentId": "ceiling_m",
-   "name": "Recessed Light",
-   "position": [
-    3.78,
-    0,
-    5.791
-   ],
-   "rotation": [
-    0,
-    0,
-    0
-   ],
-   "scale": [
-    1,
-    1,
-    1
-   ],
-   "asset": {
-    "id": "recessed-light",
-    "category": "furniture",
-    "name": "Recessed Light",
-    "thumbnail": "/items/recessed-light/thumbnail.webp",
-    "src": "/items/recessed-light/model.glb",
-    "dimensions": [
-     0.23,
-     0.06,
-     0.23
-    ],
-    "offset": [
-     0,
-     0.0057,
-     0
-    ],
-    "rotation": [
-     0,
-     0,
-     0
-    ],
-    "scale": [
-     1,
-     1,
-     1
-    ],
-    "tags": [
-     "recessed",
-     "downlight",
-     "spotlight",
-     "lighting",
-     "fixture",
-     "modern",
-     "minimalist",
-     "metal",
-     "aluminum",
-     "luminaire",
-     "ambient",
-     "illumination",
-     "architectural",
-     "can"
-    ],
-    "attachTo": "ceiling",
-    "recessed": true,
-    "interactive": {
-     "controls": [
-      {
-       "kind": "toggle"
-      },
-      {
-       "kind": "slider",
-       "label": "Intensity",
-       "min": 0,
-       "max": 100,
-       "unit": "%",
-       "displayMode": "dial",
-       "default": 100
-      }
-     ],
-     "effects": [
-      {
-       "kind": "light",
-       "intensityRange": [
-        0,
-        2
-       ],
-       "color": "#ffffff",
-       "offset": [
-        0,
-        -0.1,
-        0
-       ]
-      }
-     ]
-    }
-   },
-   "children": [],
-   "metadata": {}
-  },
   "item_m20": {
    "object": "node",
    "id": "item_m20",
@@ -6749,9 +6513,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    3.78,
+    2.499,
     0,
-    4.694
+    5.791
    ],
    "rotation": [
     0,
@@ -6849,9 +6613,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    1.676,
+    2.499,
     0,
-    9.449
+    4.694
    ],
    "rotation": [
     0,
@@ -6949,9 +6713,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    2.743,
+    3.78,
     0,
-    9.449
+    5.791
    ],
    "rotation": [
     0,
@@ -7049,9 +6813,9 @@
    "parentId": "ceiling_m",
    "name": "Recessed Light",
    "position": [
-    3.962,
+    3.78,
     0,
-    9.449
+    4.694
    ],
    "rotation": [
     0,
@@ -7151,7 +6915,7 @@
    "position": [
     1.676,
     0,
-    7.772
+    9.449
    ],
    "rotation": [
     0,
@@ -7251,7 +7015,7 @@
    "position": [
     2.743,
     0,
-    7.772
+    9.449
    ],
    "rotation": [
     0,
@@ -7351,7 +7115,7 @@
    "position": [
     3.962,
     0,
-    7.772
+    9.449
    ],
    "rotation": [
     0,
@@ -7446,11 +7210,311 @@
    "object": "node",
    "id": "item_m27",
    "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    1.676,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m28": {
+   "object": "node",
+   "id": "item_m28",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    2.743,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m29": {
+   "object": "node",
+   "id": "item_m29",
+   "type": "item",
+   "parentId": "ceiling_m",
+   "name": "Recessed Light",
+   "position": [
+    3.962,
+    0,
+    7.772
+   ],
+   "rotation": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "asset": {
+    "id": "recessed-light",
+    "category": "furniture",
+    "name": "Recessed Light",
+    "thumbnail": "/items/recessed-light/thumbnail.webp",
+    "src": "/items/recessed-light/model.glb",
+    "dimensions": [
+     0.23,
+     0.06,
+     0.23
+    ],
+    "offset": [
+     0,
+     0.0057,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ],
+    "tags": [
+     "recessed",
+     "downlight",
+     "spotlight",
+     "lighting",
+     "fixture",
+     "modern",
+     "minimalist",
+     "metal",
+     "aluminum",
+     "luminaire",
+     "ambient",
+     "illumination",
+     "architectural",
+     "can"
+    ],
+    "attachTo": "ceiling",
+    "recessed": true,
+    "interactive": {
+     "controls": [
+      {
+       "kind": "toggle"
+      },
+      {
+       "kind": "slider",
+       "label": "Intensity",
+       "min": 0,
+       "max": 100,
+       "unit": "%",
+       "displayMode": "dial",
+       "default": 100
+      }
+     ],
+     "effects": [
+      {
+       "kind": "light",
+       "intensityRange": [
+        0,
+        2
+       ],
+       "color": "#ffffff",
+       "offset": [
+        0,
+        -0.1,
+        0
+       ]
+      }
+     ]
+    }
+   },
+   "children": [],
+   "metadata": {}
+  },
+  "item_m30": {
+   "object": "node",
+   "id": "item_m30",
+   "type": "item",
    "parentId": "level_0",
    "name": "Small Plant",
    "position": [
     4.42,
-    1.62,
+    1.64,
     2.896
    ],
    "rotation": [
@@ -7498,9 +7562,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m28": {
+  "item_m31": {
    "object": "node",
-   "id": "item_m28",
+   "id": "item_m31",
    "type": "item",
    "parentId": "level_0",
    "name": "Coffee Machine",
@@ -7565,9 +7629,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m29": {
+  "item_m32": {
    "object": "node",
-   "id": "item_m29",
+   "id": "item_m32",
    "type": "item",
    "parentId": "level_0",
    "name": "Picture",
@@ -7634,9 +7698,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m30": {
+  "item_m33": {
    "object": "node",
-   "id": "item_m30",
+   "id": "item_m33",
    "type": "item",
    "parentId": "level_0",
    "name": "Floor Lamp",
@@ -7733,9 +7797,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m31": {
+  "item_m34": {
    "object": "node",
-   "id": "item_m31",
+   "id": "item_m34",
    "type": "item",
    "parentId": "level_0",
    "name": "Indoor Plant",
@@ -7800,9 +7864,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m33": {
+  "item_m36": {
    "object": "node",
-   "id": "item_m33",
+   "id": "item_m36",
    "type": "item",
    "parentId": "level_0",
    "name": "Toilet",
@@ -7856,9 +7920,9 @@
    "children": [],
    "metadata": {}
   },
-  "item_m34": {
+  "item_m37": {
    "object": "node",
-   "id": "item_m34",
+   "id": "item_m37",
    "type": "item",
    "parentId": "level_0",
    "name": "Bathroom Sink",

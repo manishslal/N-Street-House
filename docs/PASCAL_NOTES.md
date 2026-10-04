@@ -114,3 +114,9 @@ front door. This is the opposite of the item convention above. The default spawn
 ## Looking at it from the sandbox
 The headless-browser screenshots now show real textures and models. The earlier "flat grey" screenshots were a TLS problem: Chromium needs
 `ignoreHTTPSErrors` behind the sandbox proxy. `tools/eyeshot.cjs` takes eye-level shots through the walkthrough.
+
+## Slabs lift furniture (found from a screenshot)
+Do not use slabs as shelves, hoods, boxes or planters over furniture. Pascal puts a piece of furniture on the highest slab under its footprint,
+so a shelf slab at 1.6 m lifted the sideboard and everything on it to 1.6 m (it looked like floating furniture), and the hood slab lifted the range run.
+Anything raised above the floor that furniture can stand under or beside is now a model (`niche-shelf`, `plaster-hood`) instead of a slab.
+Slabs that are left (floors, patio, deck, planter boxes, bench, stepping stones) are only under things that are meant to stand on them.

@@ -16,6 +16,8 @@ const main=[
   ['sheer-curtain',9.0,32.6,S,{only:'prop',free:true}],['sheer-curtain',14.55,32.6,S,{only:'prop',free:true}],
   ['monstera',14.3,29.6,0,{only:'prop',free:true}],
   ['brass-sconce',14.9,25.6,Wst,{y:2.0,only:'prop',free:true}],
+  ['niche-shelf',14.55,25.6,Wst,{y:1.3,only:'prop',free:true}],['niche-shelf',14.55,25.6,Wst,{y:1.6,only:'prop',free:true}],
+  ['plaster-hood',14.18,18.35,Wst,{y:1.5,only:'prop',free:true}],
   // from the reference renders (proposed only): rugs, pendants, recessed lights, plants, art
   ['persian-rug',8.6,26.4,S,{only:'prop',free:true}],
   ['persian-rug',9.5,7.0,S,{scale:1.2,only:'prop',free:true}],
@@ -24,7 +26,7 @@ const main=[
   ['recessed-light',8.2,15.0,0,{only:'prop',free:true}],['recessed-light',8.2,18.6,0,{only:'prop',free:true}],['recessed-light',12.4,15.0,0,{only:'prop',free:true}],['recessed-light',12.4,18.6,0,{only:'prop',free:true}],
   ['recessed-light',5.5,3.0,0,{only:'prop',free:true}],['recessed-light',9.0,3.0,0,{only:'prop',free:true}],['recessed-light',13.0,3.0,0,{only:'prop',free:true}],
   ['recessed-light',5.5,8.5,0,{only:'prop',free:true}],['recessed-light',9.0,8.5,0,{only:'prop',free:true}],['recessed-light',13.0,8.5,0,{only:'prop',free:true}],
-  ['small-indoor-plant',14.5,24.5,0,{scale:1.0,y:1.62,only:'prop',free:true}],
+  ['small-indoor-plant',14.5,24.5,0,{scale:1.0,y:1.64,only:'prop',free:true}],
   ['coffee-machine',14.25,26.7,Wst,{scale:1.5,y:0.96,only:'prop',free:true}],
   ['picture',11.0,22.0,N,{scale:0.75,y:1.5,only:'prop',free:true}],
   ['floor-lamp',14.3,11.2,Wst,{only:'prop',free:true}],['indoor-plant',14.3,1.2,0,{only:'prop',free:true}],

@@ -198,16 +198,12 @@ function details({add,L0}){
   const slab=(id,name,pts,elev,thick,surface)=>{
     add({object:'node',id,type:'slab',name,parentId:L0.id,polygon:poly(pts),holes:[],holeMetadata:[],elevation:r3(elev),thickness:thick,slots:{surface,side:surface},metadata:{}});
     L0.children.push(id); };
-  // dining: two floating walnut shelves inside the arched niche (east wall face at plan x 15.0)
-  [['slab_shelf1',1.30],['slab_shelf2',1.60]].forEach(([id,e])=>slab(id,'Niche shelf',[[14.25,23.5],[14.97,23.5],[14.97,27.7],[14.25,27.7]],e,0.03,MAT.walnut));
   // dining: olive arched niche on the east wall, built from 7 thin wall strips of stepped height (1.0.3 has no per-region wall paint)
   { const zc=25.6, wd=1.28, r=wd/2, n=7, step=wd/n, spring=1.45, x=15.0-0.03;
     for(let k=0;k<n;k++){ const dz=(-r+(k+0.5)*step), hh=Math.sqrt(Math.max(r*r-dz*dz,0))*0.94, z0=zc*FT+(-r+k*step), z1=z0+step; // metres along plan z
       const id=`wall_niche${k+1}`;
       add({object:'node',id,type:'wall',name:'Niche arch strip',parentId:L0.id,start:[m(x),r3(D*FT-z0)],end:[m(x),r3(D*FT-z1)],thickness:0.04,height:r3(spring+hh),
         children:[],frontSide:'interior',backSide:'interior',slots:{interior:MAT.olive,exterior:MAT.olive},metadata:{}}); L0.children.push(id); } }
-  // kitchen: smooth plaster hood over the range (box from 1.5 m to 2.35 m)
-  slab('slab_hood','Plaster range hood',[[13.3,16.85],[14.97,16.85],[14.97,19.85],[13.3,19.85]],2.35,0.85,MAT.plaster);
   // backyard
   [[5.6,45.2],[6.8,46.5],[5.4,47.6]].forEach(([x,z],i)=>{ const r=0.55, pts=[...Array(10)].map((_,k)=>[x+r*Math.cos(k*Math.PI/5),z+r*Math.sin(k*Math.PI/5)]);
     slab(`slab_stone${i+1}`,'Stepping stone (assumed)',pts,G+0.035,0.05,MAT.stone); });

@@ -163,5 +163,15 @@ rec('rattan-chair','Rattan chair','furniture',writeGlb('rattan_chair',chairParts
 { const parts=[]; for(const x of [-0.45,0,0.45]) parts.push({geo:T(cyl(0.008,0.008,1.6,6),x,0,0),mat:CANEDARK}); parts.push({geo:T(box(1.0,0.01,0.01),0,1.1,0),mat:CANEDARK},{geo:T(box(1.0,0.01,0.01),0,0.6,0),mat:CANEDARK});
   for(let k=0;k<22;k++){ const x=((k*53)%100)/100-0.5, y=0.1+((k*29)%100)/100*1.3; parts.push({geo:T(sphere(0.07+((k*7)%4)*0.012,10,6),x*0.9,y,0.02+((k%3)-1)*0.04),mat:k%5==0?TERRA:(k%2?GREEN:GREEN2)}); }
   rec('tomato-trellis','Tomato trellis','outdoor',writeGlb('tomato_trellis',parts),{tags:['floor','plant','outdoor']}); }
+
+// 13 wall shelf (walnut) and plaster range hood. These used to be slabs; Pascal lifts furniture onto any slab under its footprint,
+// which raised the sideboard and the range run up onto the shelf/hood slabs, so they are models now.
+function frustumBox(w0,d0,w1,d1,h){ const g=new Geo(); const a=[[-w0/2,-d0/2],[w0/2,-d0/2],[w0/2,d0/2],[-w0/2,d0/2]], b=[[-w1/2,-d1/2],[w1/2,-d1/2],[w1/2,d1/2],[-w1/2,d1/2]];
+  const q=(i,j)=>{ const p0=V(a[i][0],0,a[i][1]),p1=V(a[j][0],0,a[j][1]),p2=V(b[j][0],h,b[j][1]),p3=V(b[i][0],h,b[i][1]);
+    const e1=[p1[0]-p0[0],p1[1]-p0[1],p1[2]-p0[2]],e2=[p3[0]-p0[0],p3[1]-p0[1],p3[2]-p0[2]]; let n=[e1[1]*e2[2]-e1[2]*e2[1],e1[2]*e2[0]-e1[0]*e2[2],e1[0]*e2[1]-e1[1]*e2[0]]; const L=Math.hypot(...n)||1; n=n.map(v=>v/L); g.quad(p0,p1,p2,p3,n); };
+  q(0,1);q(1,2);q(2,3);q(3,0); g.quad(V(-w1/2,h,d1/2),V(w1/2,h,d1/2),V(w1/2,h,-d1/2),V(-w1/2,h,-d1/2),[0,1,0]); return g; }
+rec('niche-shelf','Walnut wall shelf','furniture',writeGlb('niche_shelf',[{geo:T(box(1.28,0.035,0.23),0,0.0175,0),mat:WALNUT}]),{tags:['wall','shelf']});
+{ const PLASTER=mat('#f1ece1',{rough:0.95}); const parts=[{geo:frustumBox(0.95,0.52,0.4,0.32,0.5),mat:PLASTER},{geo:T(frustumBox(0.4,0.32,0.34,0.28,0.38),0,0.5,0),mat:PLASTER},{geo:T(box(0.97,0.025,0.54),0,0.0125,0),mat:PLASTER}];
+  rec('plaster-hood','Plaster range hood','kitchen',writeGlb('plaster_hood',parts),{tags:['wall','kitchen','hood']}); }
 fs.writeFileSync(path.join(OUT,'models.json'),JSON.stringify(out,null,1));
 console.log(Object.values(out).map(o=>`${o.id} ${o.dimensions.join('x')}`).join('\n'));

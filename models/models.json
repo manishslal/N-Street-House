@@ -173,5 +173,34 @@
    "plant",
    "outdoor"
   ]
+ },
+ "niche-shelf": {
+  "id": "niche-shelf",
+  "name": "Walnut wall shelf",
+  "category": "furniture",
+  "dimensions": [
+   1.28,
+   0.035,
+   0.23
+  ],
+  "tags": [
+   "wall",
+   "shelf"
+  ]
+ },
+ "plaster-hood": {
+  "id": "plaster-hood",
+  "name": "Plaster range hood",
+  "category": "kitchen",
+  "dimensions": [
+   0.97,
+   0.88,
+   0.54
+  ],
+  "tags": [
+   "wall",
+   "kitchen",
+   "hood"
+  ]
  }
 }

@@ -2114,5 +2114,70 @@
    1
   ],
   "custom": true
+ },
+ {
+  "id": "niche-shelf",
+  "category": "furniture",
+  "tags": [
+   "wall",
+   "shelf"
+  ],
+  "name": "Walnut wall shelf",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/niche_shelf.glb",
+  "dimensions": [
+   1.28,
+   0.035,
+   0.23
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
+ },
+ {
+  "id": "plaster-hood",
+  "category": "kitchen",
+  "tags": [
+   "wall",
+   "kitchen",
+   "hood"
+  ],
+  "name": "Plaster range hood",
+  "thumbnail": "@models/thumb.png",
+  "src": "@models/plaster_hood.glb",
+  "dimensions": [
+   0.97,
+   0.88,
+   0.54
+  ],
+  "offset": [
+   0,
+   0,
+   0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ],
+  "custom": true
  }
 ]
