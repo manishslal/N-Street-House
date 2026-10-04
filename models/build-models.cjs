@@ -140,12 +140,13 @@ rec('rattan-chair','Rattan chair','furniture',writeGlb('rattan_chair',chairParts
 // 6 oak bar stool
 { const parts=[{geo:T(cyl(0.17,0.17,0.04,24),0,0.64,0),mat:OAK}]; for(const [x,z] of [[-1,-1],[1,-1],[-1,1],[1,1]]){ parts.push({geo:T(RZ(RX(cyl(0.014,0.012,0.66,8),z*0.1),-x*0.1),x*0.13,0,z*0.13),mat:OAK}); } parts.push({geo:T(RX(torus(0.14,0.01,24,6),Math.PI/2),0,0.3,0),mat:OAK});
   rec('oak-stool','Oak stool','furniture',writeGlb('oak_stool',parts),{tags:['floor','seating']}); }
-// 7 potted monstera
+// 7 potted monstera: every leaf hangs off a stem that starts in the soil and ends at the leaf centre (nothing floats)
 { const parts=[{geo:cyl(0.17,0.13,0.28,20),mat:POT},{geo:T(cyl(0.165,0.165,0.02,20),0,0.27,0),mat:mat('#3a2a1f')}];
-  for(let k=0;k<9;k++){ const a=k/9*2*Math.PI, r=0.12+((k*37)%5)*0.03; const leaf=T(RY(RZ(RX(sphere(0.16,12,8),0),0.3),a),Math.cos(a)*r,0.55+((k*13)%7)*0.07,Math.sin(a)*r); leaf.apply(p=>[p[0],p[1],p[2]]);
-    // flatten leaf: scale y
-    const base=[Math.cos(a)*r,0.55+((k*13)%7)*0.07,Math.sin(a)*r]; leaf.apply(p=>[p[0],base[1]+(p[1]-base[1])*0.35,p[2]]); parts.push({geo:leaf,mat:k%2?GREEN:GREEN2});
-    parts.push({geo:T(RZ(cyl(0.008,0.008,0.3,6),0.0),Math.cos(a)*r*0.5,0.28,Math.sin(a)*r*0.5),mat:GREEN}); }
+  const stem=(tx,ty,tz)=>{ const L=Math.hypot(tx,ty-0.28,tz), th=Math.acos((ty-0.28)/L), ph=Math.atan2(tz,tx);
+    return T(RY(RZ(cyl(0.009,0.006,L,6,false,false),-th),-ph),0,0.28,0); };
+  for(let k=0;k<9;k++){ const a=k/9*2*Math.PI+0.3, r=0.1+((k*37)%5)*0.045, h=0.62+((k*13)%7)*0.07, cx=Math.cos(a)*r, cz=Math.sin(a)*r;
+    const leaf=sphere(0.17,14,8).apply(p=>[p[0],p[1]*0.18,p[2]*0.8]); RY(leaf,-a); T(leaf,cx,h,cz);
+    parts.push({geo:leaf,mat:k%2?GREEN:GREEN2}); parts.push({geo:stem(cx,h-0.01,cz),mat:GREEN}); }
   rec('monstera','Potted plant','furniture',writeGlb('monstera',parts),{tags:['floor','plant']}); }
 // 8 sheer curtain panel (hangs from y=2.4)
 { const parts=[{geo:T(box(0.62,2.35,0.03),0,1.175,0),mat:SHEER},{geo:T(RZ(cyl(0.012,0.012,0.7,10),Math.PI/2),0.35,2.42,0),mat:BRASS}];

@@ -3,6 +3,7 @@
 # usage: scripts/load-scenes.sh <port>      (port printed by `npx @pascal-app/cli status`)
 # Needs a hosts entry or the Host header below; the sandbox the spike was built in cannot resolve *.localhost, so we send the header explicitly.
 PORT=${1:?usage: load-scenes.sh <port>}
+if ! curl -s -o /dev/null -m 2 http://localhost:8765/thumb.png; then echo "WARNING: model server not running on :8765 - custom furniture will show as red boxes. Run scripts/serve-models.sh in another terminal (start-pascal.sh also starts it)."; fi
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
 load(){ id=$1; name=$2; file=$3
   curl -s -o /dev/null -X DELETE -H "Host: pascal.localhost:$PORT" "http://127.0.0.1:$PORT/api/scenes/$id"
